@@ -1,0 +1,228 @@
+/* Naviagation bar */
+
+.nav-bar {
+	background: rgba($lightColor, .9);
+	z-index: 9998;
+	position: relative;
+	display: block;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 50px;
+	display: flex;
+		box-shadow: 2px 2px 2px rgba($darkColor, .2);
+	@include media($tablet) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@include media($desktop) {
+		height: 70px;
+		top: 0px;
+	}
+}
+
+
+.menu-trigger {
+	.is--ipad & {
+		display: block;
+	}
+	width: 32px;
+	height: 100%;
+	position: relative;
+	left: 20px;
+	padding-top: 14px;
+	height: 100%;
+	@include media($desktop) {
+		display: none;
+	}
+	.hamburger {
+		margin-top: 4px;
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 5px;
+		background: #bd813e;
+		margin-bottom: 1px;
+		&:last-of-type {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.nav-bar-extras {
+	height: 100%;
+	right: 0px;
+	width: auto;
+	position: absolute;
+	display:flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	a {
+		color: $primaryColor;
+		text-decoration: none;
+		display: inline-block;
+		height: 100%;
+		i {
+			color: #bd813e;
+		}
+	}
+	.head-address {
+		// width: 60px;
+		// margin-right: 5px;
+		// background:  rgba($primaryColor, .8); 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		i {
+			color: #bd813e;
+			font-size: 25px;
+		}
+	}
+	.head-phone {
+		// background:  rgba($primaryColor, .8); 
+		padding: 0 20px 0 20px;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center; 
+		font-size: 18px;
+		i {
+			font-size: 25px;
+			margin-right: 10px;
+		}
+	}
+}
+
+
+/* Inside Page Headers */
+
+.int-header {
+	background-color: #3e5d6f;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 200px;
+	margin-top: 125px;
+	@include media($tablet) {
+		margin-top: 0;
+		background-position: center right;
+		background-position-y: 50px;
+		padding-top: 0;
+		background-size: cover;
+		height: 430px;
+		padding-top: 30px;
+
+	}
+	@include media($desktop) {
+		padding-top: 0;
+		margin-top: 70px;
+		background-position: center center;
+	}
+}
+
+
+
+.inside-header-logo {
+	position: relative;
+	width: calc( 100% + 40px);
+	left: -20px;
+	top: -75px;
+	background: #466679;
+	@include media($tablet) {
+		top: 0;
+		left: 0px;
+		background: transparent;
+		padding: 0;
+		margin-bottom: 0;
+		background: transparent;
+		max-width: 365px;
+		padding-top: 60px;
+	}
+	@include media($desktop) {
+		padding-top: 60px;
+	}
+	svg {
+		width: 180px;
+		height: 71px;
+		@include media($tablet) {
+			width: 358px;
+			height: auto;
+		}
+		path {fill:$lightColor;}
+	}
+	a {
+		text-decoration: none;
+	}
+	span {
+		font-family: $secondaryFont;
+		display: block;
+		font-size: 16px;
+		display: none;
+		@include media($tablet) {
+			display: block;
+			font-size: 30px;
+		}
+		&:nth-of-type(1) {
+			@include media($tablet) {
+				margin-top: 20px;
+			}
+		}
+
+		&:nth-of-type(2) {
+			color: $primaryHighlight;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			@include media($tablet) {
+				letter-spacing: 2.8px;
+			}
+		}
+	}
+	.logo-line-top {
+		width: 190px;
+		margin: 0 auto;
+		height: 1px;
+		background-color: $lightColor;
+		display: none;
+		@include media($tablet) {
+			display: block;
+			width: 100%;
+			margin-top: 15px;
+			margin-bottom: 10px;
+		}
+	}
+	.logo-line-bottom {
+		width: 80px;
+		margin: 0 auto;
+		height: 1px;
+		background-color: $lightColor;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		display: none;
+		@include media($tablet) {
+			display: block;
+		}
+	}
+
+}
+
+header .home-addy {
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	display: none;
+	font-size: 15.5px;
+	@include media($tablet) {
+		display: block;
+	}
+	a {
+		text-decoration: none;
+	}
+	i {
+		position: relative;
+		top: 3px;
+		color: $secondaryColor;
+		font-size: 24px;
+		margin-right: 10px;
+	}
+}
+

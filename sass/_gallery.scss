@@ -1,0 +1,390 @@
+// Category Archive
+
+.tmpl_type_rmg_archive {
+	.gal-buttons {
+		margin-top: 40px;
+		@include media($tablet) {
+			margin-top: 60px;
+			margin-bottom: 60px;
+		}
+	}
+	.category-slide {
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+		border-bottom: 1px solid $primaryHighlight;
+		h2 {
+			margin-bottom: 60px;
+		}
+	}
+	.gallery-cat-wrap {
+
+	}
+	.bna-group {
+		width: 45%;
+		margin-bottom: 20px;
+		position: relative;
+		@include media($tablet) {
+			width: 48%;
+		}
+
+		h2 {
+			text-transform: uppercase;
+			font-size: 20px;
+			color: $primaryAlt;
+			margin: 20px 0;
+			letter-spacing: 1px;
+			font-family: $highlightFont;
+
+			@include media($tablet) {
+				font-size: 26px;
+			}
+		}
+
+		a {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		&:hover {
+			@include media($desktop) {
+				.hover-overlay {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: -4px;
+				}
+			}
+		}
+		.hover-overlay {
+			display: none;
+			.button {
+				background-color: transparent !important;
+				border: none;
+
+				&:hover {
+					color: $darkColor!important;
+				}
+
+				i {	
+					padding: 10px;
+					border-radius: 50%;
+					background-color: $lightColor;
+					position: absolute;
+					top: 39%;
+					left: 45%;
+					font-size: 30px;
+					line-height: 30px;
+					color: $tertiaryColor;
+				}
+			}
+		}
+	}
+	.img-set {
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			@include media($tablet) {
+				width: 600px;
+			}
+			> div {
+				display: block;
+				width: 49%;
+			}
+
+			label {
+				display: block;
+				color: $primaryColor;
+				text-transform: uppercase;
+				// font-weight: bold;
+				// letter-spacing: 1px;
+				text-align: center;
+			}
+	
+		img {
+			// border: 1px solid $lightColor;
+			width: 96%;
+			margin-bottom: 5px;
+		}
+		.before-link, .after-link{
+			position: relative;
+
+			&:after {
+				content: '';
+				background: url('images/bg-bna-watermark.png');
+				background-size: 100%;
+				background-repeat: no-repeat;
+				position: absolute;
+				bottom: 3px;
+				left: 10px;
+				width: 90%;
+				height: 20px;
+
+		 		@include media($tablet) {
+					left: 20px;
+		 			height: 40px;
+					bottom: 20px;
+		 		}
+			}
+		}
+	}
+
+	.single-case {
+		// border: 1px solid red;
+		margin-bottom: 80px;
+		@include media($tablet) {
+			margin-bottom: 140px;
+		}
+		@include media($desktop) {
+			display: flex;
+		}
+	}
+
+	// .details-hdng {
+	// 	text-align: left;
+	// 	font-weight: $normal;
+	// 	margin-top: 40px;
+	// 	font-family: $highlightFont;
+	// 	text-transform: uppercase;
+	// }
+	.patient-details {
+		text-align: left;
+		margin-top: 20px;
+		@include media($desktop) {
+			margin-top: 0px;
+			width: calc(100% - 600px);
+			margin-left: 40px;
+			// margin-top: -250px;
+		}
+		h3 {
+			margin-top: 0;
+		}
+	}
+}
+
+// Single Case
+
+.tmpl_type_rmg_single_case {
+	h2 {
+		text-align: center;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	.case-wrap {
+		padding: 20px 0;
+		
+
+
+		p {
+			padding-top: 20px;
+			text-align: left;
+		}
+	}
+	.img-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		> div {
+			position: relative;
+			width: 49.5%;
+			margin-bottom: 8px;
+			img {
+				width: 100%;
+				border:1px solid $lightColor;
+			}
+			&:nth-last-of-type(2),
+			&:nth-last-of-type(1) {
+				.bna-label {
+					position: absolute;
+					display: block;
+					// bottom:0px;
+					width: 100%;
+					text-align: center;
+					color: $primaryColor;
+					text-transform: uppercase;
+					font-weight: bold;
+					letter-spacing: 1px;
+				}
+			}
+		}
+		.bna-label {
+			display: none;
+		}
+
+		.before-img, .after-img{
+			position: relative;
+
+			&:after {
+				content: '';
+				background: url('images/bg-bna-watermark.png');
+				background-size: 100%;
+				background-repeat: no-repeat;
+				position: absolute;
+				bottom: 3px;
+				left: 10px;
+				width: 90%;
+				height: 20px;
+
+		 		@include media($tablet) {
+				left: 20px;
+
+		 			height: 40px;
+					bottom: 10px;
+		 		}
+			}
+		}
+	}
+	.details-hdng {
+		text-align: left;
+		font-weight: $normal;
+		margin-top: 40px;
+		// font-family: $primaryFont;
+
+		font-family: $highlightFont;
+		text-transform: uppercase;
+		color: $primaryAlt;
+		font-weight: $bold;
+		font-size: 20px;
+	}
+	.patient-details {
+		text-align: left;
+	}
+}
+
+.notice-body-everything {
+	h2, p {
+		color: $darkColor;
+	}
+}
+.bna-label {
+	color: $darkColor;
+	font-weight: $normal;
+}
+
+.back-btn {
+	margin-top: 15px;
+	font-family: $highlightFont;
+	a {
+		color: $tertiaryColor;
+	}
+
+	i {
+		color: $tertiaryColor;
+		font-size: 25px;
+		position: relative;
+		top: 3px;
+		margin-right: 5px;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+
+.gallery-title {
+	background: $darkColor;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position:relative;
+
+	h1 {
+		max-width: 250px;
+		@include media($tablet) {
+			max-width: none;
+			max-width: 850px;
+
+		}
+	}
+}
+
+.button-gallery-prev,
+.button-gallery-next {
+	text-transform: uppercase;
+	position: relative;
+
+	@include media($tablet) {
+		bottom:15px;
+	}
+
+	@include media($desktop) {
+		bottom: 20px;
+	}
+
+	i {
+		color: $tertiaryColor;
+		font-size: 50px;
+		position: relative;
+		top: 10px;
+		padding: 0 5px;
+
+		@include media($tablet) {
+		font-size: 50px;
+		top: 10px;
+		padding: 0 15px;
+
+		}
+	}
+	&:hover {
+		color: $tertiaryColor;
+		text-decoration: none;
+	}
+
+	span {
+		// display: none;
+		@include media($tablet) {
+			display: inline-block;
+		}
+	}
+
+}
+.case-title {
+	display: inline-block;
+	font-family: $secondaryFont;
+	font-size: 20px;
+	color: $secondaryColor;
+	margin-bottom: 30px;
+	@include media($tablet) {
+		font-size: 25px;
+		
+	}
+	@include media($desktop) {
+		font-size: 40px;
+	}
+}
+
+.gallery-nav {
+	position: relative;
+}
+
+.button-gallery-prev {
+	// color: $primaryColor;
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	span {
+		color: $primaryAlt;
+		font-family: $highlightFont;
+	}
+}
+
+.button-gallery-next {
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	span {
+		color: $primaryAlt;
+		font-family: $highlightFont;
+	}
+}
+
+.button {
+	margin-bottom: 5px;
+}

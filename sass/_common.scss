@@ -1,0 +1,232 @@
+/* ------------------------
+Common/UI elements (images, video, buttons, etc)
+------------------------ */
+video {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 30px;
+}
+
+.back-to-top {
+	text-align: right;
+	display: block;
+}
+
+img.alignright,
+img.alignleft,
+img.aligncenter,
+img.alignnone,
+.caption {
+	display: block;
+	height: auto;
+	margin: 0 auto 1em;
+	max-width: 100%;
+}
+
+// .content {
+img.alignright,
+img.alignleft {
+	float: none;
+	@include media($tablet) {
+		margin-bottom: 1em;
+		max-width: 50%;
+	}
+}
+img.alignleft {
+	@include media($tablet) {
+		float: left;
+		margin-right: 2.5em;
+	}
+}
+img.alignright {
+	@include media($tablet) {
+		float: right;
+		margin-left: 2.5em;
+	}
+}
+// }
+
+.wp-caption {
+	max-width: 95%;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+img.alignleft,
+img.alignright,
+img.aligncenter,
+.yes-frame {
+	@extend %imgdefaults;
+}
+
+.button,
+.buttons a,
+.submit-btn,
+.next-prev a,
+a.page-numbers,
+a.page-numbers.current,
+.after-review-sprinkle .button {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	text-decoration: none !important;
+	border: none;
+	color: $lightColor !important;
+	font-size: 17px;
+	line-height: 25px;
+	// letter-spacing: 0.5px;
+	font-weight: 100;
+	text-transform: none;
+	font-family: $primaryFont;
+	padding: 17px 30px;
+	// border-radius: 4px;
+	transition: all 0.2s ease-in-out;
+	border: 1px solid rgba($lightColor, .3);
+	background: rgb(189,129,62);
+	background: linear-gradient(164deg, rgba(189,129,62,1) 19%, rgba(164,112,54,1) 56%); 
+	box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+	
+	&:hover {
+		text-decoration: none;
+		background: #91602a;
+		background: linear-gradient(164deg, rgba(145,96,42,1) 19%, rgba(145,96,42,1) 56%); 
+		
+	}
+}
+
+.after-review-sprinkle .button {
+	&:hover {
+		color: $secondaryColor;
+	}
+}
+
+.submit-btn {
+	// background: $primaryColor !important;
+	// color: $secondaryColor;
+	// text-transform: uppercase;
+	&:hover {
+		// back: $secondaryColor !important;
+		// background: darken($primaryColor , 10%) !important;
+	}
+}
+
+.disclaimer {
+	font-size: 11px;
+	font-style: italic;
+}
+
+.two-column {
+	@include media($tablet) {
+		column-count: 2;
+		column-gap: 40px;
+	}
+}
+
+.three-column {
+	@include media($tablet) {
+		column-count: 3;
+		column-gap: 20px;
+	}
+}
+
+::selection {
+	background: $primaryColor;
+}
+
+// For jump links on a site with fixed header
+
+:target:before {
+	@include media($desktop) {
+		content: "";
+		display: block;
+		height: 86px; /* fixed header height*/
+		margin: -86px 0 0; /* negative fixed header height */
+	}
+}
+
+/* Responsive iframes */
+
+.content video {
+	width: 100%;
+	margin: 20px 0;
+	height: auto;
+}
+
+.iframe-container {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+}
+
+/* 16x9 Aspect Ratio */
+.iframe-container-16x9 {
+	padding-bottom: 56.25%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	display: block;
+	border: 10px solid $tertiaryColor;
+	@include media($tablet) {
+		width: 640px;
+		height: 360px !important;
+		margin: 0 auto;
+		padding-bottom: 0px;
+		margin-top: 60px;
+		margin-bottom: 60px;
+		border: 20px solid $tertiaryColor;
+		// background: $tertiaryColor;
+		// padding: 20px;
+	}
+}
+
+/* 4x3 Aspect Ratio */
+.iframe-container-4x3 {
+	padding-bottom: 75%;
+}
+
+/* Hide Wow before JS Loads */
+
+.wow {
+	// z-index: -1;
+	&.fadeIn,
+	&.fadeInDown,
+	&.fadeInUp,
+	&.fadeInRight,
+	&.slideInDown
+	// &.slideInUp
+	// &.bounceInRight,
+	 {
+	 	@include media($desktop) {
+	 		
+		opacity: 0;
+		visibility: hidden;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	 	}
+	}
+}
+
+
+
+
+// Incorporate
+
+// .down-arrow {
+// 	display: block;
+// 	width: 25px;
+// 	height: 25px;
+// 	border-left: 5px solid $primaryAlt;
+// 	border-bottom: 5px solid $primaryAlt;
+// 	margin: auto;
+// 	transform: rotate(-45deg);
+// }
