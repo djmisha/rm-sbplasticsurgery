@@ -18,7 +18,7 @@
 .middle-footer {
 	max-width: 968px;
 	margin: 0 auto;
-	padding: 40px 0;
+	padding: 15px 0;
 	ul {
 		list-style: none;
 		display: flex;
@@ -26,7 +26,7 @@
 		align-items: center;
 	}
 	li {
-		border: 1px solid red;
+		// border: 1px solid red;
 		margin: 0 10px;
 	}
 }
@@ -38,9 +38,41 @@
 
 
 .footer-address {
+	font-family: $secondaryFont;
+	text-align: center;
+	font-size: 18px;
+	@include media($desktop) {
+		text-align: right;
+	}
 	img {
+		width: 100%;
 		max-width: 440px;
-		float: left;
+		margin-bottom: 40px;
+		@include media($tablet) {
+			margin-right: 40px;
+		}
+		@include media($desktop) {
+			float: left;
+			max-width: 440px;
+			margin-left: -20px;
+		}
+	}
+	.the-loc {
+		margin-top: 20px;
+		@include media($desktop) {
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+	span {
+		color: #c7cdc5;
+		font-size: 18px;
+		font-family: $primaryFont;
+	}
+	.loc-phone a {
+		font-size: 25px;
+		
 	}
 }
 
@@ -57,13 +89,25 @@
 .model-disc {
 	font-size: 12px;
 	line-height: 16px;
-	max-width: 800px;
 	margin: 0 auto;
-	// margin-top: 40px;
 	// margin-bottom: 30px;
+	margin-top: 40px;
 	text-align: center;
-	color: #46484a;
+	color: $darkColor;
 	font-style: italic;
+	@include media($desktop) {
+		max-width: 600px;
+		margin: 0;
+		margin-top: 60px;
+		text-align: left;
+	}
+}
+
+.split-lower {
+	@include media($desktop) {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .copyright,
@@ -71,7 +115,7 @@
 	display: inline-block;
 	font-family: $primaryFont;
 	text-align: center;
-	color: #46484a;
+	color: $darkColor;
 	font-size: 12px;
 	line-height: 16px;
 	@include media($desktop) {
@@ -80,7 +124,7 @@
 		// text-align: left;
 	}
 	a {
-		color: #46484a;
+		color: $darkColor;
 		text-decoration: none;
 	}
 	a:hover {
@@ -100,7 +144,7 @@
 		left: 4px;
 	}
 	path {
-		fill: $darkColor;
+		fill: #c7cdc5;
 		transition: all 0.1s ease-in;
 	}
 	&:hover {
