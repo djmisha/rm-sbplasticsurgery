@@ -5748,6 +5748,16 @@ aside li {
   display: none;
 }
 
+.upper-footer {
+  background-position: center center;
+}
+
+@media only screen and (min-width: 1080px) {
+  .upper-footer {
+    height: 490px;
+  }
+}
+
 .middle-footer {
   max-width: 968px;
   margin: 0 auto;
@@ -5777,19 +5787,26 @@ aside li {
 .footer-address {
   font-family: "Lora", serif;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-address {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (min-width: 1080px) {
   .footer-address {
     text-align: right;
+    height: 120px;
   }
 }
 
 .footer-address img {
   width: 100%;
   max-width: 440px;
-  margin-bottom: 40px;
+  display: block;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5816,8 +5833,14 @@ aside li {
 
 .footer-address span {
   color: #c7cdc5;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Lato", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-address span {
+    font-size: 18px;
+  }
 }
 
 .footer-address .loc-phone a {
@@ -5841,13 +5864,16 @@ aside li {
   text-align: center;
   color: #233448;
   font-style: italic;
+  display: block;
+  width: 100%;
 }
 
 @media only screen and (min-width: 1080px) {
   .model-disc {
+    display: block;
     max-width: 600px;
     margin: 0;
-    margin-top: 60px;
+    margin-top: 10px;
     text-align: left;
   }
 }

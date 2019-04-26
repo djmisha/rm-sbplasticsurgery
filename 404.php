@@ -14,7 +14,7 @@
 		}
 	
 		html {
-			background: #424a4f; /* DARK color */
+			background: #233448; /* DARK color */
 			color: #fff; /* BODY text color */
 			font-family: 'OpenSans', sans-serif;
 			font-size: 36px;
@@ -63,8 +63,8 @@
 		}
 		
 		#four-oh-four-nav-wrap {
-			border-top: 20px solid #e1ab4c;  /* LIGHT color */
-			border-bottom: 20px solid #e1ab4c;  /* LIGHT color */
+			border-top: 20px solid #dce4ea;  /* LIGHT color */
+			border-bottom: 20px solid #dce4ea;  /* LIGHT color */
 			text-align:center;
 			width:100%;
 			background: #fff; /* LINKS background color */
@@ -80,7 +80,7 @@
 		}
 		
 		#four-oh-four-nav-wrap nav a {
-			color: #3b3f50;
+			color: #3a4859;
 			text-decoration: underline;
 			font-weight: bold;
 		}
@@ -89,8 +89,8 @@
 		
 		#four-oh-four-nav-wrap nav ul {
 			display:block;
-			border-top: 1px solid #3b3f50; /* DARK color */
-			text-align: left;
+			/*border-top: 1px solid #dce4ea; /* DARK color */*/
+			text-align: center;
 			padding:0;
 			margin: 20px 15px;
 		}
@@ -98,7 +98,7 @@
 		#four-oh-four-nav-wrap nav ul li {
 			display:block;
 			height:auto;
-			border-bottom: 1px solid #3b3f50; /* DARK color */
+			/*border-bottom: 1px solid #dce4ea; /* DARK color */*/
 			list-style: none;
 			font-size: 29px;
 			line-height:1em;
@@ -113,7 +113,7 @@
 		
 		#four-oh-four-nav-wrap nav ul li a:hover {
 			text-decoration: none;
-			background-color: #e1ab4c;
+			background-color: #dce4ea;
 		}
 		
 		.copy {

@@ -1,7 +1,7 @@
 
 <footer>
 	
-	<section class="upper-footer">
+	<section class="upper-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg">
 			
 
 	</section> 
@@ -22,7 +22,9 @@
 
 	<section class="lower-footer">
 		 <div class="footer-address">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo" class="b-lazy">
+		 	<a href="<?php bloginfo('url'); ?>">
+		 		<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo" class="b-lazy">
+		 	</a>
 			<?php if(have_rows('locations', 'option')): ?>
 				<?php while(have_rows('locations', 'option')): the_row(); ?>
 					<div class="the-loc">

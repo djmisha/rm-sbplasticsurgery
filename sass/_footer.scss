@@ -12,7 +12,10 @@
 
 
 .upper-footer {
-
+	background-position: center center;
+	@include media($desktop) {
+		height: 490px;
+	}
 }
 
 .middle-footer {
@@ -40,14 +43,20 @@
 .footer-address {
 	font-family: $secondaryFont;
 	text-align: center;
-	font-size: 18px;
+	font-size: 16px;
+	@include media($tablet) {
+		font-size: 18px;
+	}
 	@include media($desktop) {
 		text-align: right;
+		height: 120px;
+		// border: 1px solid red;
 	}
 	img {
 		width: 100%;
 		max-width: 440px;
-		margin-bottom: 40px;
+		// margin-bottom: 40px;
+		display: block;
 		@include media($tablet) {
 			margin-right: 40px;
 		}
@@ -67,8 +76,12 @@
 	}
 	span {
 		color: #c7cdc5;
-		font-size: 18px;
+		font-size: 16px;
 		font-family: $primaryFont;
+		@include media($tablet) {
+			font-size: 18px;
+			
+		}
 	}
 	.loc-phone a {
 		font-size: 25px;
@@ -90,15 +103,17 @@
 	font-size: 12px;
 	line-height: 16px;
 	margin: 0 auto;
-	// margin-bottom: 30px;
 	margin-top: 40px;
 	text-align: center;
 	color: $darkColor;
 	font-style: italic;
+	display: block;
+	width: 100%;
 	@include media($desktop) {
+		display: block;
 		max-width: 600px;
 		margin: 0;
-		margin-top: 60px;
+		margin-top: 10px;
 		text-align: left;
 	}
 }
