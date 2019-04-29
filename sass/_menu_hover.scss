@@ -7,7 +7,7 @@ header {
 
 .hover-menu {
 	position: absolute;
-	right: 0px;
+	right: 10px;
 	bottom: 0;
 	.duplicate-item {
 		display: none;
@@ -37,8 +37,8 @@ header {
 			//show sub-menus on hover
 			&:hover{
 				> a {
-					color: $lightColor;
-					background: $primaryColor;
+					// color: $lightColor;
+					background: $primaryAlt;
 					// border-bottom: 2px solid $tertiaryColor;
 
 					// border-top: 1px solid $tertiaryColor;
@@ -69,8 +69,8 @@ header {
 				// text-transform: uppercase;
 				
 				&:hover {
-					color: $lightColor;
-					background: $darkColor;
+					color: $darkColor;
+					background: $primaryAlt;
 				}
 			}
 		}
@@ -150,14 +150,14 @@ header {
 				}
 
 				a {
-					color: $lightColor;
-					background: $darkColor;
+					color: $darkColor;
+					background: $primaryAlt;
 					padding: 12px 20px !important;
 
 				}
 				&:hover {
 					> a {
-						color: $lightColor;
+						color: $darkColor;
 						border-bottom: none;
 						text-decoration: underline;
 					}
@@ -166,7 +166,7 @@ header {
 			a{
 				text-align: left;
 				height: auto !important;
-				color: $lightColor;
+				color: $darkColor;
 				line-height: 20px;
 			}
 		}
@@ -195,7 +195,7 @@ header {
 					// color: #fff; //remove
 				}
 				> li{
-					width: 50%; //set this width to however many columns you need
+					width: 25%; //set this width to however many columns you need
 					display: inline-block;
 					vertical-align: top;
 					padding: 25px;
