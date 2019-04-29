@@ -1,11 +1,18 @@
-$menuHeight : 70px;
+$menuHeight : 40px;
 
+header {
+	// position: relative;
+	// border: 1px solid red;
+}
 
 .hover-menu {
+	position: absolute;
+	right: 0px;
+	bottom: 0;
 	.duplicate-item {
 		display: none;
 	}
-	width: 100%;
+	// width: 100%;
 	// border: 1px solid black;
 	// @include font(18px, 1em);
 	display: block;
@@ -54,11 +61,12 @@ $menuHeight : 70px;
 			a{	
 				display: block;
 				text-decoration: none;
-				padding: 20px 20px;
+				padding: 5px 15px;
 				transition: .25s ease-in-out background;
 				color: $primaryColor; 
 				height: $menuHeight;
-				text-transform: uppercase;
+				font-family: $secondaryFont;
+				// text-transform: uppercase;
 				
 				&:hover {
 					color: $lightColor;
@@ -69,7 +77,7 @@ $menuHeight : 70px;
 	}
 
 	a {
-		font-size: 14px; 
+		font-size: 16px; 
 		line-height: 30px;
 	}
 
@@ -77,7 +85,7 @@ $menuHeight : 70px;
 			background: $primaryAlt; //set to your own background color
 			// border: 1px solid rgba($lightColor, .2); //for visual purposes.  can remove.
 			position: absolute;
-			top: 70px;
+			top: 40px;
 			left: 50%;
 			right: 50%;
 			transform: translate(-50%, 0);
@@ -101,9 +109,9 @@ $menuHeight : 70px;
 
 					&:after{
 						content: '';
-						width: 6px;
+						width: 8px;
 						height: 12px;
-						background-size: 6px 12px;
+						background-size: 8px 12px;
 						transition: .2s linear all;
 						position: absolute;
 						top: 50%;

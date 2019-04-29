@@ -9,7 +9,7 @@
 	<title><?php wp_title(""); ?></title>
 
 	<?php if(!is_404()): ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400,400i,700i' ); ?>
+		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display:400,400i,700i' ); ?>
 	<?php endif; ?>
 
 	<?php wp_head()?>
@@ -33,6 +33,32 @@
 <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header will-parallax parallax-internal-header'; ?>" <?php get__header__image(); ?> >
 
 	<div class="nav-bar">
+		<div class="menu-trigger">
+			<div class="hamburger"></div>
+			<div class="hamburger"></div>
+			<div class="hamburger"></div>
+		</div>
+		<div class="nav-bar-logo">
+			<a href="<?php bloginfo('url'); ?>">
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo" class="b-lazy">
+			</a>
+		</div>
+		<div class="navbar-social">
+			<a href="<?php the_field('facebook','options'); ?>" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
+			<a href="<?php the_field('twitter','options'); ?>" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
+			<a href="<?php the_field('instagram','options'); ?>" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
+			<a href="<?php the_field('youtube','options'); ?>" target="_blank" rel="noopener" title="youtube"><i class="fab fa-youtube"></i></a>
+		</div>
+		<div class="nav-bar-extras">
+			<div class="extra-names">
+				Wesley G. Schooler, M.D., F.A.C.S.   <span>|</span>   Leslie Irvine, M.D.
+			</div>
+			<?php if(have_rows('locations', 'option')): ?>
+				<?php while(have_rows('locations', 'option')): the_row(); ?>
+					<a href="<?php the_sub_field('phone_link'); ?>" class="head-phone track-outbound" data-label="Phone - Header"><?php the_sub_field('phone'); ?></a>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</div> 
 		<nav>
 			<?php wp_nav_menu( array(
 				'menu' 		=> 'Main',
@@ -41,29 +67,6 @@
 				'menu_class' => 'main-menu',
 			)); ?>
 		</nav> 
-		<div class="nav-bar-extras">
-			<?php if(have_rows('locations', 'option')): ?>
-				<?php while(have_rows('locations', 'option')): the_row(); ?>
-					<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound head-address" data-label="Address - Header" target="_blank"  rel="noopener">
-						<i class="fas fa-map-marker-alt"></i>
-					</a>
-					<a href="<?php the_sub_field('phone_link'); ?>" class="head-phone track-outbound" data-label="Phone - Header"><i class="fas fa-mobile-alt"></i><?php the_sub_field('phone'); ?></a>
-				<?php endwhile; ?>
-			<?php endif; ?>
-		</div> 
-		<div class="menu-trigger">
-			<div class="hamburger"></div>
-			<div class="hamburger"></div>
-		</div>
-
-
-		<div class="navbar-social">
-			<a href="<?php the_field('facebook','options'); ?>" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
-			<a href="<?php the_field('twitter','options'); ?>" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
-			<a href="<?php the_field('instagram','options'); ?>" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
-		</div>
-
-
 	</div>
 
 	<?php 
@@ -91,7 +94,6 @@
 		</div>
 		</section>
 	<?php endif; ?>
-
 
 </header> 
 
