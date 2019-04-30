@@ -62,24 +62,32 @@
 }
 
 .nav-bar-logo {
-	display: none;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	right: 0;
 	@include media($tablet) {
-		display: block;
 		position: absolute;
 		top: 5px;
 	}
 	@include media($desktop) {
+		left: 10px;
 		top: 10px;
+		right: auto;
 	}
 	img {
+		max-width: 330px;
 		@include media($tablet) {
-			height: 60px;
+			max-width: none;
+			height: 55px;
 		}
 		@include media($desktop) {
 			width: 420px;
 			height: auto;
+			margin-top: 15px;
 		}
-		@include media(1250px) {
+		@include media(1340px) {
+			margin-top: 0;
 			margin-left: -10px;
 			width: auto;
 		}

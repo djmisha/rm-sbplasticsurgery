@@ -172,10 +172,32 @@ header {
 		}
 
 		.mega-menu{
+			> ul {
+				column-count: 4;
+				// right: 0px;
+			}
 			> .sub-menu{
-				width: 100%;
+				// position: relative;
+				display: none;
+				width: 1080px;
+				border: 1px solid rgba($primaryAlt, .6); //for visual purposes.  can remove.
+				// transition: .25s ease-in-out top, .25s ease-in-out opacity;
+				transition: all .5s ease-in-out; 
+				top: 95px;
+				height: 600px;
+				// right: 0;
+				position: absolute;
+				right: 0px;
+				// &.smallify-nav {
+				// 	top: 65px !important;
+				// }
 				.sub-menu{ //reset styling for sub-sub-menus
+					visibility: hidden;
 					position: relative;
+					border-bottom: none; //for visual purposes.  can remove.
+					border-top: 1px solid rgba($lightColor, .3); //for visual purposes.  can remove.
+					border-right: none;
+					border-left: none;
 					opacity: 1;
 					visibility: visible;
 					width: 100%;
@@ -185,26 +207,47 @@ header {
 					transform: none;
 					z-index: 50;
 				}
-				li{
+				li{	
 					padding-right: 0;
+					border: none;
+					width: 100%;
+					li {
+						font-weight: normal;
+						border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+						a {
+							font-size: 14px !important;
+							font-family: $highlightFont;
+						}
+					}
 					&:after{
 						display: none;
 					}
 				}
 				a{
 					// color: #fff; //remove
+					font-size: 19px !important;
+					font-family: $secondaryFont;
+					
 				}
 				> li{
-					width: 25%; //set this width to however many columns you need
+					// font-weight: bold;
+					
+					// width: 25%; //set this width to however many columns you need
 					display: inline-block;
 					vertical-align: top;
-					padding: 25px;
+					padding: 20px;
 					> a, > .sub-menu{ //set the background color of the sub-menus
 						background: none;
 					}
 				}
 			}
+			&:hover {
+				> .sub-menu {
+					display: block;
+				}
+			}
 		}
+
 		.close-menu{
 			display: none!important;
 		}

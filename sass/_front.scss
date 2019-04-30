@@ -1,6 +1,6 @@
 // header,
-.welcome,
-footer,
+// .welcome,
+// footer,
 .home-doctor,
 .home-why-choose,
 .home-featured-procedures,
@@ -23,24 +23,26 @@ footer,
 
 .welcome-parallax {
 	@include media($desktop) {
-		background: #466679 url("images/bg-welcome.jpg") center center;
+		background: #e9f1ed url("images/bg-welcome.jpg") center center;
 		background-repeat: no-repeat;
+	}
+	@include media(1660px) {
 		background-size: cover;
 	}
 }
 
 .welcome {
-	background: #466679 url("images/bg-welcome.jpg") top right no-repeat;
-	background-size: 620px auto;
-	background-position-y: 155px; 
+	background: #fff url("images/bg-welcome.jpg") top right no-repeat;
+	background-size: 720px auto;
+	background-position-y: -40px; 
 	z-index: 1000;
 	height-min: 760px;
 	@include media(500px) {
-		background-size: 780px auto;
+		// background-size: 780px auto;
 	}
 	@include media($tablet) {
 		padding-top: 0;
-		background: #466679 url("images/bg-welcome.jpg") top center no-repeat;
+		background: #e9f1ed url("images/bg-welcome.jpg") top center no-repeat;
 		background-size: 138% auto;
 		// height: 550px;
 		max-height: none;
@@ -53,186 +55,76 @@ footer,
 }
 
 .welcome .welcome-cta {
-	margin-top: 50px;
-	text-align: left;
+	margin-top: 140px;
+	padding-top: 350px;
+	text-align: center;
+	// background-color: $lightColor;
 	@include media($tablet) {
 		margin-top: 0;
-		max-width: 490px;
+		width: 490px;
+		height: 780px;
 		background: none;
-		padding-top: 120px;
+		padding-top: 220px;
 		padding-left: 50px;
 	}
 	@include media($desktop) {
-		max-width: none;
-		padding-top: 25vh;
-		padding-left: 10vw;
-		min-height: 600px;
+		width: 800px;
+		padding-top: 35vh;
+		margin-left: 2vw;
 	}
-	a {
-		text-decoration: none;
-	}
-	.home-logo {
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		margin-bottom: 320px;
-		background: #466679;
-		@include media($tablet) {
-			background: transparent;
-			padding: 0;
-			margin-bottom: 0;
-			background: transparent;
-			max-width: 365px;
-		}
-		text-align: center;
-		svg {
-			width: 180px;
-			height: 71px;
-			@include media($tablet) {
-				width: 358px;
-				height: auto;
-			}
-			path {fill:$lightColor;}
-		}
-		h1 {
-			margin: 0;
-			display: none;
-		}
-		span {
-			font-family: $secondaryFont;
-			display: block;
-			font-size: 16px;
-			@include media($tablet) {
-				font-size: 30px;
-			}
-			&:nth-of-type(1) {
-				@include media($tablet) {
-					margin-top: 20px;
-				}
-			}
-
-			&:nth-of-type(2) {
-				color: $primaryHighlight;
-				text-transform: uppercase;
-				letter-spacing: 1.5px;
-				@include media($tablet) {
-					letter-spacing: 2.5px;
-				}
-			}
-		}
-		.logo-line-top {
-			width: 190px;
-			margin: 0 auto;
-			height: 1px;
-			background-color: $lightColor;
-			@include media($tablet) {
-				width: 100%;
-				margin-top: 15px;
-				margin-bottom: 10px;
-			}
-		}
-		.logo-line-bottom {
-			width: 80px;
-			margin: 0 auto;
-			height: 1px;
-			background-color: $lightColor;
-			margin-top: 20px;
-			margin-bottom: 10px;
-			display: none;
-			@include media($tablet) {
-				display: block;
-			}
-		}
-
-	}
-	.home-addy {
-		margin-top: 10px;
-		margin-bottom: 25px;
-		display: none;
-		@include media($tablet) {
-			display: block;
-		}
-		i {
-			position: relative;
-			top: 3px;
-			color: $secondaryColor;
-			font-size: 24px;
-			margin-right: 10px;
-		}
-	}
-}
-.welcome-bottom-row {
-	text-align: left;
-	background: rgba( #375364, 1);
-	padding: 20px;
-
-	@include media($tablet) {
-		margin-top: 115px;
-		padding: 35px 5vw;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		align-items: center;
-		flex-direction: column;
-		justify-content: flex-start;
-		background: rgba( #375364, 1);
-	}
-	@include media($desktop) {
-		background: rgba( #000000, .3);
-		position: absolute;
-	}
-	@include media(1330px) {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		
+	@include media(1350px) {
+		margin-left: 10vw;
 	}
 	h2 {
-		color: $lightColor;
-		font-size: 20px;
-		line-height: 25px;
+		// max-width: 330px;
+		background: rgba( $lightColor, .8 );
+		padding: 10px 20px;
+		text-align: center;
+		font-size: 30px;
+		line-height: 34px;
 		@include media($tablet) {
-			font-size: 26px;
-			line-height: 35px;
+			background: transparent;
+			padding: 0px;
+			font-size: 38px;
+			line-height: 45px;
 		}
-		strong {
+		@include media($desktop) {
+			font-size: 80px;
+			line-height: 89px;
+		}
+		span {
+			margin-top: 0px;
+			margin-bottom: 0px;
 			display: block;
-			font-style: italic;
+			font-size: 13px;
+			@include media($tablet) {
+				margin-top: 10px;
+				margin-bottom: 40px;
+				font-size: 18px;
+				line-height: 22px;
+			}
+			@include media($desktop) {
+				font-size: 34px;
+				line-height: 32px;
+			}
 		}
 	}
-	.bottom-buttons {
-		margin-top: 20px;
-		@include media(1330px) {
-			margin-top: 0;
+	p {
+		padding-top: 20px;
+		background: $lightColor;
+		padding-left: 20px;
+		padding-right: 20px;
+		@include media($tablet) {
+			padding-top: 0;
+			background: transparent;
 		}
-
 	}
 	.button {
-		width: 100%;
+		margin-top: 10px;
+		// margin-bottom: 30px;
+
 		@include media($tablet) {
-			width: auto;
-		}
-		img {
-			margin-right: 15px;
-		}
-		&:nth-of-type(1){
-			margin-bottom: 10px;
-			background: rgb(72,105,124);
-			background: -moz-linear-gradient(-45deg, rgba(72,105,124,1) 0%, rgba(60,93,113,1) 44%, rgba(4,35,59,1) 100%);
-			background: -webkit-linear-gradient(-45deg, rgba(72,105,124,1) 0%,rgba(60,93,113,1) 44%,rgba(4,35,59,1) 100%);
-			background: linear-gradient(135deg, rgba(72,105,124,1) 0%,rgba(60,93,113,1) 44%,rgba(4,35,59,1) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48697c', endColorstr='#04233b',GradientType=1 );
-			@include media($tablet) {
-				margin-right: 10px;
-				
-			}
-			&:hover {
-			background: linear-gradient(135deg, rgba(4,35,59,1) 0%,rgba(4,35,59,1) 44%,rgba(4,35,59,1) 100%);
-			}
-		}
-		&:nth-of-type(2){
-			background-color: $secondaryColor;
+			margin-top: 20px;
 		}
 	}
 }

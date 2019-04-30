@@ -8,36 +8,9 @@
 <div class="welcome-parallax will-parallax parallax-welcome">
 	<div class="welcome" id="skiptomaincontent">
 		<div class="welcome-cta">
-			<div class="home-logo">
-				<a href="<?php bloginfo('url'); ?>">
-					<?php inline_svg('logo') ?>
-					<h1>Polacek Center for Plastic Surgery</h1>
-					<span>Non-Surgical Rejuvenation</span>
-					<div class="logo-line-top"></div>
-					<span>Lori G. Polacek, MD</span>
-					<div class="logo-line-bottom"></div>
-				</a>
-			</div>
-			<div class="home-addy">
-				<?php if(have_rows('locations', 'option')): ?>
-					<?php while(have_rows('locations', 'option')): the_row(); ?>
-						<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
-							<i class="fas fa-map-marker-alt"></i> <?php the_sub_field('address', 'option'); ?> <?php the_sub_field('city', 'option'); ?>
-						</a>
-					<?php endwhile; ?>
-				<?php endif; ?>
-			</div>
-		</div>
-		<div class="welcome-bottom-row">
-			<div class="bottom-tag">
-				<h2>
-					<?php the_field('welcome_headline'); ?>
-				</h2> 
-					</div>
-			<div class="bottom-buttons">
-				<a href="<?php the_field('procedures_button'); ?>" class="button" rel="nofollow" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-procedure.png" alt="icon">Procedures</a>
-				<a href="<?php the_field('request_an_appointment_button'); ?>" class="button" rel="nofollow" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-calendar.png" alt="icon">Request an Appointment</a>
-			</div>
+			<h2><?php the_field('welcome_headline'); ?></h2>
+			<?php the_field('welcome_content'); ?>
+			<a href="<?php the_field('gallery_button'); ?>" class="button" rel="nofollow" rel="nofollow">Patient Photo Gallery</a>
 		</div>
 	</div>
 </div> 
