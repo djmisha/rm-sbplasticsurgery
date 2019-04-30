@@ -123,7 +123,7 @@
 				if ($(".parallax").hasClass("parallax")) {
 					$(".will-parallax").waypoint(function() {
 						$(".parallax-welcome").parallax("center", -0.3, true); 
-						$(".home-doctor-parallax").parallax("center", 0.2, true);
+						$(".home-doctor-parallax").parallax("center", -0.2, true);
 						$(".home-reviews-parallax").parallax("center", -0.2, true);
 						$('.parallax-home-breast').parallax('center', -0.3, true , 'is-parallaxing');
 						$(".parallax-internal-header").parallax("center", -0.1, true);
@@ -244,14 +244,14 @@
 ========================================================*/
 
 
-const redeemBtns = document.querySelectorAll('.news-specials .button');
+// const redeemBtns = document.querySelectorAll('.news-specials .button');
 
-redeemBtns.forEach(function(btn) {
-	btn.addEventListener("click", function(event) {
-		let specialSlug = this.getAttribute('data-label');
-		let specialMessageText = "I'm interested in " +  specialSlug;
-		const specialMessageArea = document.querySelector('#message-12');
+// redeemBtns.forEach(function(btn) {
+// 	btn.addEventListener("click", function(event) {
+// 		let specialSlug = this.getAttribute('data-label');
+// 		let specialMessageText = "I'm interested in " +  specialSlug;
+// 		const specialMessageArea = document.querySelector('#message-12');
 
-		specialMessageArea.value = specialMessageText;
-	});
-});
+// 		specialMessageArea.value = specialMessageText;
+// 	});
+// });

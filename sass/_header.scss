@@ -62,11 +62,9 @@
 }
 
 .nav-bar-logo {
-	position: absolute;
-	top: 70px;
-	left: 0;
-	right: 0;
+	display: none;
 	@include media($tablet) {
+		display: block;
 		position: absolute;
 		top: 5px;
 	}

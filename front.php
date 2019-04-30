@@ -5,7 +5,12 @@
 <?get_header()?>
 
 
-<div class="welcome-parallax will-parallax parallax-welcome">
+<div class="welcome-parallax will-parallax parallax-welcome" id="skiptomaincontent">
+	<div class="welcome-logo">
+		<a href="<?php bloginfo('url'); ?>">
+			<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo">
+		</a>
+	</div>
 	<div class="welcome" id="skiptomaincontent">
 		<div class="welcome-cta">
 			<h2><?php the_field('welcome_headline'); ?></h2>
@@ -16,7 +21,37 @@
 </div> 
 
 
-<section class="home-doctor will-parallax home-doctor-parallax">
+
+
+
+<div class="home-featured-procedures">
+	<?php if(have_rows('featured_procedures_1')): ?>
+		<?php $count = 3; ?>
+		<ul>
+			<?php while(have_rows('featured_procedures_1')): the_row(); ?>
+				<li style="background-image: url('<?php the_sub_field('image'); ?>');" class="wow fadeIn" data-wow-offset="0" data-wow-delay=".<?echo $count; ?>0s" data-wow-duration="1.5s" >
+						<div class="feat-overlay">
+							<div class="feat-links">
+								
+							<?php if(have_rows('procedure_links')): ?>
+									<?php while(have_rows('procedure_links')): the_row(); ?>
+										<a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a>
+											<?php the_sub_field(''); ?>
+									<?php endwhile; ?>
+							<?php endif; ?>
+						</div>
+							</div>
+						<div class="proced-name">
+							<?php the_sub_field('headline'); ?>
+						</div>
+				</li>
+				<?php $count++; ?>
+			<?php endwhile; ?>
+		</ul>
+	<?php endif; ?>
+</div>
+
+<section class="home-doctor b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-doctors.jpg">
 	<div class="doc-content">
 		<img src="<?php bloginfo('template_directory'); ?>/images/img-doctors.png" alt="doctor" class="doc-image">
 		<h2><?php the_field('doctor_head'); ?></h2>
@@ -31,80 +66,22 @@
 			</ul>
 		<?php endif; ?>
 	</div>
-	<div class="doctors-buttons">
+	<!-- <div class="doctors-buttons">
 		<div class="doctors-buttons-again">
 			<a href="<?php the_field('doctor_bio_button'); ?>" rel="nofollow">Lori G. Polacek, MD <span>Board-Certified Plastic Surgeon</span> </a>
 			<a href="<?php the_field('assistant_bio_button'); ?>" rel="nofollow">Beth Walker <span> Medical Aesthetician </span> </a> 
 		</div>
-	</div>
+	</div> -->
 </section>
 
 
-<section class="home-why-choose">
-	<div class="choosy-border"></div>
-	<h2><?php the_field('why_choose_headline'); ?></h2>
-	<div class="choosy-border-smaller"></div>
-	<h3><?php the_field('why_choose_subheadline'); ?></h3>
-	<div class="why-choose-content">
-		<?php the_field('why_choose_content'); ?>
-		<?php if(have_rows('why_choose_logos')): ?>
-			<ul>
-				<?php while(have_rows('why_choose_logos')): the_row(); ?>
-					<li>
-						<img src="<?php the_sub_field('logo'); ?>" alt="logo">
-					</li>
-				<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>
-	</div>
-	<div class="choosy-border"></div>
-</section>
-
-
-<div class="home-featured-procedures">
-	<?php if(have_rows('featured_procedures_1')): ?>
-		<?php $count = 3; ?>
-		<ul>
-			<?php while(have_rows('featured_procedures_1')): the_row(); ?>
-				<li style="background-image: url('<?php the_sub_field('image'); ?>');" class="wow fadeIn" data-wow-offset="0" data-wow-delay=".<?echo $count; ?>0s" data-wow-duration="1.5s" >
-					<a href="<?php the_sub_field('link'); ?>" rel="nofollow">
-						<div class="feat-overlay"></div>
-						<div class="the-seth">
-							<div class="the-seth-button">
-								<div class="the-seth-button-again">
-									<?php the_sub_field('headline'); ?>
-									<span>Learn More</span>
-									<div class="seths-line"></div>
-								</div>	
-							</div>	
-						</div>
-					</a>
-				</li>
-				<?php $count++; ?>
-			<?php endwhile; ?>
-		</ul>
-	<?php endif; ?>
+<div class="home-featured-breast b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-feature.jpg" >
+		<span><?php the_field('breast_feature_subheadline'); ?></span>
+		<h2><?php the_field('breast_feature_headline'); ?></h2>
+		<?php the_field('breast_feature_content'); ?>
+		<a href="<?php the_field('breast_aug_link'); ?>" class="button" rel="nofollow" name="Learn More">Learn More</a>
 </div>
 
-
-<section class="home-reviews will-parallax home-reviews-parallax">
-	<div class="the-review-box">
-		<div class="the-review">
-			<div class="the-stars">
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-			</div>
-			<?php the_field('home_reviews_content'); ?>
-		</div>
-	</div>
-	<div class="review-buttons">
-		<a href="<?php the_field('read_more_reviews_button'); ?>" class="button" rel="nofollow">Read More Reviews</a>
-		<a href="<?php the_field('leave_your_review_button'); ?>" class="button" rel="nofollow">Leave Your Review</a>
-	</div>
-</section>
 
 
 <section class="home-media-results">

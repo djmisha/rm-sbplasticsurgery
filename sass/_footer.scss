@@ -179,6 +179,7 @@
 
 
 .model-disc {
+	clear: both;
 	font-size: 12px;
 	line-height: 16px;
 	margin: 0 auto;
@@ -190,10 +191,11 @@
 	width: 100%;
 	@include media($desktop) {
 		display: block;
-		max-width: 600px;
-		margin: 0;
+		max-width: 700px;
+		margin: 0 auto;
 		margin-top: 10px;
-		text-align: left;
+		margin-bottom: 40px;
+		// text-align: left;
 	}
 }
 
