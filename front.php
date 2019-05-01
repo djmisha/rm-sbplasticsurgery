@@ -3,9 +3,9 @@
 ?>
 
 <?get_header()?>
+		
 
-
-<div class="welcome-parallax will-parallax parallax-welcome" id="skiptomaincontent">
+<div class="welcome-parallax will-parallax parallax-welcome b-lazy" id="skiptomaincontent" data-src="<?php bloginfo('template_directory'); ?>/images/bg-welcome.jpg">
 	<div class="welcome-logo">
 		<a href="<?php bloginfo('url'); ?>">
 			<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo">
@@ -19,8 +19,6 @@
 		</div>
 	</div>
 </div> 
-
-
 
 
 
@@ -51,27 +49,14 @@
 	<?php endif; ?>
 </div>
 
-<section class="home-doctor b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-doctors.jpg">
+<section class="home-doctor home-doctor-parallax will-parallax b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-doctors.jpg">
 	<div class="doc-content">
-		<img src="<?php bloginfo('template_directory'); ?>/images/img-doctors.png" alt="doctor" class="doc-image">
+		<img data-src="<?php bloginfo('template_directory'); ?>/images/img-doctors.png" alt="doctor" class="doc-image b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
 		<h2><?php the_field('doctor_head'); ?></h2>
 		<?php the_field('doctor_cont'); ?>
-		<?php if(have_rows('doctor_logos')): ?>
-			<ul class="home-buttons-list" >
-				<?php while(have_rows('doctor_logos')): the_row(); ?>
-					<li>
-						<img src="<?php the_sub_field('logo'); ?>" alt="logo image">
-					</li>
-				<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>
+		<a href="<?php the_field('meet_dr_scholer_button'); ?>" rel="nofollow" class="button">Meet Dr. Schooler</a>
+		<a href="<?php the_field('meet_dr_irvine_button'); ?>" rel="nofollow" class="button">Meet Dr. Irvine</a>
 	</div>
-	<!-- <div class="doctors-buttons">
-		<div class="doctors-buttons-again">
-			<a href="<?php the_field('doctor_bio_button'); ?>" rel="nofollow">Lori G. Polacek, MD <span>Board-Certified Plastic Surgeon</span> </a>
-			<a href="<?php the_field('assistant_bio_button'); ?>" rel="nofollow">Beth Walker <span> Medical Aesthetician </span> </a> 
-		</div>
-	</div> -->
 </section>
 
 

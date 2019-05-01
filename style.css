@@ -4253,12 +4253,6 @@ body {
   font: 15px/24px "Lato", sans-serif;
 }
 
-@media only screen and (min-width: 1080px) {
-  body {
-    font: 17px/26px "Lato", sans-serif;
-  }
-}
-
 p {
   margin: 0 0 1em;
 }
@@ -6310,10 +6304,6 @@ aside li {
 /* ------------------------
 	Home Page
 ------------------------ */
-.home-media-results {
-  display: none !important;
-}
-
 .home h2 {
   margin: 0;
   font-family: "Lora", serif;
@@ -6324,14 +6314,15 @@ aside li {
 ===============================================*/
 @media only screen and (min-width: 1080px) {
   .welcome-parallax {
-    background: #e9f1ed url("images/bg-welcome.jpg") center center;
     background-repeat: no-repeat;
   }
 }
 
 @media only screen and (min-width: 1660px) {
   .welcome-parallax {
+    background-position: center center;
     background-size: cover;
+    background-color: #e9f1ed;
   }
 }
 
@@ -6487,21 +6478,27 @@ aside li {
   padding-bottom: 40px;
   position: relative;
   background-color: #f1efec;
-  background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
 }
 
 @media only screen and (min-width: 768px) {
   .home-doctor {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 150px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .home-doctor {
+    padding-top: 100px;
+    padding-bottom: 100px;
     height: 670px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .home-doctor {
+    background-size: cover;
   }
 }
 
@@ -6522,74 +6519,52 @@ aside li {
   }
 }
 
+.home-doctor h2 span:nth-of-type(1) {
+  display: block;
+  color: #a6a3a0;
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.home-doctor h2 span:nth-of-type(2) {
+  color: #a6a3a0;
+}
+
+.home-doctor p {
+  text-shadow: 1px 1px 4px #ffffff;
+}
+
 .home-doctor p a {
-  text-decoration: underline;
   color: #3a4859;
+  text-decoration: underline;
 }
 
-.home-doctor a {
-  border: 1px solid transparent;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor a:hover {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.1);
-  }
+.home-doctor .doc-content {
+  padding-right: 30%;
 }
 
 @media only screen and (min-width: 768px) {
   .home-doctor .doc-content {
-    padding-right: 55%;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .home-doctor .doc-content {
-    padding-right: 45%;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-doctor .doc-content {
-    padding-right: 55%;
+    padding-right: 0;
+    padding-left: 50%;
   }
 }
 
 .home-doctor .doc-content img.doc-image {
-  width: 140px;
+  width: 160px;
   position: absolute;
   bottom: 0px;
-  right: -20px;
+  right: 10px;
   z-index: 2;
-}
-
-@media only screen and (min-width: 375px) {
-  .home-doctor .doc-content img.doc-image {
-    width: 180px;
-  }
-}
-
-@media only screen and (min-width: 480px) {
-  .home-doctor .doc-content img.doc-image {
-    right: calc(50% - 200px);
-  }
 }
 
 @media only screen and (min-width: 768px) {
   .home-doctor .doc-content img.doc-image {
-    width: 350px;
+    width: 410px;
     position: absolute;
-    right: calc(50% - 350px);
-    bottom: 246px;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .home-doctor .doc-content img.doc-image {
-    bottom: 120px;
-    right: 30px;
-    width: 360px;
+    left: calc(50% - 450px);
+    bottom: 0px;
   }
 }
 
@@ -6597,75 +6572,12 @@ aside li {
   .home-doctor .doc-content img.doc-image {
     width: auto;
     position: absolute;
-    bottom: -150px;
-    right: calc(50% - 550px);
+    left: calc(50% - 550px);
   }
 }
 
-.home-doctor .doctors-buttons {
-  z-index: 2000px;
-  margin-top: 100px;
-  width: 100%;
-  background: #bd813e;
-  padding: 20px;
-  -webkit-box-shadow: 10px 10px 15px rgba(58, 72, 89, 0.3);
-          box-shadow: 10px 10px 15px rgba(58, 72, 89, 0.3);
-  width: calc(100% + 40px);
-  left: -20px;
-  position: relative;
-  z-index: 1;
-}
-
-.home-doctor .doctors-buttons-again {
-  -webkit-transition: all .35s ease-in-out;
-  transition: all .35s ease-in-out;
-  padding: 15px;
-  -webkit-box-shadow: 10px 10px 15px rgba(58, 72, 89, 0.3);
-          box-shadow: 10px 10px 15px rgba(58, 72, 89, 0.3);
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor .doctors-buttons-again {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-}
-
-.home-doctor .doctors-buttons-again a {
-  width: 100%;
-  padding: 10px 0px;
-  font-family: "Lora", serif;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor .doctors-buttons-again a {
-    width: auto;
-    font-size: 28px;
-    padding: 10px 40px;
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-  }
-}
-
-.home-doctor .doctors-buttons-again a span {
-  font-family: "Lato", sans-serif;
-  display: block;
-  font-size: 12px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctor .doctors-buttons-again a span {
-    font-size: 16px;
-  }
+.home-doctor .button {
+  margin-top: 30px;
 }
 
 /*================================================

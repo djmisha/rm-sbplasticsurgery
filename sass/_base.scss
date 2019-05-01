@@ -12,10 +12,6 @@ body {
 	min-width: 320px;
 	text-align: center;
 	font: 15px/24px $defaultfont;
-	@include media($desktop) {
-		font: 17px/26px $defaultfont;
-	}
-	// @include customfont();
 }
 
 p {

@@ -123,7 +123,7 @@
 				if ($(".parallax").hasClass("parallax")) {
 					$(".will-parallax").waypoint(function() {
 						$(".parallax-welcome").parallax("center", -0.3, true); 
-						$(".home-doctor-parallax").parallax("center", -0.2, true);
+						$(".home-doctor-parallax").parallax("center", -0.4, true);
 						$(".home-reviews-parallax").parallax("center", -0.2, true);
 						$('.parallax-home-breast').parallax('center', -0.3, true , 'is-parallaxing');
 						$(".parallax-internal-header").parallax("center", -0.1, true);
