@@ -60,16 +60,15 @@
 </section>
 
 
-<div class="home-featured-breast b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-feature.jpg" >
-		<span><?php the_field('breast_feature_subheadline'); ?></span>
-		<h2><?php the_field('breast_feature_headline'); ?></h2>
-		<?php the_field('breast_feature_content'); ?>
-		<a href="<?php the_field('breast_aug_link'); ?>" class="button" rel="nofollow" name="Learn More">Learn More</a>
+<div class="home-aboutus b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-about.jpg">
+	<h2><?php the_field('about_headline'); ?></h2>
+	<?php the_field('about_content'); ?>
+	<a href="<?php the_field('about_learn_more_button'); ?>" class="button" rel="nofollow" name="Learn More">Learn More</a>
+
 </div>
 
 
-
-<section class="home-media-results">
+<section class="home-patients b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-patients.jpg">
 	<div class="the-media">
 		<h2>In the Media</h2>
 		<div class="media-border-smaller"></div>
@@ -85,5 +84,14 @@
 		<a href="<?php bloginfo('template_directory'); ?>/gallery/" class="button" rel="nofollow">Photo Gallery</a>
 	</div>	
 </section>	
+
+
+
+<div class="home-featured-breast b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-feature.jpg" >
+		<span><?php the_field('breast_feature_subheadline'); ?></span>
+		<h2><?php the_field('breast_feature_headline'); ?></h2>
+		<?php the_field('breast_feature_content'); ?>
+		<a href="<?php the_field('breast_aug_link'); ?>" class="button" rel="nofollow" name="Learn More">Learn More</a>
+</div>
 
 <?get_footer()?>

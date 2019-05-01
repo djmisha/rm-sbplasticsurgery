@@ -6304,6 +6304,14 @@ aside li {
 /* ------------------------
 	Home Page
 ------------------------ */
+header,
+.welcome,
+footer,
+.home-doctor,
+.home-featured-procedures {
+  display: none !important;
+}
+
 .home h2 {
   margin: 0;
   font-family: "Lora", serif;
@@ -6580,6 +6588,54 @@ aside li {
   margin-top: 30px;
 }
 
+/*====================================
+=            home-aboutus            =
+====================================*/
+.home-aboutus {
+  background-position: top center;
+  background-size: 90vw auto;
+  background-repeat: no-repeat;
+  background-position-y: 40px;
+  padding-top: 110vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 1080px) {
+  .home-aboutus {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-size: 50% auto;
+    background-position: center center;
+    background-position-y: 60px;
+    background-position-x: right 60px;
+    padding-left: 40px;
+    padding-right: 60%;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .home-aboutus {
+    padding-top: 300px;
+    padding-bottom: 350px;
+    padding-left: 0;
+    padding-right: 50%;
+  }
+}
+
+.home-aboutus p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 1450px) {
+  .home-aboutus p {
+    max-width: 600px;
+  }
+}
+
 /*================================================
 =            home-featured-procedures            =
 ================================================*/
@@ -6786,24 +6842,22 @@ aside li {
   }
 }
 
-.home-media-results {
-  background: #48697c;
-  background: linear-gradient(135deg, #48697c 0%, #3c5d71 24%, #04233b 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48697c', endColorstr='#04233b',GradientType=1 );
+.home-patients {
+  background-position: bottom center;
   color: #ffffff;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
-  .home-media-results {
+  .home-patients {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
-  .home-media-results {
+  .home-patients {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6813,7 +6867,7 @@ aside li {
   }
 }
 
-.home-media-results .media-border-smaller {
+.home-patients .media-border-smaller {
   height: 1px;
   width: 100px;
   background: #ffffff;
@@ -6822,33 +6876,33 @@ aside li {
   margin-bottom: 25px;
 }
 
-.home-media-results p {
+.home-patients p {
   text-align: left;
 }
 
-.home-media-results p a {
+.home-patients p a {
   color: #ffffff;
   text-decoration: underline;
 }
 
-.home-media-results .the-media {
+.home-patients .the-media {
   max-width: 570px;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 1080px) {
-  .home-media-results .the-media {
+  .home-patients .the-media {
     width: auto;
   }
 }
 
-.home-media-results .the-results {
+.home-patients .the-results {
   margin-top: 60px;
   width: 100%;
 }
 
 @media only screen and (min-width: 1080px) {
-  .home-media-results .the-results {
+  .home-patients .the-results {
     margin-top: 0;
     margin-left: 80px;
     width: 48%;
@@ -6856,17 +6910,17 @@ aside li {
 }
 
 @media only screen and (min-width: 1480px) {
-  .home-media-results .the-results {
+  .home-patients .the-results {
     margin-left: 0;
   }
 }
 
-.home-media-results .the-results .button {
+.home-patients .the-results .button {
   margin-top: 40px;
   width: 200px;
 }
 
-.home-media-results .results-images {
+.home-patients .results-images {
   width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6881,7 +6935,7 @@ aside li {
   margin-right: 20px;
 }
 
-.home-media-results .results-images img {
+.home-patients .results-images img {
   width: 50%;
   height: auto;
   -webkit-box-shadow: 10px 10px 15px rgba(58, 72, 89, 0.3);
@@ -6890,17 +6944,17 @@ aside li {
 }
 
 @media only screen and (min-width: 768px) {
-  .home-media-results .results-images img {
+  .home-patients .results-images img {
     width: 100%;
   }
 }
 
-.home-media-results .results-images img:first-of-type {
+.home-patients .results-images img:first-of-type {
   margin-right: 40px;
 }
 
 @media only screen and (min-width: 768px) {
-  .home-media-results .results-images img:first-of-type {
+  .home-patients .results-images img:first-of-type {
     margin-right: 40px;
   }
 }

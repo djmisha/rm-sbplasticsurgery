@@ -1,12 +1,13 @@
 header,
 .welcome,
 footer,
-// .home-doctor,
+.home-doctor,
+// .home-aboutus,
 .home-featured-procedures,
-.home-featured-breast,
-.home-media-results
+// .home-featured-breast,
+// .home-patients
  {
- 	// display: none !important;
+ 	display: none !important;
 }
 
 
@@ -236,6 +237,51 @@ footer,
 
 
 
+/*====================================
+=            home-aboutus            =
+====================================*/
+
+.home-aboutus {
+	background-position: top center;
+	background-size: 90vw auto;
+	background-repeat: no-repeat;
+	background-position-y: 40px; 
+	padding-top: 110vw  ;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+
+	@include media($desktop) {
+		padding-top: 150px;
+		padding-bottom: 150px;
+		background-size: 50% auto;
+		background-position: center center;
+		background-position-y: 60px; 
+		background-position-x: right 60px; 
+		padding-left: 40px;
+		// padding-right: 67%;
+		padding-right: 60%;
+	}
+	@include media($full) {
+		padding-top: 300px;
+		padding-bottom: 350px;
+		// background-size: auto auto;
+		padding-left: 0;
+		padding-right: 50%;
+	}
+	p {
+		text-align: left;
+		margin: 0 auto;
+		margin-top: 30px;
+		@include media(1450px) {
+			max-width: 600px;
+		}
+	}
+}
+
+
+
+
 /*================================================
 =            home-featured-procedures            =
 ================================================*/
@@ -410,12 +456,8 @@ footer,
 
 
 
-.home-media-results {
-	background: rgb(72,105,124);
-	background: -moz-linear-gradient(-45deg, rgba(72,105,124,1) 0%, rgba(60,93,113,1) 24%, rgba(4,35,59,1) 100%);
-	background: -webkit-linear-gradient(-45deg, rgba(72,105,124,1) 0%,rgba(60,93,113,1) 24%,rgba(4,35,59,1) 100%);
-	background: linear-gradient(135deg, rgba(72,105,124,1) 0%,rgba(60,93,113,1) 24%,rgba(4,35,59,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48697c', endColorstr='#04233b',GradientType=1 );
+.home-patients {
+	background-position: bottom center;
 	color: $lightColor;
 	padding-top: 40px;
 	padding-bottom: 40px;
