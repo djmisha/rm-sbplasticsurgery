@@ -1,11 +1,11 @@
-<?get_header()?>
+<?php get_header()?>
 
 <section class="interior">
-	<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 		<article class="content">
 			<!-- <h1><?php //the_title(); ?></h1> -->
-			<!-- <div class="meta-data">Posted on <?the_time('M');?> <?the_time('j');?>, <? the_time('Y'); ?> <?php the_category(', '); ?></div> -->
-			<?the_content();?>
+			<!-- <div class="meta-data">Posted on <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> <?php the_category(', '); ?></div> -->
+			<?php the_content();?>
 			<?php edit_post_link( $link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id ); ?>
 			<div class="next-prev">
 				<?php
@@ -25,4 +25,4 @@
 		<?endwhile; endif;?>
 		<?php get_sidebar()?>
 	</section>
-<?get_footer()?>
+<?php get_footer()?>

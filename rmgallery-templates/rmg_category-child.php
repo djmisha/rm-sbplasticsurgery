@@ -1,4 +1,4 @@
-<? get_header();?>
+<?php get_header();?>
 <main class="interior">
 
 <div class="back-btn"><a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a>
@@ -6,7 +6,7 @@
 </div>
 	<section class="gallery-cat-wrap">
 
-		<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 				<?php
 				$limit = 1;// could probably set this as an wp option
 				foreach ($post->cases as $key => $value) {
@@ -63,4 +63,4 @@
 </section>
 </main>
 
-<? get_footer();?>
+<?php get_footer();?>

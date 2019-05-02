@@ -110,7 +110,7 @@
 			<div class="heading-text">Blog</div>
 		<?php elseif (is_single()): ?>
 			<h1><?php the_title(); ?></h1>
-			<div class="meta-data">Posted on <?the_time('M');?> <?the_time('j');?>, <? the_time('Y'); ?> <?php the_category(', '); ?></div>
+			<div class="meta-data">Posted on <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> <?php the_category(', '); ?></div>
 		<?php else: ?> 
 			<h1><?the_title();?></h1>
 		<?php endif; ?>

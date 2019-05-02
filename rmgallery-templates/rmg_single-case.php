@@ -1,8 +1,8 @@
-<? get_header();?>
+<?php get_header();?>
 
 <section class="gallery-nav">
 
-		<a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a>
+	<a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a>
 
 
 	<div class="gal-prev-next">
@@ -34,7 +34,7 @@
 	<div class="single-case-content">
 	<div class="single-case-border">
 		<div class="case-wrap">
-			<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 			<div class="img-wrap">
 				<?php foreach ( $post->rmg_case_imgs as $img ): ?>
 					<div class="before-img img-frame">
@@ -50,7 +50,7 @@
 			<?php if(!empty(get_the_content())): ?>
 				<div class="patient-details">
 					<span>Patient Details</span>
-					<?the_content();?>
+					<?php the_content();?>
 				</div>
 			<?php endif; ?>
 			<?endwhile; endif;?>
@@ -60,4 +60,4 @@
 
 </main>
 
-<? get_footer();?>
+<?php get_footer();?>

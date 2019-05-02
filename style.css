@@ -3937,8 +3937,8 @@ a.page-numbers.current:hover,
 
 /* Lazy Loading Images with a Fade */
 .b-lazy {
-  -webkit-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
   max-width: 100%;
   opacity: 0;
 }
@@ -6304,14 +6304,6 @@ aside li {
 /* ------------------------
 	Home Page
 ------------------------ */
-header,
-.welcome,
-footer,
-.home-doctor,
-.home-featured-procedures {
-  display: none !important;
-}
-
 .home h2 {
   margin: 0;
   font-family: "Lora", serif;
@@ -6323,6 +6315,7 @@ footer,
 @media only screen and (min-width: 1080px) {
   .welcome-parallax {
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -6336,8 +6329,9 @@ footer,
 
 .welcome {
   background: #fff url("images/bg-welcome.jpg") top right no-repeat;
-  background-size: 720px auto;
+  background-size: 760px auto;
   background-position-y: -40px;
+  background-position-x: right 0;
   z-index: 1000;
   height-min: 760px;
 }
@@ -6360,6 +6354,7 @@ footer,
 }
 
 .welcome-logo {
+  background: #ffffff;
   margin-top: 70px;
 }
 
@@ -6383,7 +6378,7 @@ footer,
 @media only screen and (min-width: 768px) {
   .welcome .welcome-cta {
     margin-top: 0;
-    width: 490px;
+    width: 440px;
     height: 780px;
     background: none;
     padding-top: 220px;
@@ -6396,12 +6391,6 @@ footer,
     width: 800px;
     padding-top: 35vh;
     margin-left: 2vw;
-  }
-}
-
-@media only screen and (min-width: 1350px) {
-  .welcome .welcome-cta {
-    margin-left: 10vw;
   }
 }
 
@@ -6457,12 +6446,20 @@ footer,
   background: #ffffff;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .welcome .welcome-cta p {
     padding-top: 0;
     background: transparent;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .welcome .welcome-cta p {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
 
@@ -6595,8 +6592,8 @@ footer,
   background-position: top center;
   background-size: 90vw auto;
   background-repeat: no-repeat;
-  background-position-y: 40px;
-  padding-top: 110vw;
+  background-position-y: top 40px;
+  padding-top: 115vw;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -6607,7 +6604,7 @@ footer,
     padding-top: 150px;
     padding-bottom: 150px;
     background-size: 50% auto;
-    background-position: center center;
+    background-position: center right;
     background-position-y: 60px;
     background-position-x: right 60px;
     padding-left: 40px;
@@ -6634,6 +6631,10 @@ footer,
   .home-aboutus p {
     max-width: 600px;
   }
+}
+
+.home-aboutus .button {
+  margin-top: 30px;
 }
 
 /*================================================
@@ -6844,19 +6845,18 @@ footer,
 
 .home-patients {
   background-position: bottom center;
-  color: #ffffff;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  background-repeat: no-repeat;
+  color: #233448;
+  padding: 40px 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .home-patients {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 40px;
   }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 768px) {
   .home-patients {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6867,13 +6867,45 @@ footer,
   }
 }
 
-.home-patients .media-border-smaller {
-  height: 1px;
-  width: 100px;
-  background: #ffffff;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 25px;
+.home-patients > div {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-patients > div {
+    width: 48%;
+  }
+}
+
+.home-patients .erins-wrappers {
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(166, 163, 160, 0.4);
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-patients .erins-wrappers {
+    padding: 50px 20px;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .home-patients .erins-wrappers {
+    padding: 50px 40px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .home-patients .erins-wrappers {
+    padding: 50px 100px;
+  }
+}
+
+.home-patients h2 {
+  margin-bottom: 30px;
 }
 
 .home-patients p {
@@ -6885,39 +6917,44 @@ footer,
   text-decoration: underline;
 }
 
-.home-patients .the-media {
+.home-patients .the-home-location {
   max-width: 570px;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 1080px) {
-  .home-patients .the-media {
+  .home-patients .the-home-location {
     width: auto;
   }
 }
 
-.home-patients .the-results {
-  margin-top: 60px;
+.home-patients .the-home-location img {
+  display: block;
+  margin-bottom: 20px;
   width: 100%;
 }
 
-@media only screen and (min-width: 1080px) {
-  .home-patients .the-results {
-    margin-top: 0;
-    margin-left: 80px;
-    width: 48%;
-  }
+.home-patients .the-home-location a {
+  text-decoration: none;
 }
 
-@media only screen and (min-width: 1480px) {
-  .home-patients .the-results {
-    margin-left: 0;
-  }
+.home-patients .the-home-location span {
+  text-decoration: underline;
 }
 
-.home-patients .the-results .button {
-  margin-top: 40px;
-  width: 200px;
+.home-patients .home-white-wrap {
+  background: #ffffff;
+  padding: 18px;
+}
+
+.home-patients .button {
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-patients .button {
+    margin-top: 40px;
+  }
 }
 
 .home-patients .results-images {
@@ -6931,31 +6968,17 @@ footer,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 .home-patients .results-images img {
   width: 50%;
   height: auto;
-  -webkit-box-shadow: 10px 10px 15px rgba(58, 72, 89, 0.3);
-          box-shadow: 10px 10px 15px rgba(58, 72, 89, 0.3);
-  border: 10px solid #ffffff;
+  border: 4px solid #ffffff;
 }
 
 @media only screen and (min-width: 768px) {
   .home-patients .results-images img {
     width: 100%;
-  }
-}
-
-.home-patients .results-images img:first-of-type {
-  margin-right: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-patients .results-images img:first-of-type {
-    margin-right: 40px;
   }
 }
 
