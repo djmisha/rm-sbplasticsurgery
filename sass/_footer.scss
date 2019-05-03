@@ -10,6 +10,49 @@
 }
 
 
+.sticky-form {
+	z-index: 9999;
+	background: $lightColor;
+	padding-top: 10px;
+	width: 100%;
+	position: fixed;
+	bottom: -145px;
+	right: 0;
+	left: 0;
+	border-top: 1px solid rgba($secondaryAlt, .4);
+	transition: all .5s ease-in-out;
+	&.sticky-fixed {
+		// position: 0;
+		bottom: 0px;
+	}
+	form {
+		display: flex;
+		justify-content: center;
+		.type-singlelinetext  {
+			margin-right: 5px !important;
+		}
+		.type-singlelinetext input {
+			border: 1px solid rgba($secondaryAlt, .4) !important;
+		}
+	}
+	.schedule-cta {
+		// font-size: 18px;
+		span {
+			font-family: $secondaryFont;
+			display: block;
+			font-size: 30px;
+			margin-top: 10pxl;
+			margin-bottom: 20px;
+		}
+	}
+	.submit-btn {
+		margin-left: 20px;
+	}
+
+}
+
+
+
 .upper-footer {
 	background-color: #e2e1dd;
 	background-position: bottom center;
@@ -174,7 +217,7 @@
 	background-color: $tertiaryColor;
 	color: $darkColor;
 	padding-top: 40px !important;
-	padding-bottom: 40px !important;
+	padding-bottom: 200px !important;
 }
 
 

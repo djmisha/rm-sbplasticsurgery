@@ -83,10 +83,11 @@
 
 
 
-<?php if(!is_front_page() ): 
-	// Inside Page Breadcrumbs and Page Title 
-	// Does not show on homepage
-?>
+	<?php if(!is_front_page() ): 
+		// Inside Page Breadcrumbs and Page Title 
+		// Does not show on homepage
+	?>
+	
 	<section class="site-crumbs">
 		<?php echo __salaciouscrumb(); ?>
 	</section>

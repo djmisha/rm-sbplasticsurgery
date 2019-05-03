@@ -5,8 +5,7 @@
 	<section class="upper-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg">
 		<div class="form-cta">
 			<div class="ask-docs">Ask the Doctors</div>
-			<p>
-				We look forward to answering your questions. <br />
+			<p>We look forward to answering your questions. <br />
 				Please fill out the form below or call the practice at <a href="" class="track-outbound" data-label="Phone - Footer">(805) 687-7336</a>.
 			</p>
 		</div>
@@ -46,7 +45,7 @@
 							<!-- <?php the_sub_field('name', 'option'); ?><br> -->
 							<?php the_sub_field('address', 'option'); ?> <?php the_sub_field('city', 'option'); ?> <br />
 						</a>
-						<a href="https://www.santabarbarabreast.com"><span>Visit Our Breast site: </span>www.santabarbarabreast.com</a>
+						<a href="https://www.santabarbarabreast.com" rel="noopener"><span>Visit Our Breast site: </span>www.santabarbarabreast.com</a>
 					</div>
 				<?php endwhile; ?>
 			<?php endif; ?>
@@ -59,6 +58,17 @@
 		<div class="rm-sig"><a href="<?php the_field('rm_footer_link', 'options'); ?>" target="_blank" rel="noopener" title="<?php the_field('rm_footer_text', 'options'); ?>"><?php the_field('rm_footer_text', 'options'); ?></a> by <a href="https://www.rosemontmedia.com/" title="Rosemont Media" target="_blank" rel="noopener"><?php inline_svg('rm-logo'); ?></a></div>
 		</div>
 		
+
+		<?php if(!is_page(array('contact-us'))): ?>
+		<div class="sticky-form">
+			<div class="schedule-cta">
+			For more information on how we can help you reach your goals 
+			<span>Schedule a Complimentary Consultation Today!</span>
+			</div>
+			<?php echo do_shortcode('[seaforms name="home-quick-contact"]'); ?>
+		</div>
+		<?php endif; ?>
+
 	</section>  
 
 </footer>

@@ -4109,7 +4109,7 @@ img.aligncenter,
 .seaforms .type-textarea textarea {
   background: #fff;
   width: 100%;
-  border: 1px solid white !important;
+  border: 1px solid white;
   background: #fff;
   font-size: 16px;
   padding: 12px 10px;
@@ -5870,6 +5870,53 @@ aside li {
   display: none;
 }
 
+.sticky-form {
+  z-index: 9999;
+  background: #ffffff;
+  padding-top: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: -145px;
+  right: 0;
+  left: 0;
+  border-top: 1px solid rgba(166, 163, 160, 0.4);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.sticky-form.sticky-fixed {
+  bottom: 0px;
+}
+
+.sticky-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sticky-form form .type-singlelinetext {
+  margin-right: 5px !important;
+}
+
+.sticky-form form .type-singlelinetext input {
+  border: 1px solid rgba(166, 163, 160, 0.4) !important;
+}
+
+.sticky-form .schedule-cta span {
+  font-family: "Lora", serif;
+  display: block;
+  font-size: 30px;
+  margin-top: 10pxl;
+  margin-bottom: 20px;
+}
+
+.sticky-form .submit-btn {
+  margin-left: 20px;
+}
+
 .upper-footer {
   background-color: #e2e1dd;
   background-position: bottom center;
@@ -6074,7 +6121,7 @@ aside li {
   background-color: #fafbf9;
   color: #233448;
   padding-top: 40px !important;
-  padding-bottom: 40px !important;
+  padding-bottom: 200px !important;
 }
 
 .model-disc {

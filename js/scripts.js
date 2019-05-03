@@ -31,6 +31,35 @@
 		}).init();
 
 
+		/*===================================
+		=            Sticky Form            =
+		===================================*/
+		
+		var stickyform = document.querySelector('.sticky-form');
+		
+		if(stickyform) {
+
+			console.log('yes there is this');
+			let stickyContactTop = 300;
+
+			let stickyContact = function(){
+
+				let scrollTop = $(window).scrollTop();
+
+					if (scrollTop > stickyContactTop) {
+						$('.sticky-form').addClass('sticky-fixed');
+					} else {
+						$('.sticky-form').removeClass('sticky-fixed');
+
+					}
+				};
+
+			$(window).scroll(function() {
+				stickyContact();
+			});
+
+		}
+
 		/* --------------------------------------------------
 			Blazy
 		-------------------------------------------------- */
