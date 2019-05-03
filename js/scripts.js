@@ -39,25 +39,57 @@
 		
 		if(stickyform) {
 
-			console.log('yes there is this');
-			let stickyContactTop = 300;
+			if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
 
-			let stickyContact = function(){
+				// console.log('yes there is this');
+				let stickyContactTop = 300;
 
-				let scrollTop = $(window).scrollTop();
+				let stickyContact = function(){
 
-					if (scrollTop > stickyContactTop) {
-						$('.sticky-form').addClass('sticky-fixed');
-					} else {
-						$('.sticky-form').removeClass('sticky-fixed');
+					let scrollTop = $(window).scrollTop();
 
-					}
-				};
+						if (scrollTop > stickyContactTop) {
+							$('.sticky-form').addClass('sticky-fixed');
+						} else {
+							$('.sticky-form').removeClass('sticky-fixed');
 
-			$(window).scroll(function() {
-				stickyContact();
-			});
+						}
+					};
 
+				$(window).scroll(function() {
+					stickyContact();
+				});
+				
+			}
+		}
+
+
+		var navbar = document.querySelector('.nav-bar');
+		
+		if(navbar) {
+
+			if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
+
+				// console.log('yes there is this');
+				let navbarTop = 300;
+
+				let changeupNav = function(){
+
+					let scrollnavTop = $(window).scrollTop();
+
+						if (scrollnavTop > navbarTop) {
+							$('.nav-bar').addClass('change-up-nav');
+						} else {
+							$('.nav-bar').removeClass('change-up-nav');
+
+						}
+					};
+
+				$(window).scroll(function() {
+					changeupNav();
+				});
+				
+			}
 		}
 
 		/* --------------------------------------------------

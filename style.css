@@ -4416,6 +4416,8 @@ main,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
 }
 
 @media only screen and (min-width: 768px) {
@@ -4437,6 +4439,28 @@ main,
     display: block;
     height: 130px;
     top: 0px;
+  }
+}
+
+.nav-bar.change-up-nav {
+  height: 90px;
+}
+
+.nav-bar.change-up-nav .navbar-social {
+  top: -20px;
+  opacity: 0;
+}
+
+.nav-bar.change-up-nav .nav-bar-extras {
+  top: -10px;
+}
+
+@media only screen and (min-width: 1340px) {
+  .nav-bar.change-up-nav .nav-bar-logo {
+    width: 400px;
+  }
+  .nav-bar.change-up-nav .nav-bar-logo img {
+    width: 100%;
   }
 }
 
@@ -4482,6 +4506,8 @@ main,
 }
 
 .nav-bar-logo {
+  -webkit-transition: width .5s ease-out;
+  transition: width .5s ease-out;
   display: none;
 }
 
@@ -4501,7 +4527,15 @@ main,
   }
 }
 
+@media only screen and (min-width: 1340px) {
+  .nav-bar-logo {
+    width: 500px;
+  }
+}
+
 .nav-bar-logo img {
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
   max-width: 330px;
 }
 
@@ -4514,21 +4548,20 @@ main,
 
 @media only screen and (min-width: 1080px) {
   .nav-bar-logo img {
-    width: 420px;
     height: auto;
-    margin-top: 15px;
+    width: 320px;
   }
 }
 
 @media only screen and (min-width: 1340px) {
   .nav-bar-logo img {
-    margin-top: 0;
-    margin-left: -10px;
-    width: auto;
+    width: 100%;
   }
 }
 
 .nav-bar-extras {
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
   height: 100%;
   top: 0px;
   right: 0px;
@@ -5875,26 +5908,55 @@ aside li {
   background: #ffffff;
   padding-top: 10px;
   width: 100%;
+  height: 500px;
   position: fixed;
-  bottom: -145px;
+  bottom: -500px;
   right: 0;
   left: 0;
   border-top: 1px solid rgba(166, 163, 160, 0.4);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .sticky-form {
+    height: auto;
+    bottom: -155px;
+  }
 }
 
 .sticky-form.sticky-fixed {
   bottom: 0px;
 }
 
+@media only screen and (min-width: 768px) {
+  .sticky-form.sticky-fixed {
+    bottom: 0px;
+  }
+}
+
 .sticky-form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .sticky-form form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .sticky-form form .type-singlelinetext {
@@ -5908,13 +5970,21 @@ aside li {
 .sticky-form .schedule-cta span {
   font-family: "Lora", serif;
   display: block;
-  font-size: 30px;
-  margin-top: 10pxl;
+  font-size: 25px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.sticky-form .submit-btn {
-  margin-left: 20px;
+@media only screen and (min-width: 768px) {
+  .sticky-form .schedule-cta span {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .sticky-form .submit-btn {
+    margin-left: 20px;
+  }
 }
 
 .upper-footer {

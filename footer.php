@@ -6,7 +6,12 @@
 		<div class="form-cta">
 			<div class="ask-docs">Ask the Doctors</div>
 			<p>We look forward to answering your questions. <br />
-				Please fill out the form below or call the practice at <a href="" class="track-outbound" data-label="Phone - Footer">(805) 687-7336</a>.
+				Please fill out the form below or call the practice at 
+				<?php if(have_rows('locations', 'option')): ?>
+					<?php while(have_rows('locations', 'option')): the_row(); ?>
+						<a href="<?php the_sub_field('phone_link', 'option'); ?>" class="track-outbound" data-label="Phone - Footer"><?php the_sub_field('phone', 'option'); ?></a>.
+					<?php endwhile; ?>
+				<?php endif; ?>
 			</p>
 		</div>
 
