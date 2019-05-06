@@ -1,11 +1,12 @@
 <?php get_header();?>
+
 <main class="interior">
 
 <!-- <section class="back-btn"><a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a> -->
 <!-- <h2><?php the_title();?></h2> -->
 </section>
 	<section class="gallery-cat-wrap">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+		<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 				<?php
 				$limit = 0;// could probably set this as an wp option
 				foreach ($post->cases as $key => $value) {

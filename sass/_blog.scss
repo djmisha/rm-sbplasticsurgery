@@ -2,6 +2,7 @@
 .tmpl_type_category,
 .tmpl_type_archive,
 .tmpl_type_index {
+	
 	.content {
 		.wp-caption {
 			padding-top: 0px;
@@ -28,7 +29,7 @@
 				// line-height: 30px;
 			}
 			@include media($desktop) {
-				max-width: 950px;
+				// max-width: 950px;
 			}
 			a {
 				font-family: $secondaryFont !important;
@@ -54,19 +55,22 @@
 		.thumb {
 			border: 1px solid #ccc;
 			overflow: hidden;
-			width: 150px;
-			float: right;
-			margin-left: 20px;
+			width: 100%;
+			margin-right: 20px;
+			margin-left: 0px;
 			position: relative;
 			margin-bottom: 20px;
 			@include media($tablet) {
-				width: 350px;
-				margin-top: -30px;
-				margin-left: 50px;
+			// float: left;
+			float: left;
+				width: 200px;
+				margin-right: 40px;
+				// margin-top: -30px;
+				// margin-left: 50px;
 			}
 			@include media($desktop) {
-				margin-left: 80px;
-				margin-top: -70px;
+				// margin-right: 80px;
+				// margin-top: 20px;
 			}
 			img {
 				width: 100%;
@@ -75,10 +79,10 @@
 		}
 		.excerpt {
 			padding-top: 40px;
-			padding-bottom: 40px;
+			padding-bottom: 80px;
 			@include media($tablet) {
 				// padding-top: 60px;
-				padding-bottom: 60px;
+				padding-bottom: 100px;
 				width: 100%;
 			}
 			&:first-of-type {
@@ -110,17 +114,20 @@
 		// margin-top: 10px;
 		width: auto;
 		display: inline-block;
-		margin-bottom: 0px;
-		color: $primaryColor;
-		font-size: 14px;
-		font-style: italic;
+		margin-bottom: 10px;
+		color: #c8cdc3;
+		font-size: 15px;
+		// font-weight: bold;
+		text-transform: uppercase;
+		// font-style: italic;
 		@include media($tablet) {
 			// font-size: 18px;
 		}
 		a {
-			text-decoration: underline;
-			font-family: $secondaryFont !important;
-			color: $primaryColor !important;
+			color: #c8cdc3 !important;
+			// text-decoration: underline;
+			// font-family: $secondaryFont !important;
+			// color: $primaryColor !important;
 		}
 	}
 	.button {
@@ -136,95 +143,100 @@
 		text-decoration: none;
 	}
 	h1 {
-
+		text-align: center;
+		font-family: $secondaryFont;
+		font-size: 25px !important;
+		line-height: 25px;
+		font-weight: normal;
+		@include media($desktop) {
+			font-size: 40px !important;
+			line-height: 45px;
+		}
 	}
 	.meta-data {
-		text-align: left;
-		// border: 1px solid red;
-		margin: 0 auto;
 		// margin-top: 10px;
-		// width: auto;
-		display: block;
-		// max-width: 500px;
-		padding-bottom: 15px;
-		// border-bottom: 2px solid $primaryColor;
-		color: $primaryColor;
-		font-family: $secondaryFont !important;
+		width: auto;
+		display: inline-block;
+		margin-bottom: 10px;
+		color: #c8cdc3;
 		font-size: 15px;
-		font-style: italic;
+		// font-weight: bold;
+		text-transform: uppercase;
+		// font-style: italic;
 		@include media($tablet) {
 			// font-size: 18px;
 		}
 		a {
-			text-decoration: underline;
-			font-family: $secondaryFont !important;
-			color: $primaryColor !important;
+			color: #c8cdc3 !important;
+			text-decoration: none;
+			// font-family: $secondaryFont !important;
+			// color: $primaryColor !important;
 		}
 	}
 }
 
 .from-blog {
 	.next-prev {
-		margin-top: 80px;
-		// margin-bottom: 50px;
+		padding-top: 50px;
+		clear: both;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		a {
-			color: $lightColor;
+			// color: $lightColor;
 			transition: all 0.1s ease-in;
 			margin-bottom: 20px;
 			i {
 				transition: all 0.1s ease-in;
 				position: relative;
 				top: 5px;
-				color: $lightColor;
+				color: $darkColor;
 				font: normal normal normal 27px/17px "Font Awesome 5 Pro";
 			}
 			&:hover {
-				color: $lightColor;
+				// color: $lightColor;
 				i {
-					color: $lightColor;
+					// color: $lightColor;
 				}
 			}
 		}
 	}
 	.prev-blog-button {
-		&:before {
-			transition: all 0.1s ease-in;
-			content: "\f104";
-			display: inline-block;
-			font: normal normal normal 27px/17px "Font Awesome 5 Pro";
-			position: relative;
-			margin-right: 15px;
-			top: 5px;
-			color: $lightColor;
-		}
-		&:hover {
-			color: $lightColor;
-			&:before {
-				color: $lightColor;
-			}
-		}
+		// &:before {
+		// 	transition: all 0.1s ease-in;
+		// 	content: "\f104";
+		// 	display: inline-block;
+		// 	font: normal normal normal 27px/17px "Font Awesome 5 Pro";
+		// 	position: relative;
+		// 	margin-right: 15px;
+		// 	top: 5px;
+		// 	color: $darkColor;
+		// }
+		// &:hover {
+		// 	color: $darkColor;
+		// 	&:before {
+		// 		color: $darkColor;
+		// 	}
+		// }
 	}
 
 	.next-blog-button {
-		&:after {
-			transition: all 0.1s ease-in;
-			content: "\f105";
-			display: inline-block;
-			font: normal normal normal 27px/17px "Font Awesome 5 Pro";
-			position: relative;
-			margin-left: 15px;
-			top: 5px;
-			color: $lightColor;
-		}
-		&:hover {
-			color: $lightColor;
-			&:after {
-				color: $darkColor;
-			}
-		}
+		// &:after {
+		// 	transition: all 0.1s ease-in;
+		// 	content: "\f105";
+		// 	display: inline-block;
+		// 	font: normal normal normal 27px/17px "Font Awesome 5 Pro";
+		// 	position: relative;
+		// 	margin-left: 15px;
+		// 	top: 5px;
+		// 	color: $darkColor;
+		// }
+		// &:hover {
+		// 	color: $darkColor;
+		// 	&:after {
+		// 		color: $darkColor;
+		// 	}
+		// }
 	}
 }
 
@@ -236,6 +248,8 @@
 	}
 }
 .navigation-links {
+	text-align: center;
+		// margin: 0 auto;
 	// margin-top: 60px;
 	// display: block;
   a.page-numbers {
@@ -248,12 +262,13 @@
     // min-width: 40px;
     // min-height: 40px;
     display: inline;
-    color: $lightColor;
+    // color: $lightColor;
     // border-radius: 4px;
   	margin-bottom: 5px;
   	display: inline-block;
+  	color: $darkColor;
     &:hover {
-      color: $lightColor;
+      // color: $lightColor;
       // background: $fourthFont;
     }
   }
@@ -261,6 +276,7 @@
   span.dots {
     padding: 0 15px;
     font-weight: bold;
+    font-size: 20px;
   } 
 }
 

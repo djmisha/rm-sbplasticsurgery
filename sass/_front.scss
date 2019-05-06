@@ -14,6 +14,10 @@ header,
  .home h2 {
  	margin: 0;
  	font-family: $secondaryFont;
+ 	@include media($desktop) {
+ 		font-size: 50px;
+ 		line-height: 55px;
+ 	}
  }
 
 
@@ -170,7 +174,7 @@ header,
 
 	@include media($tablet) {
 		padding-top: 150px;
-		// padding-bottom: 150px;
+		padding-bottom: 150px;
 	}
 	@include media($desktop) {
 		padding-top: 100px;
@@ -477,6 +481,9 @@ header,
 	@include media($tablet) {
 		display: flex;
 		justify-content: space-between;
+	}
+	@include media($full) {
+		background-size: cover;
 	}
 	> div {
 		width: 100%;

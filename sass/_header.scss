@@ -11,6 +11,8 @@
 	right: 0px;
 	height: 60px;
 	display: flex;
+	// border-bottom: 1px solid rgba($secondaryAlt, .4);
+	
 	@include media($tablet) {
 		background-color: $lightColor;
 		display: flex;
@@ -80,6 +82,7 @@
 .nav-bar-logo {
 	transition: width .5s ease-out;
 	display: none;
+
 	@include media($tablet) {
 		display: block;
 		position: absolute;
@@ -115,7 +118,6 @@
 
 .nav-bar-extras {
 	transition: all .5s ease-out;
-
 	height: 100%;
 	top: 0px;
 	right: 0px;
@@ -180,20 +182,19 @@
 /* Inside Page Headers */
 
 .int-header {
-	background-color: $primaryColor;
-	background-position: center right;
+	background-color: #f6f7f6;
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
 	margin-top: 125px;
 	@include media($tablet) {
 		margin-top: 0;
-		background-position: center right;
 		background-position-y: 50px;
 		padding-top: 0;
 		background-size: cover;
-		height: 430px;
-		padding-top: 30px;
+		height: 380px;
+		// padding-top: 30px;
 
 	}
 	@include media($desktop) {
@@ -203,109 +204,19 @@
 	}
 }
 
+// .inside header {
+// 	position: relative;
+// }
 
-
-.inside-header-logo {
-	position: relative;
-	width: calc( 100% + 40px);
-	left: -20px;
-	top: -75px;
-	background: #466679;
+.inside-logo {
+	display: block;
 	@include media($tablet) {
-		top: 0;
-		left: 0px;
-		background: transparent;
-		padding: 0;
-		margin-bottom: 0;
-		background: transparent;
-		max-width: 365px;
-		padding-top: 60px;
-	}
-	@include media($desktop) {
-		padding-top: 60px;
-	}
-	svg {
-		width: 180px;
-		height: 71px;
-		@include media($tablet) {
-			width: 358px;
-			height: auto;
-		}
-		path {fill:$lightColor;}
-	}
-	a {
-		text-decoration: none;
-	}
-	span {
-		font-family: $secondaryFont;
-		display: block;
-		font-size: 16px;
 		display: none;
-		@include media($tablet) {
-			display: block;
-			font-size: 30px;
-		}
-		&:nth-of-type(1) {
-			@include media($tablet) {
-				margin-top: 20px;
-			}
-		}
-
-		&:nth-of-type(2) {
-			color: $primaryHighlight;
-			text-transform: uppercase;
-			letter-spacing: 1.5px;
-			@include media($tablet) {
-				letter-spacing: 2.8px;
-			}
-		}
 	}
-	.logo-line-top {
-		width: 190px;
-		margin: 0 auto;
-		height: 1px;
-		background-color: $lightColor;
-		display: none;
-		@include media($tablet) {
-			display: block;
-			width: 100%;
-			margin-top: 15px;
-			margin-bottom: 10px;
-		}
-	}
-	.logo-line-bottom {
-		width: 80px;
-		margin: 0 auto;
-		height: 1px;
-		background-color: $lightColor;
-		margin-top: 20px;
-		margin-bottom: 10px;
-		display: none;
-		@include media($tablet) {
-			display: block;
-		}
-	}
-
-}
-
-header .home-addy {
-	text-align: left;
-	margin-top: 10px;
-	margin-bottom: 25px;
-	display: none;
-	font-size: 15.5px;
-	@include media($tablet) {
-		display: block;
-	}
-	a {
-		text-decoration: none;
-	}
-	i {
+	img {
 		position: relative;
-		top: 3px;
-		color: $secondaryColor;
-		font-size: 24px;
-		margin-right: 10px;
+		top: -60px;
+		width: 290px;
+
 	}
 }
-

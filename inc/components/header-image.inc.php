@@ -36,7 +36,10 @@ function get__header__image() {
                 // $defaultRandTag    = $defaultRepeater[$defaultRand]['patient_tag'];
 
             }
-            echo 'style="background-image:url(' . $defaultRandImage . ')" ';
+            // echo 'style="background-image:url(' . $defaultRandImage . ')" ';
+
+            // Enable Lazy Loading on Header Images 
+            echo 'data-src="'. $defaultRandImage . '"';
             $directParent = $post->post_parent;
             echo 'data-ID="' . $directParent . '"';
 

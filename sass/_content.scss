@@ -29,7 +29,7 @@
 	h4,
 	h5,
 	h6 {
-		text-align: left;
+		text-align: center;
 		color: $primaryColor;
 		font-family: $secondaryFont;
 		font-weight: 100;
@@ -54,48 +54,57 @@ article p ~ h2 {
 	width: 100%;
 	display: inline-block;
 	@include media($tablet) {
-		margin-top: 65px;
+		margin-top: 125px;
 	}
 	.heading-text,
 	h1 {
 		margin-top: 0;
 		margin-bottom: 0;
 		font-family: $secondaryFont;
-		font-size: 40px;
-		line-height: 48px;
 		font-weight: 400;
 		color: $primaryColor;
 		display: block !important;
-		padding-bottom: 30px;
-		text-align: left;
+		// padding-bottom: 30px;
+		font-size: 45px;
+		line-height: 48px;
+		text-align: center;
 		@include media($tablet) {
-			font-size: 50px;
-			line-height: 58px;
+			font-size: 60px;
+			line-height: 65px;
+		}
+		@include media($desktop) {
+			font-size: 87px;
+			line-height: 95px;
 		}
 	}
 }
 
 .site-crumbs {
-	padding-top: 7px;
+	padding-top: 10px;
 	padding-bottom: 1px;
-	background: #3e5d6f;
+	background: #f6f7f6;
 	text-align: left;
 	font-family: $primaryFont;
 	font-size: 10px;
 	line-height: 14px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+
 	@include media($tablet) {
-		padding-top: 15px !important;
-		padding-bottom: 5px !important;
+		text-align: center;
+		padding-top: 25px !important;
+		padding-bottom: 10px !important;
 		font-size: 15px;
 		line-height: 15px;
+		margin-bottom: 50px;
 	}
 	.salacious-crumb {
-		color: $lightColor;
+		color: $darkColor;
 		position: relative;
 		a {
 			font-family: $primaryFont;
-			text-decoration: underline;
-			color: $lightColor;
+			text-decoration: none;
+			color: $darkColor;
 			font-size: 10px;
 			line-height: 14px;
 			@include media($tablet) {
@@ -104,12 +113,12 @@ article p ~ h2 {
 			}
 		}
 		.crumb-sep {
-			margin: 0 8px;
-			color: $lightColor;
+			margin: 0 14px;
+			color: $darkColor;
 		}
 		.current-crumb-item {
 			text-decoration: none;
-			color: $lightColor;
+			color: #c1c9be;
 		}
 	}
 }
@@ -146,17 +155,19 @@ body.inside {
 			margin: 1em 10px;
 			list-style: none;
 			@include media($tablet) {
-				margin: 2em 50px;
+				margin: 3em 100px;
 			}
 			li {
 				position: relative;
 
 				margin-bottom: 7px;
 				padding-left: 20px;
+				text-transform: uppercase;
+				font-style: italic;
 				&:before {
 					content: "";
-					color: $secondaryColor;
-					background-color: $secondaryColor;
+					color: #c1c9be;
+					background-color: #c1c9be;
 					font-weight: $bold;
 					position: absolute;
 					left: 0px;
@@ -189,7 +200,7 @@ body.inside {
 					position: absolute;
 					content: counter(item) ". ";
 					counter-increment: item;
-					color: $secondaryColor;
+					color: #c1c9be;
 					font-weight: bold;
 				}
 			}
