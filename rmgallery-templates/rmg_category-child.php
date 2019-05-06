@@ -50,12 +50,12 @@
 
 
 
-						echo '<div class="hover-overlay"><a href="' . $case_link . '" class="button">Enlarge Photos</a></div>';
 
 					echo '</div>';
 					echo '</div>';
 
 				
+						echo '<div class=""><a href="' . $case_link . '" class="button">View Details</a></div>';
 				echo '</div>';
 				}
 				?>

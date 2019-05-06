@@ -236,7 +236,10 @@
 	background-color: $tertiaryColor;
 	color: $darkColor;
 	padding-top: 40px !important;
-	padding-bottom: 200px !important;
+	padding-bottom: 40px;
+	@include media($tablet) {
+		padding-bottom: 200px !important;
+	}
 }
 
 

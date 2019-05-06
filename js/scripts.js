@@ -34,12 +34,13 @@
 		/*===================================
 		=            Sticky Form            =
 		===================================*/
-		
+		$(window).on("load resize",function(stickstuff){
+		// $(window).(load resize).
+
+		if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
 		var stickyform = document.querySelector('.sticky-form');
 		
-		if(stickyform) {
-
-			if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
+			if(stickyform) {
 
 				// console.log('yes there is this');
 				let stickyContactTop = 300;
@@ -64,11 +65,10 @@
 		}
 
 
-		var navbar = document.querySelector('.nav-bar');
+		if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
+			var navbar = document.querySelector('.nav-bar');
 		
-		if(navbar) {
-
-			if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
+			if(navbar) {
 
 				// console.log('yes there is this');
 				let navbarTop = 300;
@@ -88,9 +88,10 @@
 				$(window).scroll(function() {
 					changeupNav();
 				});
-				
 			}
 		}
+				});
+		
 
 		/* --------------------------------------------------
 			Blazy

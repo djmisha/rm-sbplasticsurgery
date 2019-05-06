@@ -28,6 +28,8 @@
 	transition: all .5s ease-out;
 	&.change-up-nav {
 		height: 90px;
+		background: rgba($lightColor, .85);
+
 		.navbar-social {
 			top: -20px;
 			opacity: 0;
@@ -91,12 +93,12 @@
 	@include media($desktop) {
 		left: 10px;
 		top: 10px;
-		right: auto;
+		width: 320px;
+		// right: auto;
 	}
-		@include media(1340px) {
+	@include media(1280px) {
 		width: 500px;
-
-		}
+	}
 
 	img {
 		transition: all .5s ease-out;
@@ -109,7 +111,7 @@
 			height: auto;
 			width: 320px;
 		}
-		@include media(1340px) {
+		@include media(1280px) {
 			width: 100%;
 		}
 	}
@@ -183,11 +185,16 @@
 
 .int-header {
 	background-color: #f6f7f6;
+	// background-color: #000;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
 	margin-top: 125px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	@include media($tablet) {
 		margin-top: 0;
 		background-position-y: 50px;
@@ -210,13 +217,16 @@
 
 .inside-logo {
 	display: block;
+	text-align: center;
+	position: absolute;
+	top: 65px;
 	@include media($tablet) {
 		display: none;
 	}
 	img {
-		position: relative;
-		top: -60px;
+		// position: absolute;
 		width: 290px;
+		margin: 0 auto;
 
 	}
 }

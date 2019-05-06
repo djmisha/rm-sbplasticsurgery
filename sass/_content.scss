@@ -50,11 +50,11 @@ article p ~ h2 {
 	text-align: left;
 	position: relative;
 	padding-bottom: 0;
-	margin-top: 30px;
+	margin-top: 0px;
 	width: 100%;
 	display: inline-block;
 	@include media($tablet) {
-		margin-top: 125px;
+		// margin-top: 125px;
 	}
 	.heading-text,
 	h1 {
@@ -65,8 +65,8 @@ article p ~ h2 {
 		color: $primaryColor;
 		display: block !important;
 		// padding-bottom: 30px;
-		font-size: 45px;
-		line-height: 48px;
+		font-size: 30px;
+		line-height: 35px;
 		text-align: center;
 		@include media($tablet) {
 			font-size: 60px;
@@ -74,12 +74,13 @@ article p ~ h2 {
 		}
 		@include media($desktop) {
 			font-size: 87px;
-			line-height: 95px;
+			line-height: 90px;
 		}
 	}
 }
 
 .site-crumbs {
+	margin-top: 0px;
 	padding-top: 10px;
 	padding-bottom: 1px;
 	background: #f6f7f6;

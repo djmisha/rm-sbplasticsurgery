@@ -2,19 +2,18 @@
 
 <section class="gallery-nav">
 
-		<a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a>
-
+	<a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a>
 
 	<div class="gal-prev-next">
 		<?php
 
-	/**
-	* accepts an array
-	* keys : 'class' , 'title' , 'hash'
-	* if 'title' key is not present then default will be
-	* - prev : &laquo; Previous
-	* - next : Next &raquo;
-	*/
+		/**
+		* accepts an array
+		* keys : 'class' , 'title' , 'hash'
+		* if 'title' key is not present then default will be
+		* - prev : &laquo; Previous
+		* - next : Next &raquo;
+		*/
 
 	$rmg_case::prev( array(
 		'class' => 'button-rmg button-gallery-prev button' ,
@@ -50,7 +49,7 @@
 				<?php if(!empty(get_the_content())): ?>
 					<div class="patient-details">
 						<span>Patient Details</span>
-						<?the_content();?>
+						<?php the_content();?>
 					</div>
 				<?php endif; ?>
 				<?endwhile; endif;?>

@@ -206,105 +206,73 @@
 			margin-top: 0px;
 		}
 	}
-	.bna-group-border {
-		border: 1px solid rgba($primaryColor, .4);
-		padding: 15px;
-	}
 	.bna-group {
-		padding: 25px;
 		border: 1px solid #d0d6cd;
 		width: 100%;
-		// margin-bottom: 20px;
-		background-color: #d0d6cd;
-		margin-bottom: 40px;
+		margin-bottom: 100px;
 		position: relative;
 		@include media($tablet) {
-			margin-bottom: 50px;
 			width: 48%;
 		}
 
+		&:hover {
+			h2 {
+				background: $primaryColor;
+			}
+		}
+
 		h2 {
+			padding-top: 10px;
+			padding-bottom: 10px;
 			background-color: #d0d6cd;
 			// text-transform: uppercase;
 			font-size: 20px;
 			text-align: center;
 			color: $lightColor;
-			margin: 10px 0;
-			margin-bottom: 30px;
-			letter-spacing: 1px;
+			// margin: 10px 0;
+			margin-top: 0;
+			margin-bottom: 20px;
+			letter-spacing: 3px;
 			font-family: $secondaryFont;
 
 			@include media($tablet) {
-				font-size: 35px;
+				font-size: 32px;
 			}
 		}
 
-		.hover-overlay {
-			text-align: center;
-			width: 100%;
-			font-size: 18px;
-			a {
-				text-decoration: none;
-				color: $primaryColor;
-			}
-		}
-
-		a.button {
-			display: block;
-			width: 100% !important;
-			padding: 12px 20px;
-			// margin-top: 10px;
-			@include media($tablet) {
-				margin-top: 10px;
-			}
-			// position: absolute;
-			// width: 100%;
-			// height: 100%;
-			// top: 0;
-			// left: 0;
-		}
-
-		// &:hover {
-		// 	@include media($desktop) {
-		// 		.hover-overlay {
-		// 			display: inline-block;
-		// 			// justify-content: center;
-		// 			// align-items: center;
-		// 			position: absolute;
-		// 			top: 45%;
-		// 			right: calc(50% - 100px);
-		// 			// left: 50%;
-		// 			// bottom: 0;
-		// 			width: 200px;
-		// 			// margin: 0 auto;
-		// 			// width: 100%;
-		// 			// height: 100%;
-		// 		}
+		// .hover-overlay {
+		// 	text-align: center;
+		// 	width: 100%;
+		// 	font-size: 18px;
+		// 	a {
+		// 		text-decoration: none;
+		// 		color: $primaryColor;
 		// 	}
 		// }
-		.hover-overlay {
-			display: none;
-			.button {
-				// background-color: transparent !important;
-				border: none;
-
-				&:hover {
-					color: $darkColor!important;
-				}
-
-				i {
-					padding: 10px;
-					border-radius: 50%;
-					background-color: $lightColor;
-					position: absolute;
-					top: 39%;
-					left: 45%;
-					font-size: 30px;
-					line-height: 30px;
-					color: $tertiaryColor;
-				}
-			}
+		.button {
+			position: absolute;
+			bottom: -50px;
+			left: 0;
+			right: 0;
+			width: 180px;
+			margin: 0 auto;
 		}
+		// a.button {
+		// 	display: block;
+		// 	width: 100% !important;
+		// 	padding: 12px 20px;
+		// 	// margin-top: 10px;
+		// 	@include media($tablet) {
+		// 		margin-top: 10px;
+		// 	}
+		// 	// position: absolute;
+		// 	// width: 100%;
+		// 	// height: 100%;
+		// 	// top: 0;
+		// 	// left: 0;
+		// }
+
+		
 	}
 	.case-details {
 		margin-top: 20px;
@@ -313,6 +281,9 @@
 	.img-set {
 		// overflow: hidden;
 		// @include media($tablet) {
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-bottom: 10px;
 			display: flex;
 			flex-wrap: wrap;
 			position: relative;
@@ -356,6 +327,7 @@
 				left: 10px;
 				width: 90%;
 				height: 20px;
+				color: $primaryColor;
 
 				@include media($tablet) {
 					left: 20px;
@@ -383,18 +355,19 @@
 
 .tmpl_type_rmg_single_case {
 	.single-case-title {
+		// margin-top: 40px;
 	}
 	.single-case-border {
-		border: 1px solid rgba($primaryColor, .4);
+		// border: 1px solid rgba($primaryColor, .4);
 		padding: 20px 15px; 
 		@include media($tablet) {
 			padding: 40px 15px; 
 		}
 	}
 	.single-case-content {
-		background-color: #d0d6cd;
+		background-color: #f6f7f6;
 		margin-top: 0;
-			padding: 25px;
+			// padding: 25px;
 	}
 	h2 {
 		text-align: center;
@@ -427,7 +400,7 @@
 			// width: 80%;
 		}
 		@include media($desktop) {
-			width: 70%;
+			width: 90%;
 		}
 		> div {
 			position: relative;
@@ -573,9 +546,7 @@
 }
 
 .gallery-nav {
-	// border: 1px solid red;
 	margin: 0 auto;
-	// margin-top: -10px;
 	margin-bottom: 20px;
 	display: block;
 	width: 100%;
@@ -587,49 +558,30 @@
 	.gallery-button {
 		float: left;
 	}
-.gal-prev-next {
-	position: relative;
-	height: 50px;
-	// border: 1px solid #000;
-	width: 120px;
-	float: right;
-}
+	.gal-prev-next {
+		position: relative;
+		height: 50px;
+		// border: 1px solid #000;
+		width: 120px;
+		float: right;
+		// font-weight: size;
+	}
 }
 
 .single-case-title {
 	color: $primaryColor;
-	font-size: 30px;
+	font-size: 18px;
 	font-family: $secondaryFont;
 	text-align: center;
 	margin-top: 30px;
+	// padding-top: 40px;
 	@include media($tablet) {
 		margin-top: 10px;
-	}
-}
-
-.button-rmg {
-	padding-left: 20px;
-	padding-right: 20px;
-	i {
-		position: relative;
-		top: 6px;
-		color: $lightColor;
 		font-size: 30px;
-		line-height: 0;
-		transition: all .2 ease-in-out;
-	}
-		&:hover {  i{
 
-			color: $primaryColor;
-		} 
-		} 
-	.fa-angle-left {
-		// right: 10px;
-	}
-	.fa-angle-right {
-		// left: 10px;
 	}
 }
+
 
 .button-gallery-next {
 	position: absolute;
