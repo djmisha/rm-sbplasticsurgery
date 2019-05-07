@@ -88,4 +88,34 @@ aside {
 			// Style this to differentiate (or remove);
 		}
 	}
+
+}
+.related-pages {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+	background:  rgba( $primaryColor, .9);
+	.the-headline {
+		color: #c1c9be;
+		display: block;
+		margin-bottom: 30px;
+		@include media($tablet) {
+			font-size: 30px;
+		}
+	}
+	li {
+		margin-bottom: 10px;
+	}
+	a {
+		color: $lightColor;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&.full-width {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }

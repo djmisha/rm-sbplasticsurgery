@@ -94,7 +94,6 @@
 		left: 10px;
 		top: 10px;
 		width: 320px;
-		// right: auto;
 	}
 	@include media(1280px) {
 		width: 500px;
@@ -185,7 +184,6 @@
 
 .int-header {
 	background-color: #f6f7f6;
-	// background-color: #000;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -196,13 +194,11 @@
 	justify-content: center;
 	flex-direction: column;
 	@include media($tablet) {
-		margin-top: 0;
+		margin-top: 60px;
 		background-position-y: 50px;
 		padding-top: 0;
 		background-size: cover;
 		height: 380px;
-		// padding-top: 30px;
-
 	}
 	@include media($desktop) {
 		padding-top: 0;
@@ -210,10 +206,6 @@
 		background-position: center center;
 	}
 }
-
-// .inside header {
-// 	position: relative;
-// }
 
 .inside-logo {
 	display: block;
@@ -224,9 +216,7 @@
 		display: none;
 	}
 	img {
-		// position: absolute;
 		width: 290px;
 		margin: 0 auto;
-
 	}
 }

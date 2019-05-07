@@ -4263,7 +4263,7 @@ p {
 }
 
 h1 {
-  font-family: "Lato", sans-serif;
+  font-family: "Lora", serif;
 }
 
 h2,
@@ -4272,7 +4272,7 @@ h4,
 h5,
 h6,
 .the-headline {
-  font-family: "Lato", sans-serif;
+  font-family: "Lora", serif;
 }
 
 h2,
@@ -4675,7 +4675,7 @@ main,
 
 @media only screen and (min-width: 768px) {
   .int-header {
-    margin-top: 0;
+    margin-top: 60px;
     background-position-y: 50px;
     padding-top: 0;
     background-size: cover;
@@ -5110,12 +5110,13 @@ main,
 	Content
 ------------------------ */
 .content {
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 @media only screen and (min-width: 1080px) {
   .content {
     margin-bottom: 0;
+    padding-bottom: 100px;
   }
 }
 
@@ -5257,13 +5258,6 @@ body.inside {
 
 .interior {
   text-align: left;
-  padding-bottom: 60px;
-}
-
-@media only screen and (min-width: 768px) {
-  .interior {
-    padding-bottom: 100px;
-  }
 }
 
 .interior .content {
@@ -5346,40 +5340,26 @@ body.inside {
 .interior .content blockquote {
   margin: 40px 0;
   margin-left: -20px;
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
+  font-family: "Lora", serif;
+  font-size: 18px;
   line-height: 30px;
-  border-left: 7px solid #3a4859;
-  padding-left: 20px;
+  border-left: 10px solid #c8cdc3;
+  padding-left: 30px;
   font-weight: 100;
-  font-size: italic;
-  position: relative;
+  margin-bottom: 60px;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .content blockquote {
-    margin: 80px 0;
-    margin-left: 40px;
-    padding-right: 140px;
-    font-size: 20px;
-    line-height: 29px;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 90px;
+    margin-left: 10px;
   }
 }
 
-.interior .content blockquote:before {
-  content: "";
-  background: url("images/icon-inside-bquote.png");
-  background-size: 102px 79px;
-  width: 102px;
-  height: 79px;
-  position: absolute;
-  right: 40px;
-  top: 20px;
-}
-
-.interior .content blockquote span {
-  font-size: 25px;
-  color: #3a4859;
+.interior .content blockquote strong {
+  color: #c8cdc3;
 }
 
 /*==========================================
@@ -5400,16 +5380,9 @@ body.inside {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1080px) {
   .full-width {
-    left: calc(((40px + (50vw - (1280px / 2)))) * -1);
-    background-size: cover;
-  }
-}
-
-@media only screen and (min-width: 1480px) {
-  .full-width {
-    left: calc(((40px + (50vw - (1480px / 2)))) * -1);
+    left: calc(((40px + (50vw - (1080px / 2)))) * -1);
   }
 }
 
@@ -5789,6 +5762,44 @@ aside li {
 
 .sidebar-block li a:hover {
   text-decoration: underline;
+}
+
+.related-pages {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  background: rgba(58, 72, 89, 0.9);
+}
+
+.related-pages .the-headline {
+  color: #c1c9be;
+  display: block;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .related-pages .the-headline {
+    font-size: 30px;
+  }
+}
+
+.related-pages li {
+  margin-bottom: 10px;
+}
+
+.related-pages a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.related-pages a:hover {
+  text-decoration: underline;
+}
+
+.related-pages.full-width {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* ------------------------

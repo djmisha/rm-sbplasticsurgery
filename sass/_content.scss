@@ -1,8 +1,9 @@
 .content {
 	// font-family: $secondaryFont;
-	padding-bottom: 50px;
+	padding-bottom: 60px;
 	@include media($desktop) {
 		margin-bottom: 0;
+		padding-bottom: 100px;
 		// max-width: 1280px;
 		// margin: 0 auto;
 		// width: calc(100% - 350px);
@@ -133,9 +134,9 @@ body.inside {
 
 .interior {
 	text-align: left;
-	padding-bottom: 60px;
+	// padding-bottom: 60px;
 	@include media($tablet) {
-		padding-bottom: 100px;
+		// padding-bottom: 100px;
 	}
 	@include media($desktop) {
 		// display: flex;
@@ -211,37 +212,35 @@ body.inside {
 			// color: $secondaryColor;
 			margin: 40px 0;
 			margin-left: -20px;
-			font-family: $highlightFont;
-			font-size: 20px;
+			font-family: $secondaryFont;
+			font-size: 18px;
 			line-height: 30px;
-			border-left: 7px solid $primaryColor;
-			padding-left: 20px;
+			border-left: 10px solid #c8cdc3;
+			padding-left: 30px;
 			font-weight: 100;
-			font-size: italic;
+			// font-size: italic;
+			// margin-bottom: 40px;
+			margin-bottom: 60px;
 			@include media($tablet) {
-				margin: 80px 0;
-				margin-left: 40px;
-				padding-right: 140px;
-				font-size: 20px;
-				line-height: 29px;
+				font-size: 22px;
+				display: block;
+				margin-bottom: 90px;
+				// padding-bottom: ;
+				// margin: 80px 0;
+				// margin-bottom: 40px;
+				// display: inline-block;
+				margin-left: 10px;
+				// padding-right: 140px;
+				// font-size: 20px;
+				// line-height: 29px;
 				// float: right;
 				// width: 420px;
 				// margin: 0 0px 80px 80px;
 			}
-			position: relative;
-			&:before {
-				content: "";
-				background: url("images/icon-inside-bquote.png");
-				background-size: 102px 79px;
-				width: 102px;
-				height: 79px;
-				position: absolute;
-				right: 40px;
-				top: 20px;
-			}
-			span {
-				font-size: 25px;
-				color: $primaryColor;
+
+			strong {
+				// font-size: 25px;
+				color: #c8cdc3;
 			}
 		}
 	}
@@ -263,13 +262,16 @@ body.inside {
 		margin-top: 75px;
 		margin-bottom: 75px;
 	}
-
+	@include media($desktop) {
+		left: calc(((40px + (50vw - (#{$desktop} / 2)))) * -1);
+		
+	}
 	@include media(1280px) {
-		left: calc(((40px + (50vw - (1280px / 2)))) * -1);
-		background-size: cover;
+		// left: calc(((40px + (50vw - (1280px / 2)))) * -1);
+		// background-size: cover;
 	}
 	@include media($full) {
-		left: calc(((40px + (50vw - (#{$full} / 2)))) * -1);
+		// left: calc(((40px + (50vw - (#{$full} / 2)))) * -1);
 	}
 }
 
