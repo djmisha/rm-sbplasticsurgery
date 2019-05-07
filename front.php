@@ -38,6 +38,7 @@
 						</div>
 					</div>
 					<div class="proced-name">
+						<a href="<?php the_sub_field('headline_link'); ?>"></a>
 						<?php the_sub_field('headline'); ?>
 					</div>
 				</li>
