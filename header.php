@@ -41,7 +41,7 @@
 		</div>
 		<div class="nav-bar-logo">
 			<a href="<?php bloginfo('url'); ?>">
-				<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo">
+				<img class="b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
 			</a>
 		</div>
 		<div class="navbar-social">

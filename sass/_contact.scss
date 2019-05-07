@@ -68,7 +68,7 @@
 		}
 	}
 	h2 {
-		@include font(28px);
+		// @include font(28px);
 		// text-transform: none;
 		// margin-top: 70px;
 	}
@@ -92,21 +92,23 @@
 	}
 	.addy-hours {
 		@include media($tablet) {
-			justify-content: space-between;
-			display: flex;
+			// justify-content: space-between;
+			// display: flex;
 		}
 		strong {
 			font-size: 16px;
 		}
 	}
 	.address {
-		width: 50%;
+		text-align: center;
+		// width: 50%;
 	}
 	.the-hours {
+		display: block;
 		margin-top: 40px;
 		@include media($tablet) {
 			margin-top: 0px;
-			width: 50%;
+			// width: 50%;
 		}
 	}
 }

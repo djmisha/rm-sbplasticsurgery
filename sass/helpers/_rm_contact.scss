@@ -228,17 +228,17 @@ $errorcolor: darken($primaryColor, 20%);
 		select {
 			display: block;
 			width: 100%;
-			background-color: #edf2f4;
+			// background-color: #edf2f4;
 			background-image: url(images/svg/select-arrow.svg);
 			background-position: right 18px center;
 			background-repeat: no-repeat;
 			background-size: 16px 10px;
-			// padding: 16px 20px;
+			padding: 14px 10px;
 
-			// line-height: 1.714em;
+			// line-height: 1.214em;
 			border-radius: 0;
 			// height: 38px;
-			border: 1px solid #edf2f4;
+			border: 1px solid #ccc;
 			-webkit-appearance: none;
 			-webkit-border-radius: 0px;
 			position: relative;

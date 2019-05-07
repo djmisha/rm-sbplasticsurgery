@@ -4152,13 +4152,13 @@ img.aligncenter,
 .seaforms .type-selectbox select {
   display: block;
   width: 100%;
-  background-color: #edf2f4;
   background-image: url(images/svg/select-arrow.svg);
   background-position: right 18px center;
   background-repeat: no-repeat;
   background-size: 16px 10px;
+  padding: 14px 10px;
   border-radius: 0;
-  border: 1px solid #edf2f4;
+  border: 1px solid #ccc;
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
   position: relative;
@@ -6105,9 +6105,12 @@ aside li {
   padding-bottom: 40px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1080px) {
   .lower-footer {
-    padding-bottom: 200px !important;
+    padding-bottom: 240px;
+  }
+  .contact-us .lower-footer {
+    padding-bottom: 80px;
   }
 }
 
@@ -6271,11 +6274,6 @@ aside li {
   }
 }
 
-.contact-us h2 {
-  font-size: 28px;
-  font-size: 1.75rem;
-}
-
 .contact-us .the-address {
   margin-bottom: 40px;
 }
@@ -6290,33 +6288,22 @@ aside li {
   height: 400px;
 }
 
-@media only screen and (min-width: 768px) {
-  .contact-us .addy-hours {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
 .contact-us .addy-hours strong {
   font-size: 16px;
 }
 
 .contact-us .address {
-  width: 50%;
+  text-align: center;
 }
 
 .contact-us .the-hours {
+  display: block;
   margin-top: 40px;
 }
 
 @media only screen and (min-width: 768px) {
   .contact-us .the-hours {
     margin-top: 0px;
-    width: 50%;
   }
 }
 

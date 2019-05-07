@@ -8,7 +8,7 @@
 <div class="welcome-parallax will-parallax parallax-welcome b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-welcome.jpg">
 	<div class="welcome-logo">
 		<a href="<?php bloginfo('url'); ?>">
-			<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo">
 		</a>
 	</div>
 	<div class="welcome" id="skiptomaincontent">
