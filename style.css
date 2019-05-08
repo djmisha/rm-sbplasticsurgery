@@ -5594,73 +5594,6 @@ body.inside {
 /*==============================================
 =            Langing Page Sections             =
 ==============================================*/
-.tmpl_type_page_landing header {
-  position: relative;
-  margin-bottom: 0px;
-  height: auto;
-  background-position: top right;
-  height: 400px;
-}
-
-@media only screen and (min-width: 768px) {
-  .tmpl_type_page_landing header {
-    background-position: center center;
-    background-size: cover;
-    height: 80vh;
-    min-height: 600px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .tmpl_type_page_landing header {
-    min-height: 600px;
-  }
-}
-
-.tmpl_type_page_landing header .page-title {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.7);
-  margin-bottom: 0;
-  padding-top: 20px;
-  margin-left: 0;
-}
-
-.tmpl_type_page_landing header .page-title h1 {
-  padding-left: 0;
-  text-align: left !important;
-  margin-bottom: 0;
-}
-
-.tmpl_type_page_landing header .page-title .page-title-line {
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .tmpl_type_page_landing header .inside-header-logo {
-    margin-top: 200px;
-    margin-top: 25vh;
-  }
-}
-
-.tmpl_type_page_landing .flexible-content-page {
-  padding-bottom: 0;
-}
-
-.tmpl_type_page_landing .flexible-content-page .content {
-  background-image: none !important;
-  width: 100%;
-  padding-right: 0px;
-  padding-bottom: 0;
-}
-
-.news-specials form {
-  max-width: 600px;
-}
-
 /* ------------------------
 	Aside
 ------------------------ */
@@ -7328,13 +7261,8 @@ aside li {
 /* ------------------------
 	Flexible Content
 ------------------------ */
-.flexible-jump-links .jump-links-content {
-  margin-top: 40px;
-  margin-bottom: 60px;
-}
-
 .flexible-jump-links .jump-link-list {
-  background: #fafbf9;
+  width: 100%;
 }
 
 .flexible-jump-links .jump-link-list-border {
@@ -7349,8 +7277,6 @@ aside li {
   .flexible-jump-links .jump-link-list-border {
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
 }
 
@@ -7362,47 +7288,38 @@ aside li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 30px 20px;
   margin: 0;
-  border: 1px solid rgba(58, 72, 89, 0.3);
+  border: 2px solid #3a4859;
 }
 
 @media only screen and (min-width: 768px) {
   .flexible-jump-links .jump-link-list ul {
     margin: 0 auto;
-    max-width: 1200px;
     padding: 40px 20px 40px 20px;
   }
 }
 
 .flexible-jump-links .jump-link-list ul li {
-  font-family: "Lora", serif;
-  position: relative;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  font-size: 14px;
-  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
-@media only screen and (min-width: 768px) {
-  .flexible-jump-links .jump-link-list ul li {
-    font-size: 18px;
-    line-height: 27px;
-    padding: 0 10px !important;
-    border-left: 1px solid rgba(58, 72, 89, 0.6);
-  }
-  .flexible-jump-links .jump-link-list ul li:first-of-type {
-    border-left: 1px solid transparent;
-  }
-}
-
-.flexible-jump-links .jump-link-list ul:before {
+.flexible-jump-links .jump-link-list ul li:before {
   display: none;
 }
 
 .flexible-jump-links .jump-link-list ul a {
+  letter-spacing: 1px;
+  font-style: normal;
+  color: #3a4859;
   text-decoration: none;
   border-bottom: 2px solid transparent;
 }
@@ -7414,22 +7331,6 @@ aside li {
 .flexible-basic-content {
   padding-top: 40px;
   padding-bottom: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .flexible-basic-content {
-    padding-top: 100px;
-    padding-bottom: 80px;
-  }
-}
-
-.flexible-basic-content.basic-faq h2 {
-  margin-top: 100px;
-}
-
-.flexible-basic-content.basic-faq h3 {
-  border-bottom: none !important;
-  margin-bottom: 0;
 }
 
 .flexible-content-page h2 {
@@ -7511,10 +7412,6 @@ aside li {
 /*=====================================
 =            Slpit Section            =
 =====================================*/
-.flexible-split-section {
-  background-color: #fafbf9;
-}
-
 @media only screen and (min-width: 768px) {
   .flexible-split-section {
     display: -webkit-box;
@@ -7539,9 +7436,15 @@ aside li {
 
 .flexible-split-section .with-bg {
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
-  min-height: 300px;
+}
+
+@media only screen and (min-width: 768px) {
+  .flexible-split-section .with-bg {
+    min-height: 700px;
+    height: 100%;
+  }
 }
 
 .flexible-split-section .with-content {
@@ -7631,7 +7534,6 @@ aside li {
           justify-content: center;
   text-align: left;
   text-transform: uppercase;
-  width: 1005;
   margin-bottom: 20px;
 }
 

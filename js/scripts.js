@@ -65,31 +65,31 @@
 		}
 
 
-		if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
-			var navbar = document.querySelector('.nav-bar');
-		
-			if(navbar) {
+					if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
+						var navbar = document.querySelector('.nav-bar');
+					
+						if(navbar) {
 
-				// console.log('yes there is this');
-				let navbarTop = 300;
+							// console.log('yes there is this');
+							let navbarTop = 300;
 
-				let changeupNav = function(){
+							let changeupNav = function(){
 
-					let scrollnavTop = $(window).scrollTop();
+								let scrollnavTop = $(window).scrollTop();
 
-						if (scrollnavTop > navbarTop) {
-							$('.nav-bar').addClass('change-up-nav');
-						} else {
-							$('.nav-bar').removeClass('change-up-nav');
+									if (scrollnavTop > navbarTop) {
+										$('.nav-bar').addClass('change-up-nav');
+									} else {
+										$('.nav-bar').removeClass('change-up-nav');
 
+									}
+								};
+
+							$(window).scroll(function() {
+								changeupNav();
+							});
 						}
-					};
-
-				$(window).scroll(function() {
-					changeupNav();
-				});
-			}
-		}
+					}
 				});
 		
 
