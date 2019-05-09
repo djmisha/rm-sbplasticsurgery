@@ -23,7 +23,7 @@ function get__header__image() {
             $repeater        = $x;
             $rand                = rand( 0, ( count($repeater) - 1 ) );
             $randImage    = $repeater[$rand]['image'];
-            echo 'style="background-image:url(' . $randImage . ')"';
+            echo 'data-src="' . $randImage . '"';
         }
         else {
             $defaultRandImage    = '';

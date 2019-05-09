@@ -35,19 +35,20 @@
 		=            Sticky Form            =
 		===================================*/
 		$(window).on("load resize",function(stickstuff){
-		// $(window).(load resize).
+			let theWidth = $(window).width();
 
-		if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
-		var stickyform = document.querySelector('.sticky-form');
-		
-			if(stickyform) {
+			if ( theWidth > 1080 ){
+				
+				var stickyform = document.querySelector('.sticky-form');
 
-				// console.log('yes there is this');
-				let stickyContactTop = 300;
+				if(stickyform) {
 
-				let stickyContact = function(){
+					// console.log('yes there is this');
+					let stickyContactTop = 300;
 
-					let scrollTop = $(window).scrollTop();
+					let stickyContact = function(){
+
+						let scrollTop = $(window).scrollTop();
 
 						if (scrollTop > stickyContactTop) {
 							$('.sticky-form').addClass('sticky-fixed');
@@ -57,40 +58,42 @@
 						}
 					};
 
-				$(window).scroll(function() {
-					stickyContact();
-				});
-				
-			}
-		}
-
-
-					if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
-						var navbar = document.querySelector('.nav-bar');
+					$(window).scroll(function() {
+						stickyContact();
+					});
 					
-						if(navbar) {
+				}
+			}
 
-							// console.log('yes there is this');
-							let navbarTop = 300;
 
-							let changeupNav = function(){
+			if ( theWidth > 1080 ){
 
-								let scrollnavTop = $(window).scrollTop();
+		// if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
+				var navbar = document.querySelector('.nav-bar');
 
-									if (scrollnavTop > navbarTop) {
-										$('.nav-bar').addClass('change-up-nav');
-									} else {
-										$('.nav-bar').removeClass('change-up-nav');
+				if(navbar) {
 
-									}
-								};
+						// console.log('yes there is this');
+						let navbarTop = 300;
 
-							$(window).scroll(function() {
-								changeupNav();
-							});
-						}
+						let changeupNav = function(){
+
+							let scrollnavTop = $(window).scrollTop();
+
+							if (scrollnavTop > navbarTop) {
+								$('.nav-bar').addClass('change-up-nav');
+							} else {
+								$('.nav-bar').removeClass('change-up-nav');
+
+							}
+						};
+
+						$(window).scroll(function() {
+							changeupNav();
+						});
 					}
-				});
+				}
+			});
 		
 
 		/* --------------------------------------------------

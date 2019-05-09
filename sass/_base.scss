@@ -11,7 +11,10 @@ body {
 	background-color: $lightColor;
 	min-width: 320px;
 	text-align: center;
-	font: 15px/24px $defaultfont;
+	font: 14px/24px $defaultfont;
+	@include media($tablet) {
+		font: 16px/26px $defaultfont;
+	}
 }
 
 p {

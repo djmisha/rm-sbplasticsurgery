@@ -3937,10 +3937,17 @@ a.page-numbers.current:hover,
 
 /* Lazy Loading Images with a Fade */
 .b-lazy {
-  -webkit-transition: opacity 400ms ease-in-out;
-  transition: opacity 400ms ease-in-out;
+  -webkit-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
   max-width: 100%;
   opacity: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .b-lazy {
+    -webkit-transition: opacity 400ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
+  }
 }
 
 .b-lazy.b-loaded {
@@ -4250,7 +4257,13 @@ body {
   background-color: #ffffff;
   min-width: 320px;
   text-align: center;
-  font: 15px/24px "Lato", sans-serif;
+  font: 14px/24px "Lato", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font: 16px/26px "Lato", sans-serif;
+  }
 }
 
 p {
@@ -5594,6 +5607,87 @@ body.inside {
 /*==============================================
 =            Langing Page Sections             =
 ==============================================*/
+.page-989 #first-content {
+  padding-top: 0;
+}
+
+.page-989 #Benefits {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.page-989 #Consultation {
+  background-color: #fbfcf9;
+}
+
+.page-989 #Consultation h2 {
+  margin-bottom: 10px;
+}
+
+.page-989 #Consultation h3 {
+  margin-top: 0;
+  font-style: italic;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-989 #Ethnic-Considerations {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .page-989 #Ethnic-Considerations .with-content {
+    padding-top: 50px;
+  }
+  .page-989 #Ethnic-Considerations .with-bg {
+    height: 900px;
+  }
+}
+
+.page-989 #Ethnic-Considerations h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-989 #Ethnic-Considerations h3 {
+    font-size: 22px;
+    margin-bottom: 0px;
+  }
+}
+
+.page-989 #Placement {
+  background-color: #fbfcf9;
+}
+
+.page-989 #Placement h2 {
+  margin-bottom: 0px;
+}
+
+.page-989 #Placement h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-989 #Placement h3 {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+}
+
 /* ------------------------
 	Aside
 ------------------------ */
@@ -7261,6 +7355,31 @@ aside li {
 /* ------------------------
 	Flexible Content
 ------------------------ */
+@media only screen and (min-width: 1080px) {
+  .jump-links-split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .jump-links-split > div {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.jump-links-split .with-bg {
+  background-size: cover;
+  min-height: 780px;
+}
+
 .flexible-jump-links .jump-link-list {
   width: 100%;
 }
@@ -7268,15 +7387,22 @@ aside li {
 .flexible-jump-links .jump-link-list-border {
   width: auto;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .flexible-jump-links .jump-link-list-border {
+    padding-top: 40px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .flexible-jump-links .jump-link-list-border {
+    padding-top: 0;
   }
 }
 
@@ -7309,7 +7435,12 @@ aside li {
 .flexible-jump-links .jump-link-list ul li {
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .flexible-jump-links .jump-link-list ul li {
+    margin-bottom: 30px;
+  }
 }
 
 .flexible-jump-links .jump-link-list ul li:before {
@@ -7331,6 +7462,13 @@ aside li {
 .flexible-basic-content {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .flexible-basic-content {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
 }
 
 .flexible-content-page h2 {
@@ -7412,7 +7550,7 @@ aside li {
 /*=====================================
 =            Slpit Section            =
 =====================================*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1080px) {
   .flexible-split-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7424,33 +7562,38 @@ aside li {
   width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1080px) {
   .flexible-split-section div {
     width: 50%;
+    height: 100%;
   }
 }
 
-.flexible-split-section h2 {
-  text-align: left;
+@media only screen and (min-width: 768px) {
+  .flexible-split-section h2 {
+    margin-bottom: 40px;
+  }
 }
 
 .flexible-split-section .with-bg {
-  background-size: cover;
-  background-position: top center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media only screen and (min-width: 768px) {
   .flexible-split-section .with-bg {
-    min-height: 700px;
-    height: 100%;
+    min-height: 800px;
   }
 }
 
 .flexible-split-section .with-content {
   padding: 40px 20px;
-  max-width: 700px;
+}
+
+.flexible-split-section .with-content p {
   margin: 0 auto;
+  max-width: 600px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -7463,13 +7606,6 @@ aside li {
   .flexible-split-section .with-content {
     padding: 100px 70px;
   }
-}
-
-.page-title-line-custom {
-  height: 2px;
-  background: #233448;
-  width: 150px !important;
-  margin-bottom: 20px;
 }
 
 /*====================================
