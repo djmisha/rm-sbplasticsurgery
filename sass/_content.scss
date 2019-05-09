@@ -188,7 +188,7 @@ body.inside {
 			counter-reset: item;
 			margin: 1em 10px;
 			@include media($tablet) {
-				margin: 2em 50px;
+				margin: 3em 100px;
 			}
 			> li {
 				display: block;
@@ -244,7 +244,94 @@ body.inside {
 			}
 		}
 	}
+
+	.bnacase-imgset {
+		clear: both;
+		margin: 0 auto;
+		background: #c1c8be;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		padding: 40px 30px;
+		text-align: center;
+		text-transform: uppercase;
+		width: 80%;
+		margin-top: 40px;
+		margin-bottom: 40px;
+
+		@include media($tablet) {
+			margin-top: 100px;
+			margin-bottom: 100px;
+		// width: 60%;
+
+	}
+
+	.before, .after {
+		overflow: hidden;
+		width: 48%;
+		img {
+			margin-bottom: 0px;
+			.mommy-makeover &,
+			.labiaplasty &,
+			.breast & ,
+			.sample-page & {
+				filter: blur(10px);
+			}
+		}
+
+		@include media($tablet) {
+			width: 48%;
+		}
+
+		span {
+			color: $primaryColor;
+				// font-weight: bold;
+				letter-spacing: 1px;
+			}
+		}
+		.before{
+			margin-right: 0;
+			@include media($tablet) {
+				margin-right: 15px;
+			}
+		}
+		.after {
+			position: relative;
+		}
+
+		div:last-of-type {
+			align-self: center;
+			a {
+				margin-top: 20px;
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				text-align: center;
+				text-decoration: none !important;
+				font-family: $highlightFont;
+				// border: 1px solid $primaryColor;
+				text-transform: uppercase;
+				// letter-spacing: 1px;
+				// color: $secondaryColor;
+				// padding: 8px 35px;
+				// background-color: $lightColor;
+				border-bottom: 2px solid $primaryColor;
+				&:hover {
+					color: $primaryColor;
+					// border: 1px solid $tertiaryColor;
+					text-decoration: none;
+
+				}
+			}
+		} 
+	}
+
 }
+
+
+
+
 
 
 /*==========================================
@@ -256,11 +343,13 @@ body.inside {
 	padding: 40px 0px;
 	position: relative;
 	left: -20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 
 	@include media($tablet) {
 		left: -40px;
-		margin-top: 75px;
-		margin-bottom: 75px;
+		margin-top: 100px;
+		margin-bottom: 100px;
 	}
 	@include media($desktop) {
 		left: calc(((40px + (50vw - (#{$desktop} / 2)))) * -1);
@@ -277,21 +366,14 @@ body.inside {
 
 
 
-.page-feature-border {
-	margin: 40px 0;
-	@include media($tablet) {
-		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
-		padding: 20px 20px;
-		margin: 100px 0;
-	}
-}
-
 .page-feature {
-	box-shadow: 10px 10px 15px rgba($primaryColor, .3);
-	border: 1px solid rgba($lightColor, .3);
+	padding: 0;
+	// box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+	// border: 1px solid rgba($lightColor, .3);
 	display: flex;
 	flex-direction: column-reverse;
 	background-repeat: no-repeat !important;
+	background-color: #fbfcf9;
 	@include media($desktop) {
 		flex-direction: row-reverse;
 		background-size: cover !important;
@@ -300,7 +382,7 @@ body.inside {
 	.feature-image {
 		min-height: 350px;
 		@include media($tablet) {
-			min-height: 450px;
+			min-height: 650px;
 		}
 	}
 	> div {
@@ -312,13 +394,13 @@ body.inside {
 		}
 	}
 	.feature-content {
-		background: #eaf7ff;
+		// background: #eaf7ff;
 		padding: 20px;
 		@include media($tablet) {
-			padding: 60px 40px;
+			padding: 100px 40px;
 		}
 		@include media($desktop) {
-			background: transparent;
+			// background: transparent;
 			// padding: 100px 40px;
 		}
 		@include media($full) {
@@ -332,7 +414,7 @@ body.inside {
 			margin-top: 50px;
 			@include media($tablet) {
 				margin-top: 0;
-				// max-width: 500px;
+				max-width: 600px;
 			}
 		}
 		p {
@@ -521,7 +603,7 @@ body.inside {
 			height: 600px;
 
 			@include media($tablet) {
-			height: 1200px;
+				height: 1200px;
 				
 			}
 		}
@@ -531,4 +613,5 @@ body.inside {
 	}
 	#Types {
 		
+	}
 }

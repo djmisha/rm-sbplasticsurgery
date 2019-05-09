@@ -21,6 +21,8 @@ $(".menu-trigger").click(function () {
 	var el = $(this);
 	slideRightRemoveClass = false;
 	$(".menu-wrap").removeClass('menu-is-closed');
+	// removed sticky form on mobile
+	$('.sticky-form').toggleClass('sticky-mobile-fixed');
 });
 
 $(".menu-wrap").click(function() {

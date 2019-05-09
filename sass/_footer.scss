@@ -15,7 +15,7 @@
 	background: $lightColor;
 	padding-top: 10px;
 	width: 100%;
-	height: 500px;
+	height: 470px;
 	position: fixed;
 	bottom: -500px;
 	right: 0;
@@ -27,10 +27,16 @@
 
 	@include media($tablet) {
 		height: auto;
-		bottom: -155px;
+		bottom: -160px;
 	}
 
 	&.sticky-fixed {
+		bottom: 0px;
+		@include media($tablet) {
+			bottom: 0px;
+		}
+	}
+	&.sticky-mobile-fixed {
 		bottom: 0px;
 		@include media($tablet) {
 			bottom: 0px;
@@ -51,14 +57,21 @@
 		}
 	}
 	.schedule-cta {
-		// font-size: 18px;
+		font-size: 12px;
+		line-height: 14px;
+		@include media($tablet) {
+			font-size: 16px;
+			line-height: 26px;
+		}
 		span {
 			font-family: $secondaryFont;
 			display: block;
-			font-size: 25px;
-			margin-top: 10px;
-			margin-bottom: 20px;
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 10px;
 			@include media($tablet) {
+				margin-top: 10px;
+				margin-bottom: 20px;
 				font-size: 30px;
 			}
 		}

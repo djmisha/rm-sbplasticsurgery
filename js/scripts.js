@@ -50,6 +50,10 @@
 
 		      	$(window).width() > 1080
 
+		      	&&
+		      	
+		      	$(window).height() > 900
+
 		      	) 
 
 		      {
@@ -67,7 +71,8 @@
 
 		$('.connect').click(function(event) {
 			/* Act on the event */
-			$('.sticky-form').toggleClass('sticky-fixed');
+			$(this).toggleClass('chat-on');
+			$('.sticky-form').toggleClass('sticky-mobile-fixed');
 
 		});
 
