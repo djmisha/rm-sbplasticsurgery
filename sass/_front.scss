@@ -259,12 +259,17 @@ header,
 	background-position: top center;
 	background-size: 90vw auto;
 	background-repeat: no-repeat;
-	background-position-y: top 40px; 
-	// background-position-x: right 40px; 
-	padding-top: 115vw  ;
+	// background-position-y: top 40px; 
+	// background-position-x: right 40px;
+	margin-top: 20px; 
+	padding-top: 115vw ;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 20px;
+	@include media($tablet) {
+	background-position-y: top 40px; 
+		margin-top: 0;
+	}
 
 	@include media($desktop) {
 		padding-top: 150px;

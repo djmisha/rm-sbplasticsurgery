@@ -115,8 +115,20 @@
 	text-align: left;
 	padding-top: 40px;
 	padding-bottom: 40px;
+
+	@include media($tablet) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
 	> div {
-		// margin-bottom: 40px;
+		margin-bottom: 40px;
+		max-width: 600px;
+		@include media($desktop) {
+		padding-left: 40px;
+		padding-right: 40px;
+			// margin-bottom: 0;
+		}
 	}
 	@include media($tablet) {
 		padding-top: 100px;
@@ -126,11 +138,11 @@
 		flex-wrap: wrap;
 	}
 	@include media($desktop) {
-		justify-content: space-between;
-	}
-	@include media(1300px) {
+		justify-content: space-around;
 		flex-wrap: nowrap;
 	}
+	// @include media(1300px) {
+	// }
 	h2 {
 	}
 	ul {
@@ -196,18 +208,24 @@
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		min-height: 400px;
 		@include media($tablet) {
 			min-height: 800px;
-			// height: 100%;
 		}
 	}
 	.with-content {
 		// background-color: #fbfcf9; 
 		padding: 40px 20px;
-		p {
+		p, ul, ol {
 		margin: 0 auto;
 		max-width: 600px;
-
+		}
+		p {
+			margin-top: 1em;
+		}
+		ul, ol {
+			margin-top: 2em;
+			margin-bottom: 2em;
 		}
 		@include media($tablet) {
 			padding: 50px 70px;

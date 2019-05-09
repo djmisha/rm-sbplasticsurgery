@@ -71,6 +71,13 @@
 			<span>Schedule a Complimentary Consultation Today!</span>
 			</div>
 			<?php echo do_shortcode('[seaforms name="home-quick-contact"]'); ?>
+
+			<div class="mobile-social">
+				<a href="<?php the_field('facebook','options'); ?>" target="_blank" rel="noopener" title="facebook" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+				<a href="<?php the_field('twitter','options'); ?>" target="_blank" rel="noopener" title="twitter" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+				<a href="<?php the_field('instagram','options'); ?>" target="_blank" rel="noopener" title="instagram" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+				<a href="<?php the_field('youtube','options'); ?>" target="_blank" rel="noopener" title="youtube" aria-label="youtube"><i class="fab fa-youtube"></i></a>
+			</div>
 		</div>
 		<?php endif; ?>
 

@@ -31,75 +31,113 @@
 		}).init();
 
 
-		/*===================================
-		=            Sticky Form            =
-		===================================*/
-		$(window).on("load resize",function(stickstuff){
-			let theWidth = $(window).width();
-
-			if ( theWidth > 1080 ){
-				
-				var stickyform = document.querySelector('.sticky-form');
-
-				if(stickyform) {
-
-					// console.log('yes there is this');
-					let stickyContactTop = 300;
-
-					let stickyContact = function(){
-
-						let scrollTop = $(window).scrollTop();
-
-						if (scrollTop > stickyContactTop) {
-							$('.sticky-form').addClass('sticky-fixed');
-						} else {
-							$('.sticky-form').removeClass('sticky-fixed');
-
-						}
-					};
-
-					$(window).scroll(function() {
-						stickyContact();
-					});
-					
-				}
-			}
-
-
-			if ( theWidth > 1080 ){
-
-		// if ($("html").hasClass("not--device") && $(window).width() > 1080 ){
-				var navbar = document.querySelector('.nav-bar');
-
-				if(navbar) {
-
-						// console.log('yes there is this');
-						let navbarTop = 300;
-
-						let changeupNav = function(){
-
-							let scrollnavTop = $(window).scrollTop();
-
-							if (scrollnavTop > navbarTop) {
-								$('.nav-bar').addClass('change-up-nav');
-							} else {
-								$('.nav-bar').removeClass('change-up-nav');
-
-							}
-						};
-
-						$(window).scroll(function() {
-							changeupNav();
-						});
-					}
-				}
-			});
+		/*=============================
+		=            Blazy            =
+		=============================*/
+		
+		var bLazy = new Blazy();
 		
 
-		/* --------------------------------------------------
-			Blazy
-		-------------------------------------------------- */
-			var bLazy = new Blazy();
+
+		/*===================================
+		=            Sticky             =
+		===================================*/
+
+
+		$(window).scroll(function () {
+		      if ($(window).scrollTop() > 300 && $('html').hasClass('not--device') 
+		      	&& 
+
+		      	$(window).width() > 1080
+
+		      	) 
+
+		      {
+				$('.sticky-form').addClass('sticky-fixed');
+				$('.nav-bar').addClass('change-up-nav');
+		        // $('.nav-bar').addClass('fixed-menu');
+		        // $('.location').addClass('magic');
+		      } else {
+				$('.nav-bar').removeClass('change-up-nav');
+				$('.sticky-form').removeClass('sticky-fixed');
+		        // $('.nav-bar').removeClass('fixed-menu');
+		        // $('.location').removeClass('magic');
+		      }
+		    });
+
+		$('.connect').click(function(event) {
+			/* Act on the event */
+			$('.sticky-form').toggleClass('sticky-fixed');
+
+		});
+
+
+		// $(window).on('load resize',function(e){
+					
+		// 			if ($('html').hasClass('is--device') || $(window).width() <= 1080) {
+						
+		// 				console.log('will not stick');
+
+		// 			}
+
+		// 			else{
+		// 				console.log('will stick');
+		// 			}
+
+		// 		});
+
+
+
+		// 		var stickyform = document.querySelector('.sticky-form');
+
+		// 		if(stickyform) {
+		// 			// console.log('yes there is this');
+		// 			let stickyContactTop = 300;
+		// 			let stickyContact = function(){
+
+		// 				let scrollTop = $(window).scrollTop();
+		// 				if (scrollTop > stickyContactTop) {
+		// 					$('.sticky-form').addClass('sticky-fixed');
+		// 				} else {
+		// 					$('.sticky-form').removeClass('sticky-fixed');
+
+		// 				}
+		// 			};
+
+		// 			$(window).scroll(function() {
+		// 				stickyContact();
+		// 			});
+
+		// 		}
+
+
+		// 		/* NAVBAR */
+		// 		var navbar = document.querySelector('.nav-bar');
+
+		// 		if(navbar) {
+		// 			// console.log('yes there is this');
+		// 			let navbarTop = 300;
+
+		// 			let changeupNav = function(){
+
+		// 				let scrollnavTop = $(window).scrollTop();
+
+		// 				if (scrollnavTop > navbarTop) {
+		// 					$('.nav-bar').addClass('change-up-nav');
+		// 				} else {
+		// 					$('.nav-bar').removeClass('change-up-nav');
+
+		// 				}
+		// 			};
+
+		// 			$(window).scroll(function() {
+		// 				changeupNav();
+		// 			});
+		// 		}
+
+
+
+	
 
 
 		/* Homepage Procedures Slideshow */

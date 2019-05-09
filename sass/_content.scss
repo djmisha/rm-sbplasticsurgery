@@ -516,4 +516,19 @@ body.inside {
 			}
 		}
 	}
+	#Incisions {
+		.with-bg {
+			height: 600px;
+
+			@include media($tablet) {
+			height: 1200px;
+				
+			}
+		}
+	}
+	#Surgery {
+		background-color: #fbfcf9; 
+	}
+	#Types {
+		
 }

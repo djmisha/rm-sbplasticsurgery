@@ -68,6 +68,23 @@
 			margin-left: 20px;
 		}
 	}
+
+	.mobile-social {
+		bottom: 20px;
+		position: absolute;
+		right: 0px;
+		left: 0px;
+		// top: 20px;
+		display: block;
+		@include media($tablet) {
+		display: none;
+		}
+		i {
+			font-size: 30px;
+			color: #c1c9be;
+			margin: 0 6px;
+		}
+	}
 }
 
 
