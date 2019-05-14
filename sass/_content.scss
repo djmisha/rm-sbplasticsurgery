@@ -90,7 +90,7 @@ article p ~ h2 {
 	font-size: 10px;
 	line-height: 14px;
 	text-transform: uppercase;
-	margin-bottom: 30px;
+	// margin-bottom: 30px;
 
 	@include media($tablet) {
 		text-align: center;
@@ -98,7 +98,7 @@ article p ~ h2 {
 		padding-bottom: 10px !important;
 		font-size: 15px;
 		line-height: 15px;
-		margin-bottom: 50px;
+		// margin-bottom: 50px;
 	}
 	.salacious-crumb {
 		color: $darkColor;
@@ -125,22 +125,19 @@ article p ~ h2 {
 	}
 }
 
-body.inside {
-	background: url('images/bg-inside.jpg') top center;
-	@include media($tablet) {
-		background-attachment: fixed;
-	}
-}
-
 .interior {
 	text-align: left;
-	// padding-bottom: 60px;
-	@include media($tablet) {
-		// padding-bottom: 100px;
+	background: url('images/bg-inside.jpg') bottom center;
+	.tmpl_type_page_landing & {
+		background: none;
 	}
-	@include media($desktop) {
-		// display: flex;
-		// justify-content: space-between;
+	background-repeat: no-repeat;
+	padding-top: 30px;
+	@include media($tablet) {
+		padding-top: 50px;
+	}
+	@include media(1850px) {
+		background-size: cover;
 	}
 	.content {
 		overflow-wrap: break-word;
@@ -630,3 +627,20 @@ body.inside {
 	}
 }
 
+.breast-tabs {
+	.tab-group {
+		 display: flex;
+		 text-transform: uppercase;
+
+	}
+	.the-tabs {
+		border: 1px solid #c7c8ca;
+		> div {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}  
+
+	}
+}

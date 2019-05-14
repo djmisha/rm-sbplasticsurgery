@@ -15,13 +15,13 @@
 	<?php wp_head()?>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125776829-1"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4492713-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
-	  gtag('config', 'UA-125776829-1');
+	  gtag('config', 'UA-4492713-1');
 	</script>
 
 </head>
@@ -40,9 +40,11 @@
 			<div class="trigger-text">MENU</div>
 		</div>
 		<div class="nav-bar-logo">
+			<?php echo is_front_page() ? '<h1>' : ''; ?>
 			<a href="<?php bloginfo('url'); ?>">
-				<img class="b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+				<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Santa Barbara Plastic Surgery Center & Medi Spa">
 			</a>
+			<?php echo is_front_page() ? '</h1>' : ''; ?>
 		</div>
 		<div class="navbar-social">
 			<a href="<?php the_field('facebook','options'); ?>" target="_blank" rel="noopener" title="facebook" aria-label="facebook"><i class="fab fa-facebook"></i></a>
@@ -77,10 +79,11 @@
 		// Inside Page Title
 		if(!is_front_page()): 
 	 ?>
+
 		<div class="inside-logo">
-		 <a href="<?php bloginfo('url'); ?>">
-		 	<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo">
-		 </a>
+			 <a href="<?php bloginfo('url'); ?>">
+			 	<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo">
+			 </a>
 		</div>
 
 		<section class="page-title">
@@ -94,7 +97,7 @@
 					<h1><?php echo $category_title ?> Gallery</h1>
 				<?php elseif(this_is('gallery')): ?>
 					<h1>Photo Gallery</h1>
-				<?php elseif (get_post_type() =='news-room'): ?>
+				<?php elseif (is_archive() =='newsroom'): ?>
 					<div class="heading-text">Newsroom</div>
 				<?php elseif (is_search()): ?>
 					<div class="heading-text">Search Results</div>

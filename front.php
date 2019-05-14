@@ -38,8 +38,9 @@
 						</div>
 					</div>
 					<div class="proced-name">
-						<a href="<?php the_sub_field('headline_link'); ?>"></a>
-						<?php the_sub_field('headline'); ?>
+						<a href="<?php the_sub_field('headline_link'); ?>">
+							<?php the_sub_field('headline'); ?>
+						</a>
 					</div>
 				</li>
 				<?php $count++; ?>

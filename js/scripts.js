@@ -44,7 +44,7 @@
 
 		/* Change Up Navigation on Scroll Down */
 		$(window).scroll(function () {
-			if ($(window).scrollTop() > 300 && $('html').hasClass('not--device') 
+			if ($(window).scrollTop() > 450 && $('html').hasClass('not--device') 
 				&& 
 				$(window).width() > 1080
 				) 
@@ -60,7 +60,7 @@
 		/*Change Up Sticky Footer on scroll down*/
 
     	$(window).scroll(function () {
-    	      if ($(window).scrollTop() > 300 && $('html').hasClass('not--device') 
+    	      if ($(window).scrollTop() > 450 && $('html').hasClass('not--device') 
     	      	&& 
 
     	      	$(window).width() > 1080
@@ -169,7 +169,29 @@
 			} //end cookies check
 		}
 		
+		/*=======================================
+		=            Breast Aug Tabs            =
+		=======================================*/
 		
+
+		$('.breast-tabs .tab').on('click', function(event) {
+
+			event.preventDefault();
+			/* Act on the event */
+			$('.tab').removeClass('active');
+			$(this).addClass('active');
+
+			// set a variable for the active tabs data attribute
+			$active = $(this).attr('data-number');
+
+			$('.menu-featured .the-tabs div').removeClass('active');
+
+			// if the data attribute matches, add the active class
+			$('.menu-featured .the-tabs div[data-number=' + $active + ']').addClass('active');
+
+		});
+
+
 	}); // end of doc.ready
 })(jQuery);
 	

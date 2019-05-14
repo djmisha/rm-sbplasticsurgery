@@ -16,7 +16,7 @@
 						<?php endif; ?>
 						<div class="meta-data"><?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> in <?php the_category(', '); ?></div>
 						<a href="<?php the_permalink(); ?>">
-							<?php my_excerpt(75); ?>
+							<?php my_excerpt(70); ?>
 						</a>
 						<a href="<?php the_permalink(); ?>" class="button">Continue Reading
 						</a>

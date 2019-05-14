@@ -2,7 +2,7 @@
 // Template Name: Contact
 ?>
 <?php get_header()?>
-<main>
+<main class="interior">
 <?php if(have_posts()) : while (have_posts()) : the_post();?>
 	<article class="content">
 		<div class="contact-content">

@@ -4532,6 +4532,10 @@ main,
   display: none;
 }
 
+.nav-bar-logo h1 {
+  margin: 0;
+}
+
 @media only screen and (min-width: 768px) {
   .nav-bar-logo {
     display: block;
@@ -5239,7 +5243,6 @@ article p ~ h2 {
   font-size: 10px;
   line-height: 14px;
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5249,7 +5252,6 @@ article p ~ h2 {
     padding-bottom: 10px !important;
     font-size: 15px;
     line-height: 15px;
-    margin-bottom: 50px;
   }
 }
 
@@ -5283,18 +5285,27 @@ article p ~ h2 {
   color: #c1c9be;
 }
 
-body.inside {
-  background: url("images/bg-inside.jpg") top center;
+.interior {
+  text-align: left;
+  background: url("images/bg-inside.jpg") bottom center;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+}
+
+.tmpl_type_page_landing .interior {
+  background: none;
 }
 
 @media only screen and (min-width: 768px) {
-  body.inside {
-    background-attachment: fixed;
+  .interior {
+    padding-top: 50px;
   }
 }
 
-.interior {
-  text-align: left;
+@media only screen and (min-width: 1850px) {
+  .interior {
+    background-size: cover;
+  }
 }
 
 .interior .content {
@@ -5822,11 +5833,31 @@ body.inside {
   background-size: cover;
 }
 
+.breast-tabs .tab-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+}
+
+.breast-tabs .the-tabs {
+  border: 1px solid #c7c8ca;
+}
+
+.breast-tabs .the-tabs > div {
+  display: none;
+}
+
+.breast-tabs .the-tabs > div.active {
+  display: block;
+}
+
 /* ------------------------
 	Aside
 ------------------------ */
 aside {
   display: block;
+  padding-bottom: 20px;
 }
 
 aside ul {
@@ -7006,6 +7037,11 @@ aside li {
   .home-featured-procedures li .proced-name {
     font-size: 32px;
   }
+}
+
+.home-featured-procedures li .proced-name a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 1080px) {
