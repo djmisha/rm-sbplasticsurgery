@@ -30,7 +30,6 @@
 			// mobile: false,
 		}).init();
 
-
 		/*=============================
 		=            Blazy            =
 		=============================*/
@@ -43,31 +42,44 @@
 		=            Sticky             =
 		===================================*/
 
-
+		/* Change Up Navigation on Scroll Down */
 		$(window).scroll(function () {
-		      if ($(window).scrollTop() > 300 && $('html').hasClass('not--device') 
-		      	&& 
-
-		      	$(window).width() > 1080
-
-		      	&&
-		      	
-		      	$(window).height() > 900
-
-		      	) 
-
-		      {
-				$('.sticky-form').addClass('sticky-fixed');
+			if ($(window).scrollTop() > 300 && $('html').hasClass('not--device') 
+				&& 
+				$(window).width() > 1080
+				) 
+			{
 				$('.nav-bar').addClass('change-up-nav');
-		        // $('.nav-bar').addClass('fixed-menu');
-		        // $('.location').addClass('magic');
-		      } else {
+			} else {
 				$('.nav-bar').removeClass('change-up-nav');
-				$('.sticky-form').removeClass('sticky-fixed');
-		        // $('.nav-bar').removeClass('fixed-menu');
-		        // $('.location').removeClass('magic');
-		      }
-		    });
+			}
+	    });
+
+
+
+		/*Change Up Sticky Footer on scroll down*/
+
+    	$(window).scroll(function () {
+    	      if ($(window).scrollTop() > 300 && $('html').hasClass('not--device') 
+    	      	&& 
+
+    	      	$(window).width() > 1080
+
+    	      	&&
+    	      	
+    	      	$(window).height() > 900 //not on short laptop screens
+
+    	      	) 
+
+    	      {
+    			$('.sticky-form').addClass('sticky-fixed');
+    	      } else {
+    			$('.sticky-form').removeClass('sticky-fixed');
+    	      }
+        });
+
+
+    	/* Mobile Connect Button and Form */
 
 		$('.connect').click(function(event) {
 			/* Act on the event */
@@ -76,140 +88,6 @@
 
 		});
 
-
-		// $(window).on('load resize',function(e){
-					
-		// 			if ($('html').hasClass('is--device') || $(window).width() <= 1080) {
-						
-		// 				console.log('will not stick');
-
-		// 			}
-
-		// 			else{
-		// 				console.log('will stick');
-		// 			}
-
-		// 		});
-
-
-
-		// 		var stickyform = document.querySelector('.sticky-form');
-
-		// 		if(stickyform) {
-		// 			// console.log('yes there is this');
-		// 			let stickyContactTop = 300;
-		// 			let stickyContact = function(){
-
-		// 				let scrollTop = $(window).scrollTop();
-		// 				if (scrollTop > stickyContactTop) {
-		// 					$('.sticky-form').addClass('sticky-fixed');
-		// 				} else {
-		// 					$('.sticky-form').removeClass('sticky-fixed');
-
-		// 				}
-		// 			};
-
-		// 			$(window).scroll(function() {
-		// 				stickyContact();
-		// 			});
-
-		// 		}
-
-
-		// 		/* NAVBAR */
-		// 		var navbar = document.querySelector('.nav-bar');
-
-		// 		if(navbar) {
-		// 			// console.log('yes there is this');
-		// 			let navbarTop = 300;
-
-		// 			let changeupNav = function(){
-
-		// 				let scrollnavTop = $(window).scrollTop();
-
-		// 				if (scrollnavTop > navbarTop) {
-		// 					$('.nav-bar').addClass('change-up-nav');
-		// 				} else {
-		// 					$('.nav-bar').removeClass('change-up-nav');
-
-		// 				}
-		// 			};
-
-		// 			$(window).scroll(function() {
-		// 				changeupNav();
-		// 			});
-		// 		}
-
-
-
-	
-
-
-		/* Homepage Procedures Slideshow */
-
-		// $('.the-slider').flickity({
-		//   cellAlign: 'left',
-		//   contain: true,
-		//   autoPlay: 6500,
-		//   wrapAround: true
-		//   // fade: true, 
-		//   // groupCells: 2
-		// });
-
-
-		/*================================================================
-		=            Custom Landing Page Header, Append Items            =
-		================================================================*/
-
-		// $(".tmpl_type_page_landing .site-crumbs").appendTo("header");
-		// $(".tmpl_type_page_landing .page-title").appendTo("header");
-		// $(".tmpl_type_page_landing .flexible-jump-links").appendTo("header");
-
-		/*=======================================
-		=            Reviews Rotator            =
-		=======================================*/
-
-		// $(".the-slider").owlCarousel({
-		// 	items: 2,
-		// 	lazyLoad: true,
-		// 	loop: true,
-		// 	nav: false,
-		// 	dots: true,
-		// 	autoplay: true,
-		// 	autoplayTimeout: 5000,
-		// 	smartSpeed: 700
-		// });
-
-		// $(".owl-dots").appendTo(".reviews-box");
-
-
-		/*==================================
-		=            Testi Page            =
-		==================================*/
-		
-
-		  // init Isotope after all images have loaded
-		  // $grid.isotope({
-		  //   itemSelector: '.element-item',
-			 //  layoutMode: 'masonry'
-		  // });
-
-			
-		// var $grid = $('.testi-container').imagesLoaded( function() {
-		// var $grid = $(".testi-container").isotope({
-		// 	itemSelector: ".the-testi",
-		// 	percentPosition: true,
-		// 	  masonry: {
-		// 	    // use element for option
-		// 	    columnWidth: '.the-testi',
-		// 	    columnWidth: 45,
-		// 	  }
-		// });
-		// });
-
-		/* Adds Fancybox */
-			
-		// $(".the-testi a").attr("data-fancybox", "gallery");
 
 		
 		/*================================
@@ -291,55 +169,6 @@
 			} //end cookies check
 		}
 		
-
-		/*=============================================
-		=            Track Outbound Clicks            =
-		=============================================*/
-
-		function trackOutboundLink(event) {
-			// prevent the default behavior
-			event.preventDefault();
-
-			// get necessary info
-			var url = this.href;
-			var label =
-				this.dataset.label !== "undefined" ? this.dataset.label : url; // Fallback to URL just in case no label was set. Safety first kids
-			var target =
-				this.target !== "" && this.target == "_blank" ? "new" : "self";
-
-			// Just making sure this exists
-			if (typeof gtag !== "undefined") {
-				gtag("event", "click", {
-					event_category: "outbound",
-					event_label: label,
-					transport_type: "beacon",
-					event_callback: function() {
-						if (target == "new") {
-							window.open(url);
-						} else {
-							document.location = url;
-						}
-					}
-				});
-			} else {
-				// trigger default behavior as fallback in case the gtag was omitted
-				if (target == "new") {
-					window.open(url);
-				} else {
-					document.location = url;
-				}
-			}
-		} // end tarckOutboundLink()
-
-		// Grab all our links
-		var linksToTrack = document.querySelectorAll(".track-outbound");
-
-		// Add click event to all of our tracked links
-		for (var i = 0; i < linksToTrack.length; i++) {
-			linksToTrack[i].addEventListener("click", trackOutboundLink, false);
-		}
-
-
 		
 	}); // end of doc.ready
 })(jQuery);
@@ -347,19 +176,50 @@
 
 
 
-/*========================================================
-=            Specials Page form fill on click            =
-========================================================*/
 
+/*=============================================
+=            Track Outbound Clicks            =
+=============================================*/
 
-// const redeemBtns = document.querySelectorAll('.news-specials .button');
+function trackOutboundLink(event) {
+	// prevent the default behavior
+	event.preventDefault();
 
-// redeemBtns.forEach(function(btn) {
-// 	btn.addEventListener("click", function(event) {
-// 		let specialSlug = this.getAttribute('data-label');
-// 		let specialMessageText = "I'm interested in " +  specialSlug;
-// 		const specialMessageArea = document.querySelector('#message-12');
+	// get necessary info
+	var url = this.href;
+	var label =
+		this.dataset.label !== "undefined" ? this.dataset.label : url; // Fallback to URL just in case no label was set. Safety first kids
+	var target =
+		this.target !== "" && this.target == "_blank" ? "new" : "self";
 
-// 		specialMessageArea.value = specialMessageText;
-// 	});
-// });
+	// Just making sure this exists
+	if (typeof gtag !== "undefined") {
+		gtag("event", "click", {
+			event_category: "outbound",
+			event_label: label,
+			transport_type: "beacon",
+			event_callback: function() {
+				if (target == "new") {
+					window.open(url);
+				} else {
+					document.location = url;
+				}
+			}
+		});
+	} else {
+		// trigger default behavior as fallback in case the gtag was omitted
+		if (target == "new") {
+			window.open(url);
+		} else {
+			document.location = url;
+		}
+	}
+} // end tarckOutboundLink()
+
+// Grab all our links
+var linksToTrack = document.querySelectorAll(".track-outbound");
+
+// Add click event to all of our tracked links
+for (var i = 0; i < linksToTrack.length; i++) {
+	linksToTrack[i].addEventListener("click", trackOutboundLink, false);
+}

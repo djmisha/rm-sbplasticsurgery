@@ -46,9 +46,14 @@
 				padding-left: 0;
 				padding-bottom: 10px;
 				// font-family: $secondaryFont;
-				font-size: 18px;
+				font-size: 16px;
 				font-style: normal;
 				text-align: center;
+				@include media($tablet) {
+					font-size: 18px;
+					line-height: 22px;
+					
+				}
 
 				a {
 				display: inline-block;
@@ -354,6 +359,13 @@
 // Single Case
 
 .tmpl_type_rmg_single_case {
+	.interior {
+		display: block;
+		margin-bottom: 20px;
+		@include media($tablet) {
+			margin-bottom: 60px;
+		}
+	}
 	.single-case-title {
 		// margin-top: 40px;
 	}

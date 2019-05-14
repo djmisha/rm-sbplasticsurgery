@@ -1,6 +1,5 @@
  <div class="jump-links-split">
   <div data-src="<?php the_sub_field('image'); ?>" class="with-bg b-lazy"></div>
-  <!-- <div style="background-image: url('<?php the_sub_field('image'); ?>');" class="with-bg" ></div> -->
   <div class="flexible-jump-links">
     <div class="jump-link-list">
       <div class="jump-link-list-border">
@@ -13,6 +12,7 @@
             <?php endwhile; ?>
           </ul>
         <?php endif; ?>
+        <?php the_sub_field('content'); ?>
       </div>
     </div>
   </div>

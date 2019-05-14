@@ -22,7 +22,9 @@ $(".menu-trigger").click(function () {
 	slideRightRemoveClass = false;
 	$(".menu-wrap").removeClass('menu-is-closed');
 	// removed sticky form on mobile
-	$('.sticky-form').toggleClass('sticky-mobile-fixed');
+	$('.sticky-form').removeClass('sticky-mobile-fixed');
+	$('.connect').removeClass('chat-on');
+
 });
 
 $(".menu-wrap").click(function() {

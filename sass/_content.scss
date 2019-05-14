@@ -611,7 +611,22 @@ body.inside {
 	#Surgery {
 		background-color: #fbfcf9; 
 	}
-	#Types {
-		
+}
+
+/* Tummy Tuck Page */
+
+.page-1001 {
+	#Procedure {
+		flex-direction: row-reverse;
 	}
 }
+
+/* Rhuinoplasty Page  */
+
+.page-1017 {
+	#Procedure {
+		flex-direction: row-reverse;
+		background-size: cover;
+	}
+}
+

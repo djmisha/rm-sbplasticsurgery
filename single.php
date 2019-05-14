@@ -1,8 +1,8 @@
 <?php get_header()?>
 
 <section class="interior">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 		<article class="content">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 			<h1><?php the_title(); ?></h1>
 			<div class="meta-data">Posted on <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> <?php the_category(', '); ?></div>
 			<?php the_content();?>
@@ -21,8 +21,8 @@
 						));
 					?>
 			</div>
-		</article>
 		<?endwhile; endif;?>
 		<?php get_sidebar()?>
+		</article>
 	</section>
 <?php get_footer()?>
