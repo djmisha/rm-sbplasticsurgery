@@ -11,6 +11,7 @@
 	right: 0px;
 	height: 60px;
 	display: flex;
+	transition: all .5s ease-out;
 	
 	@include media($tablet) {
 		background-color: $lightColor;
@@ -25,10 +26,12 @@
 		height: 130px;
 		top: 0px;
 	}
-	transition: all .5s ease-out;
+	.is--ipad & {
+		height: 60px;
+	}
 	&.change-up-nav {
-		height: 90px;
 		background: rgba($lightColor, .85);
+		height: 90px;
 
 		.navbar-social {
 			top: -20px;
@@ -96,6 +99,14 @@
 		display: block;
 		position: absolute;
 		top: 5px;
+		.is--ipad & {
+			// display: block;
+			position: absolute;
+			top: 5px;
+			left: calc(50% - 170px);
+			// right: 50%;
+			// width: 300px;
+		}
 	}
 	@include media($desktop) {
 		left: 10px;
@@ -104,6 +115,10 @@
 	}
 	@include media(1280px) {
 		width: 500px;
+		.is--ipad & {
+			width: 280px;
+		}
+
 	}
 
 	img {
@@ -112,6 +127,11 @@
 		@include media($tablet) {
 			max-width: none;
 			height: 55px;
+			.is--ipad & {
+				max-width: none;
+				// width: 300px;
+				// height: 55px;
+			}
 		}
 		@include media($desktop) {
 			height: auto;
@@ -119,6 +139,9 @@
 		}
 		@include media(1280px) {
 			width: 100%;
+			.is--ipad & {
+				width: 280px;
+			}
 		}
 	}
 }
@@ -136,6 +159,9 @@
 	align-items: center;
 	@include media($desktop) {
 		top: 10px;
+		.is--ipad & {
+			top: 0px;
+		}
 	}
 	a {
 		color: $primaryColor;
@@ -147,6 +173,9 @@
 		display: none;
 		@include media($desktop) {
 			display: inline-block;
+			.is--ipad & {
+				display: none;
+			}
 		}
 		font-family: $secondaryFont;
 		font-size: 16px;
@@ -167,20 +196,25 @@
 		@include media($desktop) {
 			color: $darkColor;
 			background-color: transparent;
+		.is--ipad & {
+			background-color: #c2c7c0;
+			color: $lightColor;
+		}
+
 		}
 	}
 	.connect {
 		display: block;
 		@include media($tablet) {
-		display: none;
+			display: none;
 		}
 		i {
 			font-size: 25px;
 			color: #fff;
 		}
-	&.chat-on i {
-		color: $darkColor;
-	}		
+		&.chat-on i {
+			color: $darkColor;
+		}		
 	}
 }
 
@@ -193,6 +227,9 @@
 	top: 20px;
 	@include media($desktop) {
 		display: inline-block;
+		.is--ipad & {
+			display: none;
+		}
 	}
 	i {
 		font-size: 20px;

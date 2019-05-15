@@ -3805,7 +3805,6 @@ a.page-numbers.current,
   color: #3a4859;
   font-size: 15px;
   line-height: 25px;
-  font-weight: 100;
   text-transform: none;
   font-family: "Lato", sans-serif;
   padding: 4px 20px;
@@ -3815,6 +3814,7 @@ a.page-numbers.current,
   background: transparent;
   text-transform: uppercase;
   letter-spacing: 2px;
+  background: transparent;
 }
 
 .button:hover,
@@ -3825,6 +3825,7 @@ a.page-numbers:hover,
 a.page-numbers.current:hover,
 .after-review-sprinkle .button:hover {
   text-decoration: none;
+  background: #dce4ea;
 }
 
 .after-review-sprinkle .button:hover {
@@ -3957,6 +3958,13 @@ img.alignright,
 img.aligncenter,
 .yes-frame {
   visibility: visible;
+}
+
+.seaforms_confirmation_message {
+  border: 1px solid #3a4859;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .responsive-map {
@@ -4449,9 +4457,13 @@ main,
   }
 }
 
+.is--ipad .nav-bar {
+  height: 60px;
+}
+
 .nav-bar.change-up-nav {
-  height: 90px;
   background: rgba(255, 255, 255, 0.85);
+  height: 90px;
 }
 
 .nav-bar.change-up-nav .navbar-social {
@@ -4542,6 +4554,11 @@ main,
     position: absolute;
     top: 5px;
   }
+  .is--ipad .nav-bar-logo {
+    position: absolute;
+    top: 5px;
+    left: calc(50% - 170px);
+  }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -4556,6 +4573,9 @@ main,
   .nav-bar-logo {
     width: 500px;
   }
+  .is--ipad .nav-bar-logo {
+    width: 280px;
+  }
 }
 
 .nav-bar-logo img {
@@ -4569,6 +4589,9 @@ main,
     max-width: none;
     height: 55px;
   }
+  .is--ipad .nav-bar-logo img {
+    max-width: none;
+  }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -4581,6 +4604,9 @@ main,
 @media only screen and (min-width: 1280px) {
   .nav-bar-logo img {
     width: 100%;
+  }
+  .is--ipad .nav-bar-logo img {
+    width: 280px;
   }
 }
 
@@ -4606,6 +4632,9 @@ main,
   .nav-bar-extras {
     top: 10px;
   }
+  .is--ipad .nav-bar-extras {
+    top: 0px;
+  }
 }
 
 .nav-bar-extras a {
@@ -4624,6 +4653,9 @@ main,
 @media only screen and (min-width: 1080px) {
   .nav-bar-extras .extra-names {
     display: inline-block;
+  }
+  .is--ipad .nav-bar-extras .extra-names {
+    display: none;
   }
 }
 
@@ -4652,6 +4684,10 @@ main,
   .nav-bar-extras .head-phone {
     color: #233448;
     background-color: transparent;
+  }
+  .is--ipad .nav-bar-extras .head-phone {
+    background-color: #c2c7c0;
+    color: #ffffff;
   }
 }
 
@@ -4686,6 +4722,9 @@ main,
 @media only screen and (min-width: 1080px) {
   .navbar-social {
     display: inline-block;
+  }
+  .is--ipad .navbar-social {
+    display: none;
   }
 }
 
@@ -5833,6 +5872,20 @@ article p ~ h2 {
   background-size: cover;
 }
 
+.breast-tabs {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .breast-tabs {
+    max-width: 650px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+}
+
 .breast-tabs .tab-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5840,12 +5893,46 @@ article p ~ h2 {
   text-transform: uppercase;
 }
 
+.breast-tabs .tab-group > div {
+  border: 1px solid #c7c8ca;
+  padding: 5px;
+  background: #fff;
+  border-right: none;
+  position: relative;
+  top: 1px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .breast-tabs .tab-group > div {
+    line-height: 24px;
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+.breast-tabs .tab-group > div:last-of-type {
+  border-right: 1px solid #c7c8ca;
+}
+
+.breast-tabs .tab-group > div.active {
+  border-bottom: none;
+}
+
 .breast-tabs .the-tabs {
   border: 1px solid #c7c8ca;
 }
 
 .breast-tabs .the-tabs > div {
+  padding: 20px;
   display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .breast-tabs .the-tabs > div {
+    padding: 40px;
+  }
 }
 
 .breast-tabs .the-tabs > div.active {
@@ -5857,6 +5944,9 @@ article p ~ h2 {
 ------------------------ */
 aside {
   display: block;
+}
+
+.from-blog aside {
   padding-bottom: 20px;
 }
 
@@ -5876,6 +5966,10 @@ aside li {
   aside > div {
     width: 100%;
   }
+}
+
+.tmpl_type_single aside {
+  display: none;
 }
 
 .sidebar-block {
@@ -6639,7 +6733,7 @@ aside li {
 }
 
 .welcome .welcome-cta {
-  margin-top: 10px;
+  margin-top: 0px;
   padding-top: 350px;
   text-align: center;
   padding-bottom: 20px;
@@ -7814,12 +7908,12 @@ aside li {
   }
 }
 
-.flexible-split-section div {
+.flexible-split-section > div {
   width: 100%;
 }
 
 @media only screen and (min-width: 1080px) {
-  .flexible-split-section div {
+  .flexible-split-section > div {
     width: 50%;
     height: 100%;
   }

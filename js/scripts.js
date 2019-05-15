@@ -184,10 +184,10 @@
 			// set a variable for the active tabs data attribute
 			$active = $(this).attr('data-number');
 
-			$('.menu-featured .the-tabs div').removeClass('active');
+			$('.breast-tabs .the-tabs div').removeClass('active');
 
 			// if the data attribute matches, add the active class
-			$('.menu-featured .the-tabs div[data-number=' + $active + ']').addClass('active');
+			$('.breast-tabs .the-tabs div[data-number=' + $active + ']').addClass('active');
 
 		});
 

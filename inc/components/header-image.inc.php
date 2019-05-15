@@ -40,8 +40,8 @@ function get__header__image() {
 
             // Enable Lazy Loading on Header Images 
             echo 'data-src="'. $defaultRandImage . '"';
-            $directParent = $post->post_parent;
-            echo 'data-ID="' . $directParent . '"';
+            // $directParent = $post->post_parent;
+            // echo 'data-ID="' . $directParent . '"';
 
             // echo 'data-name="' . $defaultRandName . '" ';
             // echo 'data-tag="' . $defaultRandTag . '" ';

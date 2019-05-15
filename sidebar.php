@@ -1,6 +1,6 @@
 <aside>
 
-	<?php if(get_post_type() == 'post'){ //Sidebar Blog Pages  ?>
+	<?php if(get_post_type() == 'post' ){ //Sidebar Blog Pages  ?>
 		<div class="sidebar-block blog-block">
 			<div class="sb-inside">
 				<div class="sb-heading">Categories</div>

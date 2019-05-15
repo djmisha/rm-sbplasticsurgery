@@ -1,5 +1,12 @@
 $errorcolor: darken($primaryColor, 20%);
 
+.seaforms_confirmation_message {
+	border: 1px solid $primaryColor; 
+	padding: 10px;
+	margin-top: 20px; 
+	margin-bottom: 20px; 
+}
+
 .responsive-map {
 	position: relative;
 	padding-bottom: 33.33333%;

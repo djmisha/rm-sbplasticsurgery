@@ -628,19 +628,56 @@ article p ~ h2 {
 }
 
 .breast-tabs {
+	margin-bottom: 40px;
+	margin-top: 40px;
+	@include media($tablet) {
+		max-width: 650px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+		margin-top: 60px;
+	}
 	.tab-group {
-		 display: flex;
-		 text-transform: uppercase;
+		display: flex;
+		text-transform: uppercase;
+
+		> div {
+			border: 1px solid #c7c8ca;
+			padding: 5px;
+			// border-bottom: none;
+			background: #fff;
+			border-right: none;
+
+			position: relative;
+			top: 1px;
+			font-size: 10px;
+			line-height: 12px;
+			@include media($tablet) {
+				line-height: 24px;
+				font-size: 16px;
+				padding: 15px;
+			}
+			&:last-of-type {
+				border-right: 1px solid #c7c8ca;
+			}
+
+			&.active {
+				border-bottom: none;
+				// background-color: rgba(#c7c8ca, .5);
+			}
+		}
 
 	}
 	.the-tabs {
 		border: 1px solid #c7c8ca;
 		> div {
+			padding: 20px;
 			display: none;
+			@include media($tablet) {
+				padding: 40px;
+			}
 			&.active {
 				display: block;
 			}
 		}  
-
 	}
 }
