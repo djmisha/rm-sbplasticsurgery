@@ -17,11 +17,11 @@
 
 	$rmg_case::prev( array(
 		'class' => 'button-rmg button-gallery-prev button' ,
-		'title'  => '&larr;') );
+		'title'  => '&larr; <span>Prev</span>') );
 
 	$rmg_case::next( array(
 		'class' => 'button-rmg button-gallery-next button' ,
-		'title' => '&rarr;') );
+		'title' => '<span>Next</span> &rarr;') );
 		?>
 	</div>
 	<div class="single-case-title">

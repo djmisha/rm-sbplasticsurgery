@@ -14,9 +14,6 @@
 				<?php endif; ?>
 			</p>
 		</div>
-
-		<!-- FIX PHONE NUMBER -->
-
 		<?php echo do_shortcode('[seaforms name="sidebar"]'); ?>
 	</section> 
 	
@@ -50,7 +47,7 @@
 							<!-- <?php the_sub_field('name', 'option'); ?><br> -->
 							<?php the_sub_field('address', 'option'); ?> <?php the_sub_field('city', 'option'); ?> <br />
 						</a>
-						<a href="https://www.santabarbarabreast.com" rel="noopener"><span>Visit Our Breast site: </span>www.santabarbarabreast.com</a>
+						<a href="https://www.santabarbarabreast.com" rel="noopener" target="_blank"><span>Visit Our Breast site: </span>www.santabarbarabreast.com</a>
 					</div>
 				<?php endwhile; ?>
 			<?php endif; ?>
