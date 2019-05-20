@@ -5,6 +5,12 @@ header {
 	// border: 1px solid red;
 }
 
+.menu-item-1049 i {
+	font-size:23px; 
+	top: 2px;
+	position: relative;
+
+}
 .hover-menu {
 	position: absolute;
 	right: 10px;
@@ -37,8 +43,8 @@ header {
 			//show sub-menus on hover
 			&:hover{
 				> a {
-					// color: $lightColor;
-					background: $primaryAlt;
+					color: #b2bab1;
+					// background: $primaryAlt;
 					// border-bottom: 2px solid $tertiaryColor;
 
 					// border-top: 1px solid $tertiaryColor;
@@ -71,8 +77,8 @@ header {
 				// text-transform: uppercase;
 				
 				&:hover {
-					color: $darkColor;
-					background: $primaryAlt;
+					color: #b2bab1;
+					// background: $primaryAlt;
 				}
 			}
 		}
@@ -84,7 +90,9 @@ header {
 	}
 
 	.sub-menu {
-			background: $primaryAlt; //set to your own background color
+
+			background: #c1c9be; 
+			//set to your own background color
 			// border: 1px solid rgba($lightColor, .2); //for visual purposes.  can remove.
 			position: absolute;
 			top: 40px;
@@ -152,14 +160,14 @@ header {
 				}
 
 				a {
-					color: $darkColor;
-					background: $primaryAlt;
+					color: $lightColor;
+					// background: $primaryAlt;
 					padding: 12px 20px !important;
 
 				}
 				&:hover {
 					> a {
-						color: $darkColor;
+						color: $lightColor;
 						border-bottom: none;
 						text-decoration: underline;
 					}
@@ -168,7 +176,7 @@ header {
 			a{
 				text-align: left;
 				height: auto !important;
-				color: $darkColor;
+				color: $lightColor;
 				line-height: 20px;
 			}
 		}

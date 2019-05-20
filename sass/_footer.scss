@@ -119,13 +119,13 @@
 		text-align: right;
 		background-position: center center;
 		background-size: cover;
-		padding-top: 95px;
+		padding-top: 60px;
 		padding-bottom: 40px;
 		height-min: 490px;
+		height: 490px;
 	}
 	@include media($desktop) {
 		padding-bottom: 0px;
-		height: 490px;
 	}
 	.form-cta {
 		@include media($tablet) {
@@ -187,6 +187,15 @@
 				}
 			}
 		}
+		.type-checkbox {
+			display: flex;
+			@include media($tablet) {
+				width: 440px;
+				margin-left: 140px;
+				text-align: right;
+			}
+
+		}
 		.disclaimer {
 			text-align: left;
 			// width: 500px;
@@ -245,6 +254,7 @@
 	}
 	.the-loc {
 		margin-top: 20px;
+		font-size: 17px;
 		@include media($desktop) {
 		}
 		a {
@@ -254,9 +264,10 @@
 	span {
 		color: #c7cdc5;
 		font-size: 16px;
+		letter-spacing: .5px;
 		font-family: $primaryFont;
 		@include media($tablet) {
-			font-size: 18px;
+			font-size: 17px;
 		}
 	}
 	.loc-phone a {
@@ -290,6 +301,7 @@
 
 
 
+
 .model-disc {
 	clear: both;
 	font-size: 12px;
@@ -297,7 +309,7 @@
 	margin: 0 auto;
 	margin-top: 40px;
 	text-align: center;
-	color: $darkColor;
+	color: rgba($darkColor, .5);
 	font-style: italic;
 	display: block;
 	width: 100%;

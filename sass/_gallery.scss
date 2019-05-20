@@ -558,6 +558,7 @@
 }
 
 .gallery-nav {
+	// border-bottom: 1px solid red;
 	margin: 0 auto;
 	margin-bottom: 20px;
 	display: block;
@@ -576,35 +577,34 @@
 		position: relative;
 		height: 50px;
 		// border: 1px solid #000;
-		width: 125px;
-		float: right;
+		width: 210px;
 		// font-weight: size;
+		float: right;
 		@include media($tablet) {
 			width: 225px;
-			
 		}
 	}
 	span {
-		display: none;
+		// display: none;
+		font-size: 12px;
+		// letter-spacing: 0;
 		@include media($tablet) {
+			font-size: 16px;
 			display: inline-block;
 		}
 	}
 }
 
 .single-case-title {
+	position: relative;
+	top: -20px;
 	color: $primaryColor;
 	font-size: 18px;
 	font-family: $secondaryFont;
 	text-align: center;
-	// min-width: 100px;
-	// margin-top: 40px;
-	// padding-top: 20px;
-	// padding-top: 40px;
 	@include media($tablet) {
-		margin-top: 10px;
+		top: -60px;
 		font-size: 30px;
-
 	}
 }
 

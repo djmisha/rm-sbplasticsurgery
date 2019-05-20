@@ -24,10 +24,10 @@
 		'title' => '<span>Next</span> &rarr;') );
 		?>
 	</div>
+</section>
 	<div class="single-case-title">
 		<?php the_title(); ?>
 	</div>
-</section>
 
 <main class="interior">
 	<div class="single-case-content">

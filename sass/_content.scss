@@ -16,7 +16,7 @@
 	p a, li a{
 		text-decoration: underline;
 		// font-family: $primaryFont;
-		color: #5191b6;
+		color: #233448;
 		&:hover {
 			text-decoration: underline;
 			color: $secondaryColor;
@@ -78,6 +78,19 @@ article p ~ h2 {
 			line-height: 90px;
 		}
 	}
+	span {
+		font-family: $secondaryFont;
+		display: block;
+		font-style: italic;
+		font-size: 20px;
+		@include media($tablet) {
+			font-size: 30px;
+		}
+		@include media($desktop) {
+			font-size: 40px;
+			
+		}
+	}
 }
 
 .site-crumbs {
@@ -129,7 +142,7 @@ article p ~ h2 {
 	text-align: left;
 	background: url('images/bg-inside.jpg') bottom center;
 	.tmpl_type_page_landing & {
-		background: none;
+		// background: none;
 	}
 	background-repeat: no-repeat;
 	padding-top: 30px;
@@ -155,6 +168,11 @@ article p ~ h2 {
 			list-style: none;
 			@include media($tablet) {
 				margin: 3em 100px;
+			}
+			&.two-column {
+				@include media($desktop) {
+					margin: 3em 50px 3em 180px;
+				}
 			}
 			li {
 				position: relative;
@@ -528,6 +546,12 @@ article p ~ h2 {
 =            Langing Page Sections             =
 ==============================================*/
 
+.tmpl_type_page_landing {
+	.content {
+		padding-bottom: 0;
+	}
+}
+
 
 //breast augmentation page-989
 
@@ -536,6 +560,11 @@ article p ~ h2 {
 		padding-top: 0;
 	}
 	.flexible-split-section:nth-of-type(1) {
+	}
+	.jump-link-list ul {
+		@include media($desktop) {
+			min-height: 760px;
+		}
 	}
 	#Benefits {
 		flex-direction: row-reverse;
@@ -552,6 +581,17 @@ article p ~ h2 {
 			font-style: italic;
 		}
 	}
+	#Types {
+		.with-bg {
+			@include media($tablet) {
+				// background-size: 200px auto;
+				background-position: bottom left;
+			}
+			@include media($desktop) {
+				background-size: cover;
+			}
+		}
+	}
 	#Ethnic-Considerations {
 		@include media($desktop) {
 			flex-direction: row-reverse;
@@ -559,12 +599,12 @@ article p ~ h2 {
 				padding-top: 50px;
 			}
 			.with-bg {
-				height: 900px
+				height: 980px
 			}
 		}
 		h3 {
 			margin-top: 10px;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 			font-family: $primaryFont;
 			text-transform: uppercase;
 			letter-spacing: 2px;
@@ -572,8 +612,14 @@ article p ~ h2 {
 
 			@include media($tablet) {
 				font-size: 22px;
+				line-height: 22px;
+			}
+			&:nth-of-type(2),
+			&:nth-of-type(3) {
+				margin-top: 30px;
 				margin-bottom: 0px;
 			}
+
 		}
 	}
 	#Placement {
@@ -600,8 +646,13 @@ article p ~ h2 {
 			height: 600px;
 
 			@include media($tablet) {
-				height: 1200px;
-				
+				height: 1000px;
+			}
+			@include media($desktop) {
+				height: 820px;
+			}
+			@include media($full) {
+				height: 1100px;
 			}
 		}
 	}
@@ -613,8 +664,39 @@ article p ~ h2 {
 /* Tummy Tuck Page */
 
 .page-1001 {
+	.jump-links-split .with-bg {
+		@include media($desktop) {
+			height: 1050px;
+		}
+	}
 	#Procedure {
 		flex-direction: row-reverse;
+		h3 ,
+		h2:nth-of-type(2)  
+		{
+			margin-top: 30px;
+			margin-bottom: 10px;
+			font-family: $primaryFont;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 18px;
+
+			@include media($tablet) {
+				font-size: 22px;
+				line-height: 28px;
+				margin-bottom: 0px;
+			}
+		}
+		h2:nth-of-type(2) {
+			margin-top: 30px !important;
+		}
+
+		.with-bg  {
+			@include media($desktop) {
+				height: 1210px;
+				background-size: auto 101%;
+			}
+		}
 	}
 }
 
@@ -624,6 +706,9 @@ article p ~ h2 {
 	#Procedure {
 		flex-direction: row-reverse;
 		background-size: cover;
+	}
+	#Recovery {
+		background-color: $lightColor;
 	}
 }
 

@@ -3825,7 +3825,19 @@ a.page-numbers:hover,
 a.page-numbers.current:hover,
 .after-review-sprinkle .button:hover {
   text-decoration: none;
-  background: #dce4ea;
+  background: #c0c8bf;
+  color: #ffffff;
+  border-bottom: 1px solid #c0c8bf;
+}
+
+.content .button:hover, .content
+.buttons a:hover, .content
+.submit-btn:hover, .content
+.next-prev a:hover, .content
+a.page-numbers:hover, .content
+a.page-numbers.current:hover, .content
+.after-review-sprinkle .button:hover {
+  color: #ffffff;
 }
 
 .after-review-sprinkle .button:hover {
@@ -4648,6 +4660,7 @@ main,
   display: none;
   font-family: "Lora", serif;
   font-size: 16px;
+  margin-right: 20px;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -4662,6 +4675,7 @@ main,
 .nav-bar-extras .extra-names span {
   display: inline-block;
   margin: 0 10px;
+  color: #dce4ea;
 }
 
 .nav-bar-extras .head-phone {
@@ -4814,7 +4828,7 @@ main,
 }
 
 .touch-menu .main-menu {
-  background: #466679;
+  background: #c1c9be;
   height: 100%;
   width: 100%;
   overflow-y: scroll;
@@ -4951,6 +4965,12 @@ main,
           transform: translate3d(100%, 0, 0);
 }
 
+.menu-item-1049 i {
+  font-size: 23px;
+  top: 2px;
+  position: relative;
+}
+
 .hover-menu {
   position: absolute;
   right: 10px;
@@ -4985,7 +5005,7 @@ main,
 }
 
 .hover-menu .main-menu > li:hover > a {
-  background: #dce4ea;
+  color: #b2bab1;
 }
 
 .hover-menu .main-menu > li:hover > .sub-menu {
@@ -5011,8 +5031,7 @@ main,
 }
 
 .hover-menu .main-menu > li a:hover {
-  color: #233448;
-  background: #dce4ea;
+  color: #b2bab1;
 }
 
 .hover-menu a {
@@ -5021,7 +5040,7 @@ main,
 }
 
 .hover-menu .sub-menu {
-  background: #dce4ea;
+  background: #c1c9be;
   position: absolute;
   top: 40px;
   left: 50%;
@@ -5091,13 +5110,12 @@ main,
 }
 
 .hover-menu .sub-menu > li a {
-  color: #233448;
-  background: #dce4ea;
+  color: #ffffff;
   padding: 12px 20px !important;
 }
 
 .hover-menu .sub-menu > li:hover > a {
-  color: #233448;
+  color: #ffffff;
   border-bottom: none;
   text-decoration: underline;
 }
@@ -5105,7 +5123,7 @@ main,
 .hover-menu .sub-menu a {
   text-align: left;
   height: auto !important;
-  color: #233448;
+  color: #ffffff;
   line-height: 20px;
 }
 
@@ -5202,7 +5220,7 @@ main,
 
 .content p a, .content li a {
   text-decoration: underline;
-  color: #5191b6;
+  color: #233448;
 }
 
 .content p a:hover, .content li a:hover {
@@ -5272,6 +5290,25 @@ article p ~ h2 {
   }
 }
 
+.page-title span {
+  font-family: "Lora", serif;
+  display: block;
+  font-style: italic;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-title span {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-title span {
+    font-size: 40px;
+  }
+}
+
 .site-crumbs {
   margin-top: 0px;
   padding-top: 10px;
@@ -5331,10 +5368,6 @@ article p ~ h2 {
   padding-top: 30px;
 }
 
-.tmpl_type_page_landing .interior {
-  background: none;
-}
-
 @media only screen and (min-width: 768px) {
   .interior {
     padding-top: 50px;
@@ -5368,6 +5401,12 @@ article p ~ h2 {
 @media only screen and (min-width: 768px) {
   .interior .content ul {
     margin: 3em 100px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .interior .content ul.two-column {
+    margin: 3em 50px 3em 180px;
   }
 }
 
@@ -5760,8 +5799,18 @@ article p ~ h2 {
 /*==============================================
 =            Langing Page Sections             =
 ==============================================*/
+.tmpl_type_page_landing .content {
+  padding-bottom: 0;
+}
+
 .page-989 #first-content {
   padding-top: 0;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-989 .jump-link-list ul {
+    min-height: 760px;
+  }
 }
 
 .page-989 #Benefits {
@@ -5786,6 +5835,18 @@ article p ~ h2 {
   font-style: italic;
 }
 
+@media only screen and (min-width: 768px) {
+  .page-989 #Types .with-bg {
+    background-position: bottom left;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-989 #Types .with-bg {
+    background-size: cover;
+  }
+}
+
 @media only screen and (min-width: 1080px) {
   .page-989 #Ethnic-Considerations {
     -webkit-box-orient: horizontal;
@@ -5797,13 +5858,13 @@ article p ~ h2 {
     padding-top: 50px;
   }
   .page-989 #Ethnic-Considerations .with-bg {
-    height: 900px;
+    height: 980px;
   }
 }
 
 .page-989 #Ethnic-Considerations h3 {
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -5813,8 +5874,13 @@ article p ~ h2 {
 @media only screen and (min-width: 768px) {
   .page-989 #Ethnic-Considerations h3 {
     font-size: 22px;
-    margin-bottom: 0px;
+    line-height: 22px;
   }
+}
+
+.page-989 #Ethnic-Considerations h3:nth-of-type(2), .page-989 #Ethnic-Considerations h3:nth-of-type(3) {
+  margin-top: 30px;
+  margin-bottom: 0px;
 }
 
 .page-989 #Placement {
@@ -5847,7 +5913,19 @@ article p ~ h2 {
 
 @media only screen and (min-width: 768px) {
   .page-989 #Incisions .with-bg {
-    height: 1200px;
+    height: 1000px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-989 #Incisions .with-bg {
+    height: 820px;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .page-989 #Incisions .with-bg {
+    height: 1100px;
   }
 }
 
@@ -5856,11 +5934,47 @@ article p ~ h2 {
 }
 
 /* Tummy Tuck Page */
+@media only screen and (min-width: 1080px) {
+  .page-1001 .jump-links-split .with-bg {
+    height: 1050px;
+  }
+}
+
 .page-1001 #Procedure {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.page-1001 #Procedure h3,
+.page-1001 #Procedure h2:nth-of-type(2) {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-1001 #Procedure h3,
+  .page-1001 #Procedure h2:nth-of-type(2) {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 0px;
+  }
+}
+
+.page-1001 #Procedure h2:nth-of-type(2) {
+  margin-top: 30px !important;
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-1001 #Procedure .with-bg {
+    height: 1210px;
+    background-size: auto 101%;
+  }
 }
 
 /* Rhuinoplasty Page  */
@@ -5870,6 +5984,10 @@ article p ~ h2 {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   background-size: cover;
+}
+
+.page-1017 #Recovery {
+  background-color: #ffffff;
 }
 
 .breast-tabs {
@@ -6250,16 +6368,16 @@ aside li {
     text-align: right;
     background-position: center center;
     background-size: cover;
-    padding-top: 95px;
+    padding-top: 60px;
     padding-bottom: 40px;
     height-min: 490px;
+    height: 490px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .upper-footer {
     padding-bottom: 0px;
-    height: 490px;
   }
 }
 
@@ -6340,6 +6458,20 @@ aside li {
   }
 }
 
+.upper-footer form .type-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  .upper-footer form .type-checkbox {
+    width: 440px;
+    margin-left: 140px;
+    text-align: right;
+  }
+}
+
 .upper-footer form .disclaimer {
   text-align: left;
 }
@@ -6408,6 +6540,7 @@ aside li {
 
 .footer-address .the-loc {
   margin-top: 20px;
+  font-size: 17px;
 }
 
 .footer-address .the-loc a {
@@ -6417,12 +6550,13 @@ aside li {
 .footer-address span {
   color: #c7cdc5;
   font-size: 16px;
+  letter-spacing: .5px;
   font-family: "Lato", sans-serif;
 }
 
 @media only screen and (min-width: 768px) {
   .footer-address span {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
@@ -6461,7 +6595,7 @@ aside li {
   margin: 0 auto;
   margin-top: 40px;
   text-align: center;
-  color: #233448;
+  color: rgba(35, 52, 72, 0.5);
   font-style: italic;
   display: block;
   width: 100%;
@@ -6791,6 +6925,7 @@ aside li {
   margin-bottom: 0px;
   display: block;
   font-size: 13px;
+  letter-spacing: 2px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -6826,7 +6961,7 @@ aside li {
 
 @media only screen and (min-width: 1080px) {
   .welcome .welcome-cta p {
-    max-width: 600px;
+    max-width: 750px;
     margin: 0 auto;
   }
 }
@@ -6899,6 +7034,7 @@ aside li {
   font-size: 20px;
   line-height: 22px;
   margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
 .home-doctor h2 span:nth-of-type(2) {
@@ -6952,6 +7088,16 @@ aside li {
 
 .home-doctor .button {
   margin-top: 30px;
+  background: #3a4859;
+  color: #ffffff;
+  padding: 5px 20px;
+}
+
+.home-doctor .button:hover {
+  text-decoration: none;
+  background: #c0c8bf;
+  color: #ffffff;
+  border-bottom: 1px solid #c0c8bf;
 }
 
 /*====================================
@@ -7186,7 +7332,7 @@ aside li {
     background-size: auto;
     background-position: center center;
     min-height: 625px;
-    padding-top: 150px;
+    padding-top: 100px;
     padding-left: 50%;
   }
 }
@@ -7233,7 +7379,7 @@ aside li {
 
 @media only screen and (min-width: 768px) {
   .home-patients {
-    padding: 100px 40px;
+    padding: 50px 40px 100px 40px;
   }
 }
 
@@ -7705,9 +7851,15 @@ aside li {
   min-height: 400px;
 }
 
+@media only screen and (min-width: 768px) {
+  .jump-links-split .with-bg {
+    min-height: 800px;
+  }
+}
+
 @media only screen and (min-width: 1080px) {
   .jump-links-split .with-bg {
-    min-height: 780px;
+    min-height: 800px;
   }
 }
 
@@ -7718,7 +7870,7 @@ aside li {
 .flexible-jump-links .jump-link-list-border {
   width: auto;
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -7781,6 +7933,9 @@ aside li {
 @media only screen and (min-width: 768px) {
   .flexible-jump-links .jump-link-list ul li {
     margin-bottom: 30px;
+  }
+  .flexible-jump-links .jump-link-list ul li:last-of-type {
+    margin-bottom: 0;
   }
 }
 
@@ -8716,7 +8871,7 @@ aside li {
 .gallery-nav .gal-prev-next {
   position: relative;
   height: 50px;
-  width: 125px;
+  width: 210px;
   float: right;
 }
 
@@ -8727,16 +8882,19 @@ aside li {
 }
 
 .gallery-nav span {
-  display: none;
+  font-size: 12px;
 }
 
 @media only screen and (min-width: 768px) {
   .gallery-nav span {
+    font-size: 16px;
     display: inline-block;
   }
 }
 
 .single-case-title {
+  position: relative;
+  top: -20px;
   color: #3a4859;
   font-size: 18px;
   font-family: "Lora", serif;
@@ -8745,7 +8903,7 @@ aside li {
 
 @media only screen and (min-width: 768px) {
   .single-case-title {
-    margin-top: 10px;
+    top: -60px;
     font-size: 30px;
   }
 }

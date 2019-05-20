@@ -13,8 +13,11 @@
 	.with-bg {
 		background-size: cover;
 		min-height: 400px;
+		@include media($tablet) {
+			min-height: 800px;
+		}
 		@include media($desktop) {
-			min-height: 780px;
+			min-height: 800px;
 		}
 	}
 }
@@ -31,7 +34,7 @@
 	.jump-link-list-border {
 		width: auto;
 		padding-top: 20px;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 		padding-left: 20px;
 		padding-right: 20px;
 		@include media($tablet) {
@@ -73,7 +76,9 @@
 			text-transform: uppercase;
 			@include media($tablet) {
 				margin-bottom: 30px;
-				
+				&:last-of-type {
+					margin-bottom: 0;
+				}
 			}
 			&:before {
 				display: none;
