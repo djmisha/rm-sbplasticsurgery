@@ -7,14 +7,14 @@ header {
 
 .menu-item-1049 i {
 	font-size:23px; 
-	top: 2px;
+	top: -5px;
 	position: relative;
 
 }
 .hover-menu {
 	position: absolute;
 	right: 10px;
-	bottom: 0;
+	bottom: 0px;
 	.duplicate-item {
 		display: none;
 	}
@@ -69,12 +69,13 @@ header {
 			a{	
 				display: block;
 				text-decoration: none;
-				padding: 5px 15px;
+				padding: 8px 15px;
 				transition: .25s ease-in-out background;
 				color: $primaryColor; 
 				height: $menuHeight;
 				font-family: $secondaryFont;
 				// text-transform: uppercase;
+				// border: 1px solid red;
 				
 				&:hover {
 					color: #b2bab1;
@@ -86,7 +87,7 @@ header {
 
 	a {
 		font-size: 16px; 
-		line-height: 30px;
+		line-height: 10px;
 	}
 
 	.sub-menu {

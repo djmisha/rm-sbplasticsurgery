@@ -19,7 +19,7 @@
 		color: #233448;
 		&:hover {
 			text-decoration: underline;
-			color: $secondaryColor;
+			color: #8b9989;
 		}
 	}
 	h2 {
@@ -141,8 +141,11 @@ article p ~ h2 {
 .interior {
 	text-align: left;
 	background: url('images/bg-inside.jpg') bottom center;
-	.tmpl_type_page_landing & {
-		// background: none;
+	background-repeat: no-repeat; 
+	.parent-2611 & {
+		background: url('images/bg-inside.jpg') top center;
+		background-position-y: 200px;
+		background-repeat: no-repeat; 
 	}
 	background-repeat: no-repeat;
 	padding-top: 30px;
@@ -224,7 +227,7 @@ article p ~ h2 {
 		}
 
 		blockquote {
-			// color: $secondaryColor;
+			font-style: normal;
 			margin: 40px 0;
 			margin-left: -20px;
 			font-family: $secondaryFont;
@@ -233,28 +236,20 @@ article p ~ h2 {
 			border-left: 10px solid #c8cdc3;
 			padding-left: 30px;
 			font-weight: 100;
-			// font-size: italic;
-			// margin-bottom: 40px;
 			margin-bottom: 60px;
 			@include media($tablet) {
 				font-size: 22px;
 				display: block;
 				margin-bottom: 90px;
-				// padding-bottom: ;
-				// margin: 80px 0;
-				// margin-bottom: 40px;
-				// display: inline-block;
 				margin-left: 10px;
-				// padding-right: 140px;
-				// font-size: 20px;
-				// line-height: 29px;
-				// float: right;
-				// width: 420px;
-				// margin: 0 0px 80px 80px;
 			}
 
 			strong {
-				// font-size: 25px;
+				font-size: 16px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-family: $primaryFont;
+				font-style: italic;
 				color: #c8cdc3;
 			}
 		}

@@ -4484,7 +4484,11 @@ main,
 }
 
 .nav-bar.change-up-nav .nav-bar-extras {
-  top: -10px;
+  top: -20px;
+}
+
+.nav-bar.change-up-nav .nav-bar-logo {
+  top: 7px;
 }
 
 @media only screen and (min-width: 1340px) {
@@ -4551,8 +4555,8 @@ main,
 }
 
 .nav-bar-logo {
-  -webkit-transition: width .5s ease-out;
-  transition: width .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
   display: none;
 }
 
@@ -4576,7 +4580,7 @@ main,
 @media only screen and (min-width: 1080px) {
   .nav-bar-logo {
     left: 10px;
-    top: 10px;
+    top: 20px;
     width: 320px;
   }
 }
@@ -4642,7 +4646,7 @@ main,
 
 @media only screen and (min-width: 1080px) {
   .nav-bar-extras {
-    top: 10px;
+    top: 0px;
   }
   .is--ipad .nav-bar-extras {
     top: 0px;
@@ -4730,7 +4734,7 @@ main,
   display: none;
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 15px;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -4967,14 +4971,14 @@ main,
 
 .menu-item-1049 i {
   font-size: 23px;
-  top: 2px;
+  top: -5px;
   position: relative;
 }
 
 .hover-menu {
   position: absolute;
   right: 10px;
-  bottom: 0;
+  bottom: 0px;
   display: block;
 }
 
@@ -5022,7 +5026,7 @@ main,
 .hover-menu .main-menu > li a {
   display: block;
   text-decoration: none;
-  padding: 5px 15px;
+  padding: 8px 15px;
   -webkit-transition: .25s ease-in-out background;
   transition: .25s ease-in-out background;
   color: #3a4859;
@@ -5036,7 +5040,7 @@ main,
 
 .hover-menu a {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 10px;
 }
 
 .hover-menu .sub-menu {
@@ -5225,7 +5229,7 @@ main,
 
 .content p a:hover, .content li a:hover {
   text-decoration: underline;
-  color: #e1ab4c;
+  color: #8b9989;
 }
 
 .content h2 {
@@ -5365,7 +5369,14 @@ article p ~ h2 {
   text-align: left;
   background: url("images/bg-inside.jpg") bottom center;
   background-repeat: no-repeat;
+  background-repeat: no-repeat;
   padding-top: 30px;
+}
+
+.parent-2611 .interior {
+  background: url("images/bg-inside.jpg") top center;
+  background-position-y: 200px;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5464,6 +5475,7 @@ article p ~ h2 {
 }
 
 .interior .content blockquote {
+  font-style: normal;
   margin: 40px 0;
   margin-left: -20px;
   font-family: "Lora", serif;
@@ -5485,6 +5497,11 @@ article p ~ h2 {
 }
 
 .interior .content blockquote strong {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
   color: #c8cdc3;
 }
 
@@ -6452,7 +6469,7 @@ aside li {
 
 @media only screen and (min-width: 768px) {
   .upper-footer form .field-20 label {
-    margin-top: 0px;
+    margin-top: -8px;
     font-size: 18px;
     line-height: 32px;
   }
@@ -7051,21 +7068,22 @@ aside li {
 }
 
 .home-doctor .doc-content {
-  padding-right: 30%;
+  padding-bottom: 280px;
 }
 
 @media only screen and (min-width: 768px) {
   .home-doctor .doc-content {
+    padding-bottom: 0;
     padding-right: 0;
     padding-left: 50%;
   }
 }
 
 .home-doctor .doc-content img.doc-image {
-  width: 160px;
+  width: 200px;
   position: absolute;
   bottom: 0px;
-  right: 10px;
+  right: calc(50% - 100px);
   z-index: 2;
 }
 
@@ -7073,7 +7091,8 @@ aside li {
   .home-doctor .doc-content img.doc-image {
     width: 410px;
     position: absolute;
-    left: calc(50% - 450px);
+    right: auto;
+    left: calc(50% - 400px);
     bottom: 0px;
   }
 }
@@ -7082,15 +7101,21 @@ aside li {
   .home-doctor .doc-content img.doc-image {
     width: auto;
     position: absolute;
-    left: calc(50% - 550px);
+    left: calc(50% - 500px);
   }
 }
 
 .home-doctor .button {
-  margin-top: 30px;
+  margin-top: 10px;
   background: #3a4859;
   color: #ffffff;
   padding: 5px 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-doctor .button {
+    margin-top: 30px;
+  }
 }
 
 .home-doctor .button:hover {
@@ -7205,6 +7230,16 @@ aside li {
   }
 }
 
+.home-featured-procedures li:nth-of-type(5) {
+  width: 70%;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-featured-procedures li:nth-of-type(5) {
+    width: 25%;
+  }
+}
+
 .home-featured-procedures li .feat-overlay {
   z-index: -1;
   top: 0;
@@ -7242,7 +7277,10 @@ aside li {
 }
 
 .home-featured-procedures li .feat-overlay a {
-  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 20px;
+  margin-bottom: 12px;
   color: #3a4859;
   text-transform: uppercase;
   text-decoration: none;
@@ -7357,6 +7395,10 @@ aside li {
 .home-featured-breast a {
   color: #ffffff;
   text-decoration: underline;
+}
+
+.home-featured-breast a:hover {
+  color: #c1c9be;
 }
 
 .home-featured-breast .button {
@@ -8369,6 +8411,7 @@ aside li {
   padding-bottom: 20px;
   position: relative;
   margin-top: 40px;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .tmpl_type_rmg_archive .cat-container a {

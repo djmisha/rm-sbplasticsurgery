@@ -38,9 +38,10 @@
 			opacity: 0;
 		}
 		.nav-bar-extras {
-			top: -10px;
+			top: -20px;
 		}
 		.nav-bar-logo {
+			top:7px;
 			@include media(1340px) {
 				width: 400px;
 				img {width: 100%;}
@@ -92,7 +93,7 @@
 
 .nav-bar-logo {
 	h1 {margin:0;}
-	transition: width .5s ease-out;
+	transition: all .5s ease-out;
 	display: none;
 
 	@include media($tablet) {
@@ -110,7 +111,7 @@
 	}
 	@include media($desktop) {
 		left: 10px;
-		top: 10px;
+		top: 20px;
 		width: 320px;
 	}
 	@include media(1280px) {
@@ -158,7 +159,7 @@
 	flex-wrap: nowrap;
 	align-items: center;
 	@include media($desktop) {
-		top: 10px;
+		top: 0px;
 		.is--ipad & {
 			top: 0px;
 		}
@@ -226,7 +227,7 @@
 	display: none;
 	position: absolute;
 	right: 20px;
-	top: 20px;
+	top: 15px;
 	@include media($desktop) {
 		display: inline-block;
 		.is--ipad & {

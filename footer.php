@@ -44,8 +44,8 @@
 								<?php the_sub_field('phone', 'option'); ?></a>
 						</div>
 						<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
-							<!-- <?php the_sub_field('name', 'option'); ?><br> -->
-							<?php the_sub_field('address', 'option'); ?> <?php the_sub_field('city', 'option'); ?> <br />
+							<!-- <?php //the_sub_field('name', 'option'); ?><br> -->
+							<?php the_sub_field('address', 'option'); ?>, <?php the_sub_field('city', 'option'); ?> <br />
 						</a>
 						<a href="https://www.santabarbarabreast.com" rel="noopener" target="_blank" class="footer-visit"><span>Visit Our Breast site: </span>www.santabarbarabreast.com</a>
 					</div>
