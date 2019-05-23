@@ -5379,6 +5379,12 @@ article p ~ h2 {
   background-repeat: no-repeat;
 }
 
+@media only screen and (min-width: 1850px) {
+  .parent-2611 .interior {
+    background-size: cover;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .interior {
     padding-top: 50px;

@@ -146,6 +146,9 @@ article p ~ h2 {
 		background: url('images/bg-inside.jpg') top center;
 		background-position-y: 200px;
 		background-repeat: no-repeat; 
+		@include media(1850px) {
+			background-size: cover;
+		}
 	}
 	background-repeat: no-repeat;
 	padding-top: 30px;
