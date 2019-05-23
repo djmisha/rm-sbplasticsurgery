@@ -54,7 +54,8 @@
 		</div>
 		<div class="nav-bar-extras">
 			<div class="extra-names">
-				Wesley G. Schooler, M.D., F.A.C.S.   <span>|</span>   Leslie Irvine, M.D.
+				Wesley G. Schooler, M.D., F.A.C.S. 
+				<!-- <span>|</span> -->
 			</div>
 			<div class="connect">
 				<i class="fas fa-comments"></i>

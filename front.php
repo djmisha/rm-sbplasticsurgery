@@ -110,7 +110,7 @@
 	<span><?php the_field('breast_feature_subheadline'); ?></span>
 	<h2><?php the_field('breast_feature_headline'); ?></h2>
 	<?php the_field('breast_feature_content'); ?>
-	<a href="<?php the_field('breast_aug_link'); ?>" class="button" rel="nofollow" name="Learn More">Learn More</a>
+	<a href="http://rosemontdev.com/sbplasticsurgery/breast/augmentation/" class="button" rel="nofollow" name="Learn More">Learn More</a>
 </div>
 
 

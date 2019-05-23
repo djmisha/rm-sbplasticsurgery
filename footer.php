@@ -4,7 +4,7 @@
 	
 	<section class="upper-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg">
 		<div class="form-cta">
-			<div class="ask-docs">Ask the Doctors</div>
+			<div class="ask-docs">Ask Dr. Schooler</div>
 			<p>We look forward to answering your questions. <br />
 				Please fill out the form below or call the practice at 
 				<?php if(have_rows('locations', 'option')): ?>

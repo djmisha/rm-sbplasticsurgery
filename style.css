@@ -7412,6 +7412,10 @@ aside li {
   border-bottom: 1px solid #ffffff;
 }
 
+.home-featured-breast .button:hover {
+  color: #3a4859;
+}
+
 @media only screen and (min-width: 1480px) {
   .home-featured-breast {
     background-size: cover;
