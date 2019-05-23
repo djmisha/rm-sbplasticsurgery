@@ -8414,6 +8414,17 @@ aside li {
   background: rgba(255, 255, 255, 0.6);
 }
 
+.tmpl_type_rmg_archive .cat-container h2 {
+  padding-top: 15px;
+  line-height: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .tmpl_type_rmg_archive .cat-container h2 {
+    line-height: 40px;
+  }
+}
+
 .tmpl_type_rmg_archive .cat-container a {
   text-decoration: none;
 }
