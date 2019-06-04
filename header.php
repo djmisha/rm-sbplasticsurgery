@@ -30,7 +30,7 @@
 
 <a href="#skiptomaincontent" style="display:none;">Skip to main content</a>
 
-<header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header b-lazy will-parallax parallax-internal-header'; ?>" <?php get__header__image(); ?> >
+<header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header will-parallax parallax-internal-header'; ?>" <?php get__header__image(); ?> >
 
 	<div class="nav-bar">
 		<div class="menu-trigger">
@@ -55,7 +55,6 @@
 		<div class="nav-bar-extras">
 			<div class="extra-names">
 				Wesley G. Schooler, M.D., F.A.C.S. 
-				<!-- <span>|</span> -->
 			</div>
 			<div class="connect">
 				<i class="fas fa-comments"></i>

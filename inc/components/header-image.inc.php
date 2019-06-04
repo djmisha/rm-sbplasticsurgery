@@ -23,7 +23,9 @@ function get__header__image() {
             $repeater        = $x;
             $rand                = rand( 0, ( count($repeater) - 1 ) );
             $randImage    = $repeater[$rand]['image'];
-            echo 'data-src="' . $randImage . '"';
+            // echo 'data-src="' . $randImage . '"';
+            echo 'style="background-image:url(' . $randImage . ')"';
+
         }
         else {
             $defaultRandImage    = '';
@@ -39,7 +41,9 @@ function get__header__image() {
             // echo 'style="background-image:url(' . $defaultRandImage . ')" ';
 
             // Enable Lazy Loading on Header Images 
-            echo 'data-src="'. $defaultRandImage . '"';
+            // echo 'data-src="'. $defaultRandImage . '"';
+            echo 'style="background-image:url(' . $defaultRandImage . ')" ';
+            
             // $directParent = $post->post_parent;
             // echo 'data-ID="' . $directParent . '"';
 

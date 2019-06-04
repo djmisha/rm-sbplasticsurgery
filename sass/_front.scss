@@ -185,6 +185,13 @@ header,
 	@include media($full) {
 		background-size: cover;
 	}
+	.is--ipad & {
+		@include media(1336px) {
+			
+		padding-top: 150px !important;
+		}
+	}
+
 	h2 {
 		margin-bottom: 20px;
 		@include media($tablet) {

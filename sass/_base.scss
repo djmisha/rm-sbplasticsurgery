@@ -145,6 +145,20 @@ main,
 	}
 }
 
+.is--device.is--ipad {
+	footer section, .interior {
+		@include media(1336px) {
+			padding: 20px  calc(40px + (50% - (#{$desktop} / 2))) !important;
+		}
+	}
+	.interior {
+		padding-bottom: 0 !important;
+	}
+	footer section {
+		padding-top: 60px !important;
+	}
+}
+
 /* ***************************************** */
 /* --------------- Layouts ----------------- */
 /* ***************************************** */

@@ -199,11 +199,17 @@
 		@include media($desktop) {
 			color: $darkColor;
 			background-color: transparent;
-		.is--ipad & {
-			background-color: #c2c7c0;
-			color: $lightColor;
+			height: 40px;
+			.is--ipad & {
+				background-color: #c2c7c0;
+				color: $lightColor;
+			}
 		}
-
+		@include media(1336px) {
+			.is--ipad & {
+				color: $darkColor;
+				background-color: transparent !important;
+			}
 		}
 	}
 	.connect {
@@ -228,6 +234,7 @@
 	position: absolute;
 	right: 20px;
 	top: 15px;
+	z-index: 9999;
 	@include media($desktop) {
 		display: inline-block;
 		.is--ipad & {
@@ -256,7 +263,6 @@
 	flex-direction: column;
 	@include media($tablet) {
 		margin-top: 60px;
-		// background-position-y: 50px;
 		padding-top: 0;
 		background-size: cover;
 		height: 380px;
@@ -265,6 +271,11 @@
 		padding-top: 0;
 		margin-top: 130px;
 		background-position: center center;
+	}
+	@include media(1336px) {
+		.is--device.is--ipad & {
+			margin-top: 60px !important;
+		}
 	}
 }
 
